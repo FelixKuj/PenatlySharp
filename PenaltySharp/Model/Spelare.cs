@@ -8,5 +8,6 @@ namespace PenaltySharp.Model
 {
     class Spelare
     {
+        string name;
     }
 }

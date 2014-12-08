@@ -9,5 +9,6 @@ namespace PenaltySharp.Model
     class Spelare
     {
         string name;
+        int id;
     }
 }

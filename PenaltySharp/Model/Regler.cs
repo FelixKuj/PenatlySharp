@@ -12,7 +12,7 @@ namespace PenaltySharp.Model
         private string namn;
         private int id;
         private int böter;
-       
+
 
         public Regler()
         {
@@ -57,18 +57,29 @@ namespace PenaltySharp.Model
         {
             return this.böter;
         }
-       
+
+        /// <summary>
+        /// Bestämmer regel namn.
+        /// </summary>
+        /// <param name="namn">regel namn</param>
         public void setNamn(string namn)
         {
             this.namn = namn;
         }
 
-      
+        /// <summary>
+        /// Bestämmer regel id.
+        /// </summary>
+        /// <param name="id">regel id</param>
         public void setId(int id)
         {
             this.id = id;
         }
 
+        /// <summary>
+        /// Bestämmer regel böter.
+        /// </summary>
+        /// <param name="böter">regel böter</param>
         public void setBöter(int böter)
         {
             this.böter = böter;

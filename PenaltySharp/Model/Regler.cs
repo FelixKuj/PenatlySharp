@@ -8,12 +8,11 @@ namespace PenaltySharp.Model
 {
     class Regler
     {
-        //medlemsvariabler
+        //Medlemsvariabler
         private string namn;
         private int id;
         private int böter;
-
-
+     
         public Regler()
         {
             this.namn = "Hångel";
@@ -21,6 +20,12 @@ namespace PenaltySharp.Model
             this.böter = 450000000;
         }
 
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
+        /// <param name="inNamn">Regel Namn</param>
+        /// <param name="inId">Regel Id</param>
+        /// <param name="inBöter">Regel Böter</param>
         public Regler(string inNamn, int inId, int inBöter)
         {
             this.namn = inNamn;
@@ -28,7 +33,7 @@ namespace PenaltySharp.Model
             this.böter = inBöter;
         }
 
-        // metoder
+        // Metoder
 
         /// <summary>
         ///Returnerar regel namn

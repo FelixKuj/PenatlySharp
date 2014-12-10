@@ -34,6 +34,18 @@ namespace PenaltySharp.Controler
         {
             return m_Spelare.Count();
         }
+
+        public int GetIndexOfNamn(string Namn)
+        {
+            for (int i = 0; i < m_Spelare.Count; i++)
+            {
+                if (m_Spelare[i].getNamn() == Namn)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
     }
 }
 

@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\RegelController.cs" />
+    <Compile Include="Controller\SpelareController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

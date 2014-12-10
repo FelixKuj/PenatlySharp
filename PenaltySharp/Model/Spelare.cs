@@ -8,17 +8,17 @@ namespace PenaltySharp.Model
 {
     class Spelare
     {
-        private string namn;
-        private int id;
-        private string användarnamn;
-        private string lösenord;
+        private string m_namn;
+        private int m_id;
+        private string m_användarnamn;
+        private string m_lösenord;
 
         public Spelare()
         {
-            this.namn = "Felix Kujanpää";
-            this.id = 0;
-            this.användarnamn = "FelixKuj";
-            this.lösenord = "QWE123";
+            this.m_namn = "Felix Kujanpää";
+            this.m_id = 0;
+            this.m_användarnamn = "FelixKuj";
+            this.m_lösenord = "QWE123";
         }
 
         /// <summary>
@@ -33,10 +33,10 @@ namespace PenaltySharp.Model
                      string inAnvändarnamn,
                      string inLösenord)
         {
-            this.namn = inNamn;
-            this.id = inId;
-            this.användarnamn = inAnvändarnamn;
-            this.lösenord = inLösenord;
+            this.m_namn = inNamn;
+            this.m_id = inId;
+            this.m_användarnamn = inAnvändarnamn;
+            this.m_lösenord = inLösenord;
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace PenaltySharp.Model
         /// <returns>Namn</param>
         public string getNamn(string Namn)
         {
-           return this.namn;
+           return this.m_namn;
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace PenaltySharp.Model
         /// <param name="namn">Namn</param>
         public void setNamn(string namn)
         {
-            this.namn = namn;
+            this.m_namn = namn;
         }
 
         /// <summary>
@@ -62,17 +62,38 @@ namespace PenaltySharp.Model
         /// </summary>
         /// <param name="id"></param>
         /// <returns>ID</returns>
-        public int getId(string id)
+        public int getId(int id)
         {
-            return this.id;
+            return this.m_id;
         }
         /// <summary>
         /// Returnerar ID
         /// </summary>
         /// <param name="id">ID</param>
-        public setId(string id)
+        public void setId(int id)
         {
-            this.id = id;
+            this.m_id = id;
+        }
+
+        public string getAnvändarnamn(string användarnamn)
+        {
+            return this.m_användarnamn;
+        }
+
+
+        public void setAnvändarnamn(string användarnamn)
+        {
+            this.m_användarnamn = användarnamn;
+        }
+
+        public string getLösenord(string användarnamn)
+        {
+            return this.m_lösenord;
+        }
+
+        public void setLösenord(string lösenord)
+        {
+            this.m_lösenord = lösenord;
         }
     }
 }

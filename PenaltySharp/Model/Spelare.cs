@@ -43,7 +43,7 @@ namespace PenaltySharp.Model
         /// rerurnerar Namn
         /// </summary>
         /// <returns>Namn</param>
-        public string getNamn(string Namn)
+        public string getNamn()
         {
            return this.m_namn;
         }
@@ -62,7 +62,7 @@ namespace PenaltySharp.Model
         /// </summary>
         /// <param name="id"></param>
         /// <returns>ID</returns>
-        public int getId(int id)
+        public int getId()
         {
             return this.m_id;
         }
@@ -75,7 +75,7 @@ namespace PenaltySharp.Model
             this.m_id = id;
         }
 
-        public string getAnvändarnamn(string användarnamn)
+        public string getAnvändarnamn()
         {
             return this.m_användarnamn;
         }
@@ -86,7 +86,7 @@ namespace PenaltySharp.Model
             this.m_användarnamn = användarnamn;
         }
 
-        public string getLösenord(string användarnamn)
+        public string getLösenord()
         {
             return this.m_lösenord;
         }

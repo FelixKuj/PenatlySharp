@@ -60,6 +60,10 @@ namespace PenaltySharp.Controller
             spelare = new Spelare("Smartin Smartlund", 4, "smasma", "smasma");
             m_Spelare.Add(spelare);
         }
+        public string LoggaIn(string Användarnamn, string Lösenord)
+        {
+            return "AS";
+        }
     }
 }
 

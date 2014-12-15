@@ -27,7 +27,7 @@ namespace PenaltySharp.View
             {
                 if (true)
                 {
-                    textBox1.Text = "sdas";
+                    string a = Controller.SpelareController 
                 }
             }
 

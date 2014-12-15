@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PenaltySharp.Model;
+using PenaltySharp.Controller;
+
 
 namespace PenaltySharp
 {
@@ -15,6 +18,7 @@ namespace PenaltySharp
         public Form1()
         {
             InitializeComponent();
+            
         }
     }
 }

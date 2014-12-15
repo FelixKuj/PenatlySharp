@@ -16,11 +16,11 @@ namespace PenaltySharp.Controller
             m_Spelare = new List<Spelare>();
         }
 
-        public void Läggatill(Spelare item)
+        public void LäggaTill(Spelare item)
         {
             m_Spelare.Add(item);
         }
-        public void Tabort(Spelare item)
+        public void TaBort(Spelare item)
         {
             m_Spelare.Remove(item);
         }

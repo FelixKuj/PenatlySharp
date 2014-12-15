@@ -46,10 +46,10 @@
   <ItemGroup>
     <Compile Include="Controller\RegelController.cs" />
     <Compile Include="Controller\SpelareController.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Regler.cs" />

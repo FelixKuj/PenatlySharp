@@ -12,13 +12,6 @@ namespace PenaltySharp.Model
         private string m_namn;
         private int m_id;
         private int m_böter;
-     
-        public Regler()
-        {
-            this.m_namn = "Hångel";
-            this.m_id = 0;
-            this.m_böter = 450000000;
-        }
 
         /// <summary>
         /// Konstruktor

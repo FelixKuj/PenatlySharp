@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PenaltySharp.Model;
+using PenaltySharp.Controller;
+using PenaltySharp.View;
 using System.Windows.Forms;
 
 namespace PenaltySharp.View
@@ -19,6 +22,14 @@ namespace PenaltySharp.View
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            for (int i = 0; i < 2; i++)
+            {
+                if (true)
+                {
+                    textBox1.Text = "sdas";
+                }
+            }
 
         }
     }

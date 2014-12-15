@@ -13,6 +13,8 @@ namespace PenaltySharp.Model
         private string m_användarnamn;
         private string m_lösenord;
 
+        //(list)
+         
         public Spelare()
         {
             this.m_namn = "Felix Kujanpää";
@@ -27,7 +29,7 @@ namespace PenaltySharp.Model
         /// <param name="inNamn">Spelare namn</param>
         /// <param name="inId">Spelare ID</param>
         /// <param name="inAnvändarnamn">Spelare användarnamn</param>
-        /// <param name="inLösenord">Spealre Lösenord</param>
+        /// <param name="inLösenord">Spelare Lösenord</param>
         public Spelare(string inNamn,
                      int inId,
                      string inAnvändarnamn,

@@ -46,6 +46,20 @@ namespace PenaltySharp.Controller
             }
             return -1;
         }
+        public void TestData()
+        {
+            Spelare 
+            spelare = new Spelare("Felix Kujanpää",0,"kujfel","felkuj");
+            m_Spelare.Add(spelare);
+            spelare = new Spelare("Aderian Jakobsen", 1, "jakade", "adejak");
+            m_Spelare.Add(spelare);
+            spelare = new Spelare("Jarl Ballheden", 2, "baljar", "jarbal");
+            m_Spelare.Add(spelare);
+            spelare = new Spelare("Leran Inos", 3, "inoler", "lerino");
+            m_Spelare.Add(spelare);
+            spelare = new Spelare("Smartin Smartlund", 4, "smasma", "smasma");
+            m_Spelare.Add(spelare);
+        }
     }
 }
 

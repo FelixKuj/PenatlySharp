@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PenaltySharp.Model;
+using PenaltySharp.Controller;
+using PenaltySharp.View;
 
 namespace PenaltySharp.Controller
 {
@@ -63,6 +66,23 @@ namespace PenaltySharp.Controller
         public string LoggaIn(string Användarnamn, string Lösenord)
         {
             return "AS";
+        }
+
+        public string SkapaAnvändare(string Förnamn, string efternamn, string Användarnamn, string Lösenord, string Lösenord2, string Email)
+        {
+             //kollar om det finns samma användarnamn redan
+            for (int i = 0; i < Antal() ; i++)
+            {
+                if (Användarnamn == m_Spelare[i].getNamn())
+                {
+                    
+                }
+            }
+
+            Spelare spelare = new Spelare(Förnamn + " " + efternamn , Antal() + 1 , Användarnamn, Lösenord);
+            m_Spelare.Add(spelare);
+
+            return "Hej";
         }
     }
 }

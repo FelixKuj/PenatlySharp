@@ -19,7 +19,7 @@ namespace PenaltySharp.View
 
         private void btn_Användarsida_Spealre_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

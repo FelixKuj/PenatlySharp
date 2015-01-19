@@ -22,14 +22,13 @@ namespace PenaltySharp.View
 
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)
         {
-            
-            for (int i = 0; i < 2; i++)
-            {
-                if (true)
-                {
-                    string a = Controller.SpelareController
-                }
-            }
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    if (true)
+            //    {
+            //        string a = Controller.SpelareController
+            //    }
+            //}
 
         }
     }

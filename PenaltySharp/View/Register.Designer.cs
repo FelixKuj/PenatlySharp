@@ -132,6 +132,7 @@
             this.btn_RegistreringsSida_Registrera.TabIndex = 18;
             this.btn_RegistreringsSida_Registrera.Text = "Registrera";
             this.btn_RegistreringsSida_Registrera.UseVisualStyleBackColor = true;
+            this.btn_RegistreringsSida_Registrera.Click += new System.EventHandler(this.btn_RegistreringsSida_Registrera_Click);
             // 
             // label4
             // 

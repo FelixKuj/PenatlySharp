@@ -15,17 +15,22 @@ namespace PenaltySharp.View
 {
     public partial class Inloggning : Form
     {
+
+        SpelareController spelarController;
         public Inloggning()
         {
             InitializeComponent();
-             
+            spelarController = new SpelareController();
         }
-
-        
 
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)
         {
-            var användarsidaForm = new Användarsida();
+            string information = spelarController.LoggaIn(tbx_InloggningsSida_Användarnamn.Text, tbx_InloggningsSida_Lösenord.Text);
+            
+            //var användarsidaForm = new Användarsida();
+            
+            
+            
             //var adminsidaForm =
 
             //if (Spelare == användare)

@@ -62,7 +62,14 @@ namespace PenaltySharp.Controller
         }
         public string LoggaIn(string Användarnamn, string Lösenord)
         {
-            return "AS";
+            for (int i = 0; i < Antal(); i++)
+            {
+                if (Användarnamn == m_Spelare[i].getNamn() && Lösenord == m_Spelare[i].getLösenord())
+                {
+                    return (Användarnamn);
+                }
+            }
+            return "-1";
         }
     }
 }

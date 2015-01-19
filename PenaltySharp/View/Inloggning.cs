@@ -20,7 +20,7 @@ namespace PenaltySharp.View
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)
         {
             
             for (int i = 0; i < 2; i++)

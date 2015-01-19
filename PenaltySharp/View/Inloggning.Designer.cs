@@ -45,7 +45,7 @@
             this.btn_InloggningsSida_Inloggning.TabIndex = 0;
             this.btn_InloggningsSida_Inloggning.Text = "Logga in";
             this.btn_InloggningsSida_Inloggning.UseVisualStyleBackColor = true;
-            this.btn_InloggningsSida_Inloggning.Click += new System.EventHandler(this.button1_Click);
+            this.btn_InloggningsSida_Inloggning.Click += new System.EventHandler(this.btn_InloggningsSida_Inloggning_Click);
             // 
             // label1
             // 

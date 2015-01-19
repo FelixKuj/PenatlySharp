@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 553);
+            this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.btn_Användarsida_Spelare);
             this.Controls.Add(this.btn_Användarsida_Regler);
             this.Controls.Add(this.label3);

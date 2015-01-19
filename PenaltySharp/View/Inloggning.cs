@@ -18,19 +18,35 @@ namespace PenaltySharp.View
         public Inloggning()
         {
             InitializeComponent();
+             
         }
+
+        
 
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)
         {
-            
-            for (int i = 0; i < 2; i++)
-            {
-                if (true)
-                {
-                    string a = Controller.SpelareController
-                }
-            }
+            var användarsidaForm = new Användarsida();
+            //var adminsidaForm =
 
+            //if (Spelare == användare)
+            //{
+            //    användarsidaForm.Show();
+            //    this.Hide();
+            //}
+
+            //else
+            //{
+            //    adminsidaForm.Show();
+            //    this.Hide();
+            //}
+         
+
+        }
+
+        private void btn_InloggningsSida_Registrera_Click(object sender, EventArgs e)
+        {
+            var registerForm = new Register();
+            registerForm.Show();
         }
     }
 }

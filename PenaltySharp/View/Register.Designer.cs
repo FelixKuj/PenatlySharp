@@ -42,6 +42,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbx_RegistreringsSida_Förnamn = new System.Windows.Forms.TextBox();
+            this.tbx_RegistreringsSida_Efternamn = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label6
@@ -170,12 +174,48 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Användarnamn";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(147, 139);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Förnamn";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(143, 165);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Efternamn";
+            // 
+            // tbx_RegistreringsSida_Förnamn
+            // 
+            this.tbx_RegistreringsSida_Förnamn.Location = new System.Drawing.Point(204, 136);
+            this.tbx_RegistreringsSida_Förnamn.Name = "tbx_RegistreringsSida_Förnamn";
+            this.tbx_RegistreringsSida_Förnamn.Size = new System.Drawing.Size(162, 20);
+            this.tbx_RegistreringsSida_Förnamn.TabIndex = 30;
+            // 
+            // tbx_RegistreringsSida_Efternamn
+            // 
+            this.tbx_RegistreringsSida_Efternamn.Location = new System.Drawing.Point(204, 162);
+            this.tbx_RegistreringsSida_Efternamn.Name = "tbx_RegistreringsSida_Efternamn";
+            this.tbx_RegistreringsSida_Efternamn.Size = new System.Drawing.Size(162, 20);
+            this.tbx_RegistreringsSida_Efternamn.TabIndex = 31;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(434, 512);
+            this.Controls.Add(this.tbx_RegistreringsSida_Efternamn);
+            this.Controls.Add(this.tbx_RegistreringsSida_Förnamn);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.label5);
@@ -217,5 +257,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbx_RegistreringsSida_Förnamn;
+        private System.Windows.Forms.TextBox tbx_RegistreringsSida_Efternamn;
     }
 }

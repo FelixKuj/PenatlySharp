@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnInloggning = new System.Windows.Forms.Button();
+            this.btn_InloggningsSida_Inloggning = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.tbx_InloggningsSida_Användarnamn = new System.Windows.Forms.TextBox();
+            this.tbx_InloggningsSida_Lösenord = new System.Windows.Forms.TextBox();
+            this.btn_InloggningsSida_Registrera = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnInloggning
+            // btn_InloggningsSida_Inloggning
             // 
-            this.btnInloggning.Location = new System.Drawing.Point(127, 123);
-            this.btnInloggning.Name = "btnInloggning";
-            this.btnInloggning.Size = new System.Drawing.Size(75, 23);
-            this.btnInloggning.TabIndex = 0;
-            this.btnInloggning.Text = "Logga in";
-            this.btnInloggning.UseVisualStyleBackColor = true;
-            this.btnInloggning.Click += new System.EventHandler(this.button1_Click);
+            this.btn_InloggningsSida_Inloggning.Location = new System.Drawing.Point(127, 123);
+            this.btn_InloggningsSida_Inloggning.Name = "btn_InloggningsSida_Inloggning";
+            this.btn_InloggningsSida_Inloggning.Size = new System.Drawing.Size(75, 23);
+            this.btn_InloggningsSida_Inloggning.TabIndex = 0;
+            this.btn_InloggningsSida_Inloggning.Text = "Logga in";
+            this.btn_InloggningsSida_Inloggning.UseVisualStyleBackColor = true;
+            this.btn_InloggningsSida_Inloggning.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -65,29 +65,29 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Lösenord";
             // 
-            // textBox1
+            // tbx_InloggningsSida_Användarnamn
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbx_InloggningsSida_Användarnamn.Location = new System.Drawing.Point(102, 38);
+            this.tbx_InloggningsSida_Användarnamn.Name = "tbx_InloggningsSida_Användarnamn";
+            this.tbx_InloggningsSida_Användarnamn.Size = new System.Drawing.Size(100, 20);
+            this.tbx_InloggningsSida_Användarnamn.TabIndex = 3;
             // 
-            // textBox2
+            // tbx_InloggningsSida_Lösenord
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '•';
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.tbx_InloggningsSida_Lösenord.Location = new System.Drawing.Point(102, 78);
+            this.tbx_InloggningsSida_Lösenord.Name = "tbx_InloggningsSida_Lösenord";
+            this.tbx_InloggningsSida_Lösenord.PasswordChar = '•';
+            this.tbx_InloggningsSida_Lösenord.Size = new System.Drawing.Size(100, 20);
+            this.tbx_InloggningsSida_Lösenord.TabIndex = 4;
             // 
-            // button2
+            // btn_InloggningsSida_Registrera
             // 
-            this.button2.Location = new System.Drawing.Point(269, 185);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Registrera";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_InloggningsSida_Registrera.Location = new System.Drawing.Point(269, 185);
+            this.btn_InloggningsSida_Registrera.Name = "btn_InloggningsSida_Registrera";
+            this.btn_InloggningsSida_Registrera.Size = new System.Drawing.Size(75, 23);
+            this.btn_InloggningsSida_Registrera.TabIndex = 5;
+            this.btn_InloggningsSida_Registrera.Text = "Registrera";
+            this.btn_InloggningsSida_Registrera.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -104,12 +104,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(356, 220);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_InloggningsSida_Registrera);
+            this.Controls.Add(this.tbx_InloggningsSida_Lösenord);
+            this.Controls.Add(this.tbx_InloggningsSida_Användarnamn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnInloggning);
+            this.Controls.Add(this.btn_InloggningsSida_Inloggning);
             this.Name = "Inloggning";
             this.Text = "Inloggning";
             this.ResumeLayout(false);
@@ -119,12 +119,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnInloggning;
+        private System.Windows.Forms.Button btn_InloggningsSida_Inloggning;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox tbx_InloggningsSida_Användarnamn;
+        private System.Windows.Forms.TextBox tbx_InloggningsSida_Lösenord;
+        private System.Windows.Forms.Button btn_InloggningsSida_Registrera;
         private System.Windows.Forms.Label label3;
     }
 }

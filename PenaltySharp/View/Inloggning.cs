@@ -27,7 +27,7 @@ namespace PenaltySharp.View
             {
                 if (true)
                 {
-                    string a = Controller.SpelareController 
+                    string a = Controller.SpelareController
                 }
             }
 

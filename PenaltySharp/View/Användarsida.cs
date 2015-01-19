@@ -16,5 +16,10 @@ namespace PenaltySharp.View
         {
             InitializeComponent();
         }
+
+        private void btn_Användarsida_Spealre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

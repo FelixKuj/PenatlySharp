@@ -32,12 +32,12 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbx_RegistreringsSida_LösenordIgen = new System.Windows.Forms.TextBox();
+            this.tbx_RegistreringsSida_lösenord = new System.Windows.Forms.TextBox();
+            this.tbx_RegistreringsSida_användarnamn = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_RegistreringsSida_Registrera = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,28 +81,28 @@
             this.textBox4.Size = new System.Drawing.Size(162, 20);
             this.textBox4.TabIndex = 24;
             // 
-            // textBox3
+            // tbx_RegistreringsSida_LösenordIgen
             // 
-            this.textBox3.Location = new System.Drawing.Point(204, 280);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '•';
-            this.textBox3.Size = new System.Drawing.Size(162, 20);
-            this.textBox3.TabIndex = 23;
+            this.tbx_RegistreringsSida_LösenordIgen.Location = new System.Drawing.Point(204, 280);
+            this.tbx_RegistreringsSida_LösenordIgen.Name = "tbx_RegistreringsSida_LösenordIgen";
+            this.tbx_RegistreringsSida_LösenordIgen.PasswordChar = '•';
+            this.tbx_RegistreringsSida_LösenordIgen.Size = new System.Drawing.Size(162, 20);
+            this.tbx_RegistreringsSida_LösenordIgen.TabIndex = 23;
             // 
-            // textBox2
+            // tbx_RegistreringsSida_lösenord
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 253);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '•';
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 22;
+            this.tbx_RegistreringsSida_lösenord.Location = new System.Drawing.Point(204, 253);
+            this.tbx_RegistreringsSida_lösenord.Name = "tbx_RegistreringsSida_lösenord";
+            this.tbx_RegistreringsSida_lösenord.PasswordChar = '•';
+            this.tbx_RegistreringsSida_lösenord.Size = new System.Drawing.Size(162, 20);
+            this.tbx_RegistreringsSida_lösenord.TabIndex = 22;
             // 
-            // textBox1
+            // tbx_RegistreringsSida_användarnamn
             // 
-            this.textBox1.Location = new System.Drawing.Point(204, 192);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 21;
+            this.tbx_RegistreringsSida_användarnamn.Location = new System.Drawing.Point(204, 192);
+            this.tbx_RegistreringsSida_användarnamn.Name = "tbx_RegistreringsSida_användarnamn";
+            this.tbx_RegistreringsSida_användarnamn.Size = new System.Drawing.Size(162, 20);
+            this.tbx_RegistreringsSida_användarnamn.TabIndex = 21;
             // 
             // checkBox2
             // 
@@ -124,14 +124,14 @@
             this.checkBox1.TabIndex = 19;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_RegistreringsSida_Registrera
             // 
-            this.button1.Location = new System.Drawing.Point(312, 395);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Registrera";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_RegistreringsSida_Registrera.Location = new System.Drawing.Point(312, 395);
+            this.btn_RegistreringsSida_Registrera.Name = "btn_RegistreringsSida_Registrera";
+            this.btn_RegistreringsSida_Registrera.Size = new System.Drawing.Size(75, 23);
+            this.btn_RegistreringsSida_Registrera.TabIndex = 18;
+            this.btn_RegistreringsSida_Registrera.Text = "Registrera";
+            this.btn_RegistreringsSida_Registrera.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -179,12 +179,12 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbx_RegistreringsSida_LösenordIgen);
+            this.Controls.Add(this.tbx_RegistreringsSida_lösenord);
+            this.Controls.Add(this.tbx_RegistreringsSida_användarnamn);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_RegistreringsSida_Registrera);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -206,12 +206,12 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbx_RegistreringsSida_LösenordIgen;
+        private System.Windows.Forms.TextBox tbx_RegistreringsSida_lösenord;
+        private System.Windows.Forms.TextBox tbx_RegistreringsSida_användarnamn;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_RegistreringsSida_Registrera;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

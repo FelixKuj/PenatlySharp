@@ -87,7 +87,7 @@ namespace PenaltySharp.Controller
             string visaregler = "";
             for (int regelnr = 0; regelnr < m_Regler.Count; regelnr++)
             {
-                visaregler = visaregler + "\n" + m_Regler[regelnr];
+                visaregler = visaregler + "\n" + m_Regler[regelnr].getNamn + m_Regler[regelnr].getId + m_Regler[regelnr].getBöter;
             }
             MessageBox.Show(visaregler);
         }

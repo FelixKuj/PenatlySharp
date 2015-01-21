@@ -93,30 +93,28 @@ namespace PenaltySharp.Controller
 
         public string SkapaAnvändare(string Förnamn, string efternamn, string Användarnamn, string Lösenord, string Lösenord2, string Email)
         {
-            //kollar om det finns samma användarnamn redan
-            for (int i = 0; i < Antal(); i++)
+             //kollar om det finns samma användarnamn redan finns
+            for (int i = 0; i < Antal() ; i++)
             {
-                if (Användarnamn == m_Spelare[i].getNamn())
+                if (Användarnamn == m_Spelare[i].getAnvändarnamn())
                 {
-
+                    return "Användarnamn upptaget";
                 }
             }
 
-            Spelare spelare = new Spelare(Förnamn + " " + efternamn, Antal() + 1, Användarnamn, Lösenord, false);
-            m_Spelare.Add(spelare);
+            if (Lösenord == Lösenord2) // lösenorden är lika?
+            {
+                Spelare spelare = new Spelare(Förnamn + " " + efternamn, Antal() + 1, Användarnamn, Lösenord, false);
+                m_Spelare.Add(spelare);
+            }
+            else
+            {
+                return "lösenordet fel";
+            }
+            
 
-            return "Hej";
+            return "Ny användare skapad";
         }
-
-
-
-
-        public void ÖppnaAnvändarsida(bool Admin)
-        {
-
-        }
-
-
     }
 }
 

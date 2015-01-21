@@ -83,7 +83,7 @@
             this.textBox4.Location = new System.Drawing.Point(204, 342);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(162, 20);
-            this.textBox4.TabIndex = 24;
+            this.textBox4.TabIndex = 6;
             // 
             // tbx_RegistreringsSida_LösenordIgen
             // 
@@ -91,7 +91,7 @@
             this.tbx_RegistreringsSida_LösenordIgen.Name = "tbx_RegistreringsSida_LösenordIgen";
             this.tbx_RegistreringsSida_LösenordIgen.PasswordChar = '•';
             this.tbx_RegistreringsSida_LösenordIgen.Size = new System.Drawing.Size(162, 20);
-            this.tbx_RegistreringsSida_LösenordIgen.TabIndex = 23;
+            this.tbx_RegistreringsSida_LösenordIgen.TabIndex = 5;
             // 
             // tbx_RegistreringsSida_lösenord
             // 
@@ -99,14 +99,14 @@
             this.tbx_RegistreringsSida_lösenord.Name = "tbx_RegistreringsSida_lösenord";
             this.tbx_RegistreringsSida_lösenord.PasswordChar = '•';
             this.tbx_RegistreringsSida_lösenord.Size = new System.Drawing.Size(162, 20);
-            this.tbx_RegistreringsSida_lösenord.TabIndex = 22;
+            this.tbx_RegistreringsSida_lösenord.TabIndex = 4;
             // 
             // tbx_RegistreringsSida_användarnamn
             // 
             this.tbx_RegistreringsSida_användarnamn.Location = new System.Drawing.Point(204, 192);
             this.tbx_RegistreringsSida_användarnamn.Name = "tbx_RegistreringsSida_användarnamn";
             this.tbx_RegistreringsSida_användarnamn.Size = new System.Drawing.Size(162, 20);
-            this.tbx_RegistreringsSida_användarnamn.TabIndex = 21;
+            this.tbx_RegistreringsSida_användarnamn.TabIndex = 3;
             // 
             // checkBox2
             // 
@@ -133,7 +133,7 @@
             this.btn_RegistreringsSida_Registrera.Location = new System.Drawing.Point(312, 395);
             this.btn_RegistreringsSida_Registrera.Name = "btn_RegistreringsSida_Registrera";
             this.btn_RegistreringsSida_Registrera.Size = new System.Drawing.Size(75, 23);
-            this.btn_RegistreringsSida_Registrera.TabIndex = 18;
+            this.btn_RegistreringsSida_Registrera.TabIndex = 0;
             this.btn_RegistreringsSida_Registrera.Text = "Registrera";
             this.btn_RegistreringsSida_Registrera.UseVisualStyleBackColor = true;
             this.btn_RegistreringsSida_Registrera.Click += new System.EventHandler(this.btn_RegistreringsSida_Registrera_Click);
@@ -197,14 +197,14 @@
             this.tbx_RegistreringsSida_Förnamn.Location = new System.Drawing.Point(204, 136);
             this.tbx_RegistreringsSida_Förnamn.Name = "tbx_RegistreringsSida_Förnamn";
             this.tbx_RegistreringsSida_Förnamn.Size = new System.Drawing.Size(162, 20);
-            this.tbx_RegistreringsSida_Förnamn.TabIndex = 30;
+            this.tbx_RegistreringsSida_Förnamn.TabIndex = 1;
             // 
             // tbx_RegistreringsSida_Efternamn
             // 
             this.tbx_RegistreringsSida_Efternamn.Location = new System.Drawing.Point(204, 162);
             this.tbx_RegistreringsSida_Efternamn.Name = "tbx_RegistreringsSida_Efternamn";
             this.tbx_RegistreringsSida_Efternamn.Size = new System.Drawing.Size(162, 20);
-            this.tbx_RegistreringsSida_Efternamn.TabIndex = 31;
+            this.tbx_RegistreringsSida_Efternamn.TabIndex = 2;
             // 
             // Register
             // 

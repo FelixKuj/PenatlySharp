@@ -15,24 +15,38 @@ namespace PenaltySharp.View
 {
     public partial class Inloggning : Form
     {
+
+        SpelareController spelarController;
         public Inloggning()
         {
             InitializeComponent();
-             
+            spelarController = new SpelareController();
         }
-
-        
 
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)
         {
+            string information = spelarController.LoggaIn(tbx_InloggningsSida_Användarnamn.Text, tbx_InloggningsSida_Lösenord.Text);
             
-            for (int i = 0; i < 2; i++)
-            {
-                if (true)
-                {
-                    string a = Controller.SpelareController
-                }
-            }
+            //var användarsidaForm = new Användarsida();
+            
+            
+            
+            //var adminsidaForm =
+
+            //if (Spelare == användare)
+            //{
+            //    användarsidaForm.Show();
+            //    this.Hide();
+            //}
+
+            //else
+            //{
+            //    adminsidaForm.Show();
+            //    this.Hide();
+            //}
+         
+
+        }
 
         private void btn_InloggningsSida_Registrera_Click(object sender, EventArgs e)
         {

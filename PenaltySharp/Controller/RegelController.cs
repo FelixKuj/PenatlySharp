@@ -54,7 +54,7 @@ namespace PenaltySharp.Controller
 
         public void TestData()
         {
-            Regler 
+            Regler
             regel = new Regler("Sen ankomst till träning", 0, 50);
             m_Regler.Add(regel);
             regel = new Regler("Sen ankomst till match", 1, 100);

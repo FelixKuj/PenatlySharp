@@ -20,6 +20,7 @@ namespace PenaltySharp.View
         private void btn_RegistreringsSida_Registrera_Click(object sender, EventArgs e)
         {
             this.Hide();
+            
         }
     }
 }

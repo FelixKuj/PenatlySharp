@@ -115,6 +115,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Användarsida";
             this.Text = "Användarsida";
+            this.Load += new System.EventHandler(this.Användarsida_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

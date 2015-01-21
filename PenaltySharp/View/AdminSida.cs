@@ -16,5 +16,10 @@ namespace PenaltySharp.View
         {
             InitializeComponent();
         }
+
+        private void btn_AdminSida_Regler_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

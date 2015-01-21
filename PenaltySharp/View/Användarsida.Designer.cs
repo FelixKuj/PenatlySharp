@@ -62,6 +62,7 @@
             this.lv_Användarsida.Size = new System.Drawing.Size(756, 389);
             this.lv_Användarsida.TabIndex = 3;
             this.lv_Användarsida.UseCompatibleStateImageBehavior = false;
+            this.lv_Användarsida.SelectedIndexChanged += new System.EventHandler(this.lv_Användarsida_SelectedIndexChanged);
             // 
             // btn_Användarsida_LoggaUt
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Användarsida";
             this.Text = "Användarsida";
+            this.Load += new System.EventHandler(this.Användarsida_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

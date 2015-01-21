@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BöterController.cs" />
     <Compile Include="Controller\RegelController.cs" />
     <Compile Include="Controller\SpelareController.cs" />
     <Compile Include="View\AdminSida.cs">

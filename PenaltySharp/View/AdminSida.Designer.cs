@@ -55,6 +55,7 @@
             this.btn_AdminSida_Regler.TabIndex = 7;
             this.btn_AdminSida_Regler.Text = "Regler";
             this.btn_AdminSida_Regler.UseVisualStyleBackColor = true;
+            this.btn_AdminSida_Regler.Click += new System.EventHandler(this.btn_AdminSida_Regler_Click);
             // 
             // btn_AdminSida_Spelare
             // 

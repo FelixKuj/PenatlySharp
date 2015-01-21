@@ -21,13 +21,15 @@ namespace PenaltySharp.View
         {
             InitializeComponent();
             spelarController = new SpelareController();
+            spelarController.TestData();
         }
 
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)
         {
             string information = spelarController.LoggaIn(tbx_InloggningsSida_Användarnamn.Text, tbx_InloggningsSida_Lösenord.Text);
-            
-            //var användarsidaForm = new Användarsida();
+          
+
+          
             
             
             
@@ -53,5 +55,7 @@ namespace PenaltySharp.View
             var registerForm = new Register();
             registerForm.Show();
         }
+
+       
     }
 }

@@ -51,39 +51,72 @@ namespace PenaltySharp.Controller
         }
         public void TestData()
         {
-            Spelare 
-            spelare = new Spelare("Felix Kujanpää",0,"kujfel","felkuj");
+            Spelare
+            spelare = new Spelare("Felix Kujanpää", 0, "kujfel", "felkuj", true);
             m_Spelare.Add(spelare);
-            spelare = new Spelare("Aderian Jakobsen", 1, "jakade", "adejak");
+            spelare = new Spelare("Aderian Jakobsen", 1, "jakade", "adejak", false);
             m_Spelare.Add(spelare);
-            spelare = new Spelare("Jarl Ballheden", 2, "baljar", "jarbal");
+            spelare = new Spelare("Jarl Ballheden", 2, "baljar", "jarbal", true);
             m_Spelare.Add(spelare);
-            spelare = new Spelare("Leran Inos", 3, "inoler", "lerino");
+            spelare = new Spelare("Leran Inos", 3, "inoler", "lerino", false);
             m_Spelare.Add(spelare);
-            spelare = new Spelare("Smartin Smartlund", 4, "smasma", "smasma");
+            spelare = new Spelare("Smartin Smartlund", 4, "smasma", "smasma", true);
             m_Spelare.Add(spelare);
         }
         public string LoggaIn(string Användarnamn, string Lösenord)
         {
-            return "AS";
+            for (int i = 0; i < Antal(); i++)
+            {
+                if (Användarnamn == m_Spelare[i].getAnvändarnamn() && Lösenord == m_Spelare[i].getLösenord())
+                {
+                    var adminsidaForm = new AdminSida();
+                    var inloggningsForm = new Inloggning();
+                    var användarsidaForm = new Användarsida();
+
+                    if (m_Spelare[i].getAdmin() == true)
+                    {
+                        adminsidaForm.Show();
+                        inloggningsForm.Hide();                       
+                    }
+
+                    else
+                    {
+                        användarsidaForm.Show();
+                        inloggningsForm.Hide();
+                    }
+                    return Användarnamn;
+                }
+            }
+
+            return "Fel användarnamn eller lösenord.";
         }
 
         public string SkapaAnvändare(string Förnamn, string efternamn, string Användarnamn, string Lösenord, string Lösenord2, string Email)
         {
-             //kollar om det finns samma användarnamn redan
-            for (int i = 0; i < Antal() ; i++)
+            //kollar om det finns samma användarnamn redan
+            for (int i = 0; i < Antal(); i++)
             {
                 if (Användarnamn == m_Spelare[i].getNamn())
                 {
-                    
+
                 }
             }
 
-            Spelare spelare = new Spelare(Förnamn + " " + efternamn , Antal() + 1 , Användarnamn, Lösenord);
+            Spelare spelare = new Spelare(Förnamn + " " + efternamn, Antal() + 1, Användarnamn, Lösenord, false);
             m_Spelare.Add(spelare);
 
             return "Hej";
         }
+
+
+
+
+        public void ÖppnaAnvändarsida(bool Admin)
+        {
+
+        }
+
+
     }
 }
 

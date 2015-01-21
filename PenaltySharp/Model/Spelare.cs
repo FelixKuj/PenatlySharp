@@ -15,16 +15,10 @@ namespace PenaltySharp.Model
         private int m_id;
         private string m_användarnamn;
         private string m_lösenord;
-
+        private bool m_admin;
         //(list)
          
-        public Spelare()
-        {
-            this.m_namn = "Felix Kujanpää";
-            this.m_id = 0;
-            this.m_användarnamn = "FelixKuj";
-            this.m_lösenord = "QWE123";
-        }
+      
 
         /// <summary>
         /// Konstruktor
@@ -36,12 +30,14 @@ namespace PenaltySharp.Model
         public Spelare(string inNamn,
                      int inId,
                      string inAnvändarnamn,
-                     string inLösenord)
+                     string inLösenord,
+                     bool inAdmin)
         {
             this.m_namn = inNamn;
             this.m_id = inId;
             this.m_användarnamn = inAnvändarnamn;
             this.m_lösenord = inLösenord;
+            this.m_admin = inAdmin;
         }
 
         /// <summary>
@@ -99,6 +95,21 @@ namespace PenaltySharp.Model
         public void setLösenord(string lösenord)
         {
             this.m_lösenord = lösenord;
+        }
+
+        /// <summary>
+        /// Returnerar Admin
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Admin</returns>
+        public bool getAdmin()
+        {
+            return this.m_admin;
+        }
+
+        public void setAdmin(bool admin)
+        {
+            this.m_admin = admin;
         }
     }
 }

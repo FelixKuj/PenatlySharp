@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
+using System.Windows.Forms;
 
 namespace PenaltySharp.Controller
 {
@@ -80,6 +81,15 @@ namespace PenaltySharp.Controller
             regel = new Regler("Ramla på matchuppvärmning", 11, 20);
             m_Regler.Add(regel);
 
+        }
+        public void VisaRegler()
+        {
+            string visaregler = "";
+            for (int regelnr = 0; regelnr < m_Regler.Count; regelnr++)
+            {
+                visaregler = visaregler + "\n" + m_Regler[regelnr];
+            }
+            MessageBox.Show(visaregler);
         }
     }
 }

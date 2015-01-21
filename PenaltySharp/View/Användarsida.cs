@@ -17,11 +17,13 @@ namespace PenaltySharp.View
     {
         BöterController bötercontroller;
         SpelareController spelarController;
+        RegelController regelcontroller;
         public Användarsida()
         {
             InitializeComponent();
             bötercontroller = new BöterController();
             spelarController = new SpelareController();
+            regelcontroller = new RegelController();
         }
 
         private void btn_Användarsida_Spealre_Click(object sender, EventArgs e)
@@ -37,6 +39,11 @@ namespace PenaltySharp.View
         private void Användarsida_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Användarsida_Regler_Click(object sender, EventArgs e)
+        {
+            regelcontroller.VisaRegler();
         }
     }
 }

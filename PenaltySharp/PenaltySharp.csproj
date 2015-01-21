@@ -46,6 +46,12 @@
   <ItemGroup>
     <Compile Include="Controller\RegelController.cs" />
     <Compile Include="Controller\SpelareController.cs" />
+    <Compile Include="View\AdminSida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminSida.Designer.cs">
+      <DependentUpon>AdminSida.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AdminSida.resx">
+      <DependentUpon>AdminSida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Användarsida.resx">
       <DependentUpon>Användarsida.cs</DependentUpon>
     </EmbeddedResource>

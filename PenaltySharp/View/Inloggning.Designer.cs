@@ -88,6 +88,7 @@
             this.btn_InloggningsSida_Registrera.TabIndex = 5;
             this.btn_InloggningsSida_Registrera.Text = "Registrera";
             this.btn_InloggningsSida_Registrera.UseVisualStyleBackColor = true;
+            this.btn_InloggningsSida_Registrera.Click += new System.EventHandler(this.btn_InloggningsSida_Registrera_Click);
             // 
             // label3
             // 

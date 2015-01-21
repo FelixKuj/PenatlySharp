@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PenaltySharp.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -78,7 +79,7 @@ namespace PenaltySharp.Controller
                         inloggningsForm.Hide();                       
                     }
 
-                    else if (m_Spelare[i].getAdmin() == false)
+                    else
                     {
                         användarsidaForm.Show();
                         inloggningsForm.Hide();
@@ -88,6 +89,31 @@ namespace PenaltySharp.Controller
             }
 
             return "Fel användarnamn eller lösenord.";
+        }
+
+        public string SkapaAnvändare(string Förnamn, string efternamn, string Användarnamn, string Lösenord, string Lösenord2, string Email)
+        {
+             //kollar om det finns samma användarnamn redan finns
+            for (int i = 0; i < Antal() ; i++)
+            {
+                if (Användarnamn == m_Spelare[i].getAnvändarnamn())
+                {
+                    return "Användarnamn upptaget";
+                }
+            }
+
+            if (Lösenord == Lösenord2) // lösenorden är lika?
+            {
+                Spelare spelare = new Spelare(Förnamn + " " + efternamn, Antal() + 1, Användarnamn, Lösenord, false);
+                m_Spelare.Add(spelare);
+            }
+            else
+            {
+                return "lösenordet fel";
+            }
+            
+
+            return "Ny användare skapad";
         }
     }
 }

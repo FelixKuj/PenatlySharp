@@ -20,8 +20,8 @@ namespace PenaltySharp.View
         public Inloggning()
         {
             InitializeComponent();
-            spelarController = new SpelareController();
-            spelarController.TestData();
+            spelarController = ServiceProvider.GetSpelareService();
+            
         }
 
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)

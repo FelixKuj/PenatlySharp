@@ -45,5 +45,10 @@ namespace PenaltySharp.View
         {
             regelcontroller.VisaRegler();
         }
+
+        private void btn_Användarsida_LoggaUt_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -74,6 +74,7 @@
             this.btn_AdminSida_LoggaUt.TabIndex = 9;
             this.btn_AdminSida_LoggaUt.Text = "Logga ut";
             this.btn_AdminSida_LoggaUt.UseVisualStyleBackColor = true;
+            this.btn_AdminSida_LoggaUt.Click += new System.EventHandler(this.btn_AdminSida_LoggaUt_Click);
             // 
             // lv_AdminSida
             // 

@@ -27,6 +27,8 @@ namespace PenaltySharp.View
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)
         {
             string information = spelarController.LoggaIn(tbx_InloggningsSida_Användarnamn.Text, tbx_InloggningsSida_Lösenord.Text);
+            tbx_InloggningsSida_Användarnamn.Clear();
+            tbx_InloggningsSida_Lösenord.Clear();
         }
 
         private void btn_InloggningsSida_Registrera_Click(object sender, EventArgs e)

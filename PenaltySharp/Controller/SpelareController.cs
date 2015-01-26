@@ -1,5 +1,4 @@
-﻿using PenaltySharp.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -70,7 +69,7 @@ namespace PenaltySharp.Controller
                 if (Användarnamn == m_Spelare[i].getAnvändarnamn() && Lösenord == m_Spelare[i].getLösenord())
                 {
                     var adminsidaForm = new AdminSida();
-                    var inloggningsForm = new Inloggning();
+                    Inloggning inloggningsForm = new Inloggning();
                     var användarsidaForm = new Användarsida();
 
                     if (m_Spelare[i].getAdmin() == true)

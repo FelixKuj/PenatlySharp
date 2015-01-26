@@ -13,6 +13,7 @@ namespace PenaltySharp.Controller
 {
     class RegelController
     {
+        ReglerSida regelsida;
         private List<Regler> m_Regler;
 
         public RegelController()
@@ -81,15 +82,22 @@ namespace PenaltySharp.Controller
             regel = new Regler("Ramla på matchuppvärmning", 11, 20);
             m_Regler.Add(regel);
 
+
         }
         public void VisaRegler()
         {
-            string visaregler = "";
+            TestData();
+            string visaregler = "Regler";
+            string visaböter = "";
             for (int regelnr = 0; regelnr < m_Regler.Count; regelnr++)
             {
-                visaregler = visaregler + "\n" + m_Regler[regelnr].getNamn + m_Regler[regelnr].getId + m_Regler[regelnr].getBöter;
+                visaregler += "\n" + "\n" + (m_Regler[regelnr].getId() + 1).ToString() + ".  " + m_Regler[regelnr].getNamn().ToString();
+                visaböter += "\n" + "\n" + m_Regler[regelnr].getBöter().ToString() + "kr";
             }
-            MessageBox.Show(visaregler);
+            regelsida = new ReglerSida();
+            regelsida.tbx_ReglerSida_Regel.Text = visaregler;
+            regelsida.tbx_ReglerSida_Böter.Text = visaböter;
+            regelsida.Show();
         }
     }
 }

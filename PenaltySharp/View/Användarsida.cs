@@ -22,8 +22,8 @@ namespace PenaltySharp.View
         {
             InitializeComponent();
             bötercontroller = new BöterController();
-            spelarController = new SpelareController();
-            regelcontroller = new RegelController();
+            spelarController = ServiceProvider.GetSpelareService();
+            regelcontroller = ServiceProvider.GetReglerService();
         }
 
         private void btn_Användarsida_Spealre_Click(object sender, EventArgs e)

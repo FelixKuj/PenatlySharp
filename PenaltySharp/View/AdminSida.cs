@@ -19,7 +19,7 @@ namespace PenaltySharp.View
         public AdminSida()
         {
             InitializeComponent();
-            regelcontroller = new RegelController();
+            regelcontroller = ServiceProvider.GetReglerService();
             spelarController = ServiceProvider.GetSpelareService();
             
         }

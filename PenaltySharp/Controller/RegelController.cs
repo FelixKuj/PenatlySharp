@@ -19,6 +19,7 @@ namespace PenaltySharp.Controller
         public RegelController()
         {
             m_Regler = new List<Regler>();
+            TestData();
         }
 
         public void Add(Regler item)

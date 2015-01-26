@@ -38,7 +38,7 @@
             this.tbx_ReglerSida_Regel.Multiline = true;
             this.tbx_ReglerSida_Regel.Name = "tbx_ReglerSida_Regel";
             this.tbx_ReglerSida_Regel.ReadOnly = true;
-            this.tbx_ReglerSida_Regel.Size = new System.Drawing.Size(239, 508);
+            this.tbx_ReglerSida_Regel.Size = new System.Drawing.Size(239, 326);
             this.tbx_ReglerSida_Regel.TabIndex = 0;
             // 
             // tbx_ReglerSida_Böter
@@ -47,14 +47,14 @@
             this.tbx_ReglerSida_Böter.Multiline = true;
             this.tbx_ReglerSida_Böter.Name = "tbx_ReglerSida_Böter";
             this.tbx_ReglerSida_Böter.ReadOnly = true;
-            this.tbx_ReglerSida_Böter.Size = new System.Drawing.Size(75, 508);
+            this.tbx_ReglerSida_Böter.Size = new System.Drawing.Size(75, 326);
             this.tbx_ReglerSida_Böter.TabIndex = 1;
             // 
             // ReglerSida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 533);
+            this.ClientSize = new System.Drawing.Size(373, 349);
             this.Controls.Add(this.tbx_ReglerSida_Böter);
             this.Controls.Add(this.tbx_ReglerSida_Regel);
             this.Name = "ReglerSida";

@@ -31,7 +31,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbx_RegistreringsSida_Email = new System.Windows.Forms.TextBox();
             this.tbx_RegistreringsSida_LösenordIgen = new System.Windows.Forms.TextBox();
             this.tbx_RegistreringsSida_lösenord = new System.Windows.Forms.TextBox();
             this.tbx_RegistreringsSida_användarnamn = new System.Windows.Forms.TextBox();
@@ -78,12 +78,12 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Fyll i nedstående fält för att registrera dig";
             // 
-            // textBox4
+            // tbx_RegistreringsSida_Email
             // 
-            this.textBox4.Location = new System.Drawing.Point(204, 342);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 20);
-            this.textBox4.TabIndex = 6;
+            this.tbx_RegistreringsSida_Email.Location = new System.Drawing.Point(204, 342);
+            this.tbx_RegistreringsSida_Email.Name = "tbx_RegistreringsSida_Email";
+            this.tbx_RegistreringsSida_Email.Size = new System.Drawing.Size(162, 20);
+            this.tbx_RegistreringsSida_Email.TabIndex = 6;
             // 
             // tbx_RegistreringsSida_LösenordIgen
             // 
@@ -219,7 +219,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbx_RegistreringsSida_Email);
             this.Controls.Add(this.tbx_RegistreringsSida_LösenordIgen);
             this.Controls.Add(this.tbx_RegistreringsSida_lösenord);
             this.Controls.Add(this.tbx_RegistreringsSida_användarnamn);
@@ -246,7 +246,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbx_RegistreringsSida_Email;
         private System.Windows.Forms.TextBox tbx_RegistreringsSida_LösenordIgen;
         private System.Windows.Forms.TextBox tbx_RegistreringsSida_lösenord;
         private System.Windows.Forms.TextBox tbx_RegistreringsSida_användarnamn;

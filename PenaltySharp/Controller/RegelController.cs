@@ -87,12 +87,12 @@ namespace PenaltySharp.Controller
         public void VisaRegler()
         {
             TestData();
-            string visaregler = "Regler";
-            string visaböter = "";
+            string visaregler = "Regler" + System.Environment.NewLine;
+            string visaböter = System.Environment.NewLine;
             for (int regelnr = 0; regelnr < m_Regler.Count; regelnr++)
             {
-                visaregler += "\n" + "\n" + (m_Regler[regelnr].getId() + 1).ToString() + ".  " + m_Regler[regelnr].getNamn().ToString();
-                visaböter += "\n" + "\n" + m_Regler[regelnr].getBöter().ToString() + "kr";
+                visaregler += (m_Regler[regelnr].getId() + 1).ToString() + ".  " + m_Regler[regelnr].getNamn().ToString() + System.Environment.NewLine;
+                visaböter += m_Regler[regelnr].getBöter().ToString() + "kr" + System.Environment.NewLine;
             }
             regelsida = new ReglerSida();
             regelsida.tbx_ReglerSida_Regel.Text = visaregler;

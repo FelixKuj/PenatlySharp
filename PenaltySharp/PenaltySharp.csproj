@@ -47,6 +47,7 @@
     <Compile Include="Controller\BöterController.cs" />
     <Compile Include="Controller\RegelController.cs" />
     <Compile Include="Controller\SpelareController.cs" />
+    <Compile Include="Service\ServiceProvider.cs" />
     <Compile Include="View\AdminSida.cs">
       <SubType>Form</SubType>
     </Compile>

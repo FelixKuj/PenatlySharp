@@ -37,6 +37,7 @@
             this.tbx_ReglerSida_Regel.Location = new System.Drawing.Point(13, 13);
             this.tbx_ReglerSida_Regel.Multiline = true;
             this.tbx_ReglerSida_Regel.Name = "tbx_ReglerSida_Regel";
+            this.tbx_ReglerSida_Regel.ReadOnly = true;
             this.tbx_ReglerSida_Regel.Size = new System.Drawing.Size(239, 508);
             this.tbx_ReglerSida_Regel.TabIndex = 0;
             // 
@@ -45,6 +46,7 @@
             this.tbx_ReglerSida_Böter.Location = new System.Drawing.Point(286, 13);
             this.tbx_ReglerSida_Böter.Multiline = true;
             this.tbx_ReglerSida_Böter.Name = "tbx_ReglerSida_Böter";
+            this.tbx_ReglerSida_Böter.ReadOnly = true;
             this.tbx_ReglerSida_Böter.Size = new System.Drawing.Size(75, 508);
             this.tbx_ReglerSida_Böter.TabIndex = 1;
             // 

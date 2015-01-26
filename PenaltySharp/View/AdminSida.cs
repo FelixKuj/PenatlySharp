@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading.Tasks;
 using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using System.Windows.Forms;
@@ -26,6 +25,11 @@ namespace PenaltySharp.View
         private void btn_AdminSida_Regler_Click(object sender, EventArgs e)
         {
             regelcontroller.VisaRegler();
+        }
+
+        private void btn_AdminSida_LoggaUt_Click(object sender, EventArgs e)
+        {
+            this.Close();          
         }
     }
 }

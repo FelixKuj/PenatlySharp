@@ -72,6 +72,7 @@
             this.btn_Användarsida_LoggaUt.TabIndex = 4;
             this.btn_Användarsida_LoggaUt.Text = "Logga ut";
             this.btn_Användarsida_LoggaUt.UseVisualStyleBackColor = true;
+            this.btn_Användarsida_LoggaUt.Click += new System.EventHandler(this.btn_Användarsida_LoggaUt_Click);
             // 
             // label3
             // 

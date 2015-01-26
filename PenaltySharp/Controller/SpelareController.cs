@@ -16,6 +16,7 @@ namespace PenaltySharp.Controller
         public SpelareController()
         {
             m_Spelare = new List<Spelare>();
+            TestData();
         }
 
         public void LäggaTill(Spelare item)
@@ -92,6 +93,7 @@ namespace PenaltySharp.Controller
 
         public string SkapaAnvändare(string Förnamn, string efternamn, string Användarnamn, string Lösenord, string Lösenord2, string Email)
         {
+            
              //kollar om det finns samma användarnamn redan finns
             for (int i = 0; i < Antal() ; i++)
             {

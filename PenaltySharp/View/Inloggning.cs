@@ -17,18 +17,11 @@ namespace PenaltySharp.View
     {
 
         SpelareController spelarController;
-        RegelController regelcontroller;
         public Inloggning()
         {
-            init();
-        }
-        void init()
-        {
             InitializeComponent();
-            spelarController = new SpelareController();
-            regelcontroller = new RegelController();
-            spelarController.TestData();
-            regelcontroller.TestData();
+            spelarController = ServiceProvider.GetSpelareService();
+            
         }
 
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)

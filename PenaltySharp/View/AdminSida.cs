@@ -15,16 +15,19 @@ namespace PenaltySharp.View
     public partial class AdminSida : Form
     {
         RegelController regelcontroller;
+        SpelareController spelarController;
         public AdminSida()
         {
             InitializeComponent();
-            regelcontroller = new RegelController();
-
+            regelcontroller = ServiceProvider.GetReglerService();
+            spelarController = ServiceProvider.GetSpelareService();
+            
         }
 
         private void btn_AdminSida_Regler_Click(object sender, EventArgs e)
         {
-            regelcontroller.VisaRegler();
+            regelcontroller.VisaRegler();           
+            
         }
 
         private void btn_AdminSida_LoggaUt_Click(object sender, EventArgs e)

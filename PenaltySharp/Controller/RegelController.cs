@@ -86,7 +86,6 @@ namespace PenaltySharp.Controller
         }
         public void VisaRegler()
         {
-            TestData();
             string visaregler = "Regler" + System.Environment.NewLine;
             string visaböter = System.Environment.NewLine;
             for (int regelnr = 0; regelnr < m_Regler.Count; regelnr++)

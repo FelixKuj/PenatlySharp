@@ -20,6 +20,7 @@ namespace PenaltySharp
     class ServiceProvider
     {
         static SpelareController _spelareControllerService;
+        static RegelController _regelControllerSevice;
         public static SpelareController GetSpelareService()
         {
             if (_spelareControllerService == null)
@@ -28,6 +29,13 @@ namespace PenaltySharp
             return _spelareControllerService;
         }
 
+        public static RegelController GetReglerService()
+        {
+            if (_regelControllerSevice == null)
+                _regelControllerSevice = new RegelController();
+
+            return _regelControllerSevice;
+        }
 
 
     }

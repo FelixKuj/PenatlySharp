@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
 using System.Windows.Forms;

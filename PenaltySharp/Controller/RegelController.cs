@@ -13,6 +13,7 @@ namespace PenaltySharp.Controller
     [Serializable]
     class RegelController
     {
+        int id = 0;
         ReglerSida regelsida;
         private List<Regler> m_Regler;
 
@@ -57,34 +58,55 @@ namespace PenaltySharp.Controller
 
         public void TestData()
         {
+            
             Regler
-            regel = new Regler("Sen ankomst till träning", 0, 50);
+            regel = new Regler("Sen ankomst till träning", id, 50);
             m_Regler.Add(regel);
-            regel = new Regler("Sen ankomst till match", 1, 100);
+            id++;
+            regel = new Regler("Sen ankomst till match", id, 100);
             m_Regler.Add(regel);
-            regel = new Regler("Mobil som ringer under samling/genomgång", 2, 50);
+            id++;
+            regel = new Regler("Mobil som ringer under samling/genomgång", id, 50);
             m_Regler.Add(regel);
-            regel = new Regler("Glömd utrustning till bortamatch", 3, 100);
+            id++;
+            regel = new Regler("Glömd utrustning till bortamatch", id, 100);
             m_Regler.Add(regel);
-            regel = new Regler("Oreda på platsen", 4, 50);
+            id++;
+            regel = new Regler("Oreda på platsen", id, 50);
             m_Regler.Add(regel);
-            regel = new Regler("10 min misconduct", 5, 100);
+            id++;
+            regel = new Regler("10 min misconduct", id, 100);
             m_Regler.Add(regel);
-            regel = new Regler("Matchstraff för snack", 6, 200);
+            id++;
+            regel = new Regler("Matchstraff för snack", id, 200);
             m_Regler.Add(regel);
-            regel = new Regler("Hångel på lokal", 7, 50);
+            id++;
+            regel = new Regler("Hångel på lokal", id, 50);
             m_Regler.Add(regel);
-            regel = new Regler("Ta över någons ex", 8, 300);
+            id++;
+            regel = new Regler("Ta över någons ex", id, 300);
             m_Regler.Add(regel);
-            regel = new Regler("Avslagen klubba", 9, 500);
+            id++;
+            regel = new Regler("Avslagen klubba", id, 500);
             m_Regler.Add(regel);
-            regel = new Regler("Bild i tidningen", 10, 20);
+            id++;
+            regel = new Regler("Bild i tidningen", id, 20);
             m_Regler.Add(regel);
-            regel = new Regler("Ramla på matchuppvärmning", 11, 20);
+            id++;
+            regel = new Regler("Ramla på matchuppvärmning", id, 20);
             m_Regler.Add(regel);
 
+            if (regelsida.skaparegel == true)
+            {
+                id++;
+                regel = new Regler(regelsida.tbx_ReglerSida_Regel.Text, id, Convert.ToInt32(regelsida.tbx_ReglerSida_Böter));
+                m_Regler.Add(regel);
+                regelsida.skaparegel = false;
 
+            }
         }
+
+        
         public void VisaRegler()
         {
             string visaregler = "Regler" + System.Environment.NewLine;

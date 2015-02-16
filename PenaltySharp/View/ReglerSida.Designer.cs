@@ -63,6 +63,7 @@
             this.reglerSida_btn_LäggaTillRegel.TabIndex = 2;
             this.reglerSida_btn_LäggaTillRegel.Text = "Lägg till ny regel";
             this.reglerSida_btn_LäggaTillRegel.UseVisualStyleBackColor = true;
+            this.reglerSida_btn_LäggaTillRegel.Click += new System.EventHandler(this.reglerSida_btn_LäggaTillRegel_Click);
             // 
             // ReglerSida_tbx_RegelNamn
             // 

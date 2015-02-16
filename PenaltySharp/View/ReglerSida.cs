@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PenaltySharp.Controller;
 
 namespace PenaltySharp.View
 {
@@ -15,6 +16,13 @@ namespace PenaltySharp.View
         public ReglerSida()
         {
             InitializeComponent();
+        }
+        RegelController regelcontroller;
+        public bool skaparegel = false;
+        private void reglerSida_btn_LäggaTillRegel_Click(object sender, EventArgs e)
+        {
+            regelcontroller = ServiceProvider.GetReglerService();
+            regelcontroller.TestData();
         }
     }
 }

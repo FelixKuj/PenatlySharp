@@ -96,7 +96,9 @@ namespace PenaltySharp.Controller
             }
             regelsida = new ReglerSida();
             regelsida.tbx_ReglerSida_Regel.Text = visaregler;
+            regelsida.tbx_ReglerSida_Regel.AppendText("Bryt dem inte!");
             regelsida.tbx_ReglerSida_Böter.Text = visaböter;
+            
             regelsida.Show();
         }
     }

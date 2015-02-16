@@ -9,6 +9,7 @@ using PenaltySharp.View;
 
 namespace PenaltySharp.Model
 {
+    [Serializable]
     class Spelare
     {
         private string m_namn;

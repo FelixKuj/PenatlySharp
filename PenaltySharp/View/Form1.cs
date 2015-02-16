@@ -20,7 +20,11 @@ namespace PenaltySharp
         {
             
             InitializeComponent();
-            
+            this.ShowInTaskbar = false;
+            this.WindowState = FormWindowState.Minimized;
+            this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            View.Inloggning inloggningsForm = new Inloggning();
+            inloggningsForm.ShowDialog();
         }
     }
 }

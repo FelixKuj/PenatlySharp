@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace PenaltySharp.Controller
 {
+    [Serializable]
     class RegelController
     {
         ReglerSida regelsida;

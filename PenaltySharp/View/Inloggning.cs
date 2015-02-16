@@ -10,6 +10,8 @@ using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace PenaltySharp.View
 {
@@ -21,7 +23,7 @@ namespace PenaltySharp.View
         {
             InitializeComponent();
             spelarController = ServiceProvider.GetSpelareService();
-            
+            tbx_InloggningsSida_Användarnamn.Focus();
         }
 
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)
@@ -35,6 +37,19 @@ namespace PenaltySharp.View
         {
             var registerForm = new Register();
             registerForm.Show();
+        }
+
+        private void tbx_InloggningsSida_Lösenord_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_InloggningsSida_Inloggning.PerformClick();
+            }
+        }
+
+        private void Inloggning_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
        

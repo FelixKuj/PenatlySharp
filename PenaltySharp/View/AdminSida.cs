@@ -22,6 +22,10 @@ namespace PenaltySharp.View
             regelcontroller = ServiceProvider.GetReglerService();
             spelarController = ServiceProvider.GetSpelareService();
             cbx_AdminSida_Spelare.Show();
+            for (int index = 0; index < spelarController.Antal(); index++)
+            {
+                cbx_AdminSida_Spelare.Items.Add(spelarController.GetAnvändarnamn(index));
+            }
             
         }
 

@@ -19,7 +19,7 @@ namespace PenaltySharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.Inloggning());
+            Application.Run(new Form1());
 
         }
     }

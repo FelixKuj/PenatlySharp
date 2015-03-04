@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lw_ReglerSida = new System.Windows.Forms.ListView();
+            this.Column_Regler = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Column_Böter = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // reglerSida_btn_LäggaTillRegel
@@ -80,11 +82,26 @@
             // 
             // lw_ReglerSida
             // 
+            this.lw_ReglerSida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Column_Regler,
+            this.Column_Böter});
+            this.lw_ReglerSida.GridLines = true;
             this.lw_ReglerSida.Location = new System.Drawing.Point(16, 13);
             this.lw_ReglerSida.Name = "lw_ReglerSida";
             this.lw_ReglerSida.Size = new System.Drawing.Size(346, 330);
             this.lw_ReglerSida.TabIndex = 7;
             this.lw_ReglerSida.UseCompatibleStateImageBehavior = false;
+            this.lw_ReglerSida.View = System.Windows.Forms.View.Details;
+            // 
+            // Column_Regler
+            // 
+            this.Column_Regler.Text = "Regler";
+            this.Column_Regler.Width = 255;
+            // 
+            // Column_Böter
+            // 
+            this.Column_Böter.Text = "Böter";
+            this.Column_Böter.Width = 100;
             // 
             // ReglerSida
             // 
@@ -112,5 +129,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView lw_ReglerSida;
+        private System.Windows.Forms.ColumnHeader Column_Regler;
+        private System.Windows.Forms.ColumnHeader Column_Böter;
     }
 }

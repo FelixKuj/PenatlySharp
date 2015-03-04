@@ -58,7 +58,7 @@ namespace PenaltySharp.Controller
 
         public void TestData()
         {
-            
+
             Regler
             regel = new Regler("Sen ankomst till träning", id, 50);
             m_Regler.Add(regel);
@@ -96,17 +96,17 @@ namespace PenaltySharp.Controller
             regel = new Regler("Ramla på matchuppvärmning", id, 20);
             m_Regler.Add(regel);
 
-            if (regelsida.skaparegel == true)
-            {
-                id++;
-                regel = new Regler(regelsida.tbx_ReglerSida_Regel.Text, id, Convert.ToInt32(regelsida.tbx_ReglerSida_Böter));
-                m_Regler.Add(regel);
-                regelsida.skaparegel = false;
+            //if (regelsida.skaparegel == true)
+            //{
+            //    id++;
+            //    regel = new Regler(regelsida.tbx_ReglerSida_Regel.Text, id, Convert.ToInt32(regelsida.tbx_ReglerSida_Böter));
+            //    m_Regler.Add(regel);
+            //    regelsida.skaparegel = false;
 
-            }
+            //}
         }
 
-        
+
         public void VisaRegler()
         {
             string visaregler = "Regler" + System.Environment.NewLine;

@@ -51,5 +51,6 @@ namespace PenaltySharp.View
         {
             this.Close();
         }
+
     }
 }

@@ -13,16 +13,40 @@ namespace PenaltySharp.View
 {
     public partial class ReglerSida : Form
     {
+        RegelController regelcontroller;
         public ReglerSida()
         {
             InitializeComponent();
+            regelcontroller = ServiceProvider.GetReglerService();
+            updateListView();
         }
-        RegelController regelcontroller;
+        
         public bool skaparegel = false;
         private void reglerSida_btn_LäggaTillRegel_Click(object sender, EventArgs e)
         {
-            regelcontroller = ServiceProvider.GetReglerService();
-            regelcontroller.TestData();
+            regelcontroller.Add(new Model.Regler(ReglerSida_tbx_RegelNamn.Text, 0, Convert.ToInt32(ReglerSida_tbx_RegelKostnad.Text)));
+            updateListView();
+        }
+        private void updateListView()
+        {
+
+            lv_ReglerSida.Items.Clear();
+            string[] columns = new string[2];
+            ListViewItem item;
+            for (int i = 0; i < regelcontroller.Count(); i++)
+            {
+                columns[0] = regelcontroller.Get(i).getNamn();
+                columns[1] = regelcontroller.Get(i).getBöter().ToString();
+                item = new ListViewItem(columns);
+                lv_ReglerSida.Items.Add(item);
+            }
+            for (int i = 0; i < columns.Length; i++)
+            {
+
+                lv_ReglerSida.AutoResizeColumn(i,
+                ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
+
         }
     }
 }

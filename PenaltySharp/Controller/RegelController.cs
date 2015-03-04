@@ -96,32 +96,25 @@ namespace PenaltySharp.Controller
             regel = new Regler("Ramla på matchuppvärmning", id, 20);
             m_Regler.Add(regel);
 
-            if (regelsida.skaparegel == true)
-            {
-                id++;
-                regel = new Regler(regelsida.tbx_ReglerSida_Regel.Text, id, Convert.ToInt32(regelsida.tbx_ReglerSida_Böter));
-                m_Regler.Add(regel);
-                regelsida.skaparegel = false;
+            //if (regelsida.skaparegel == true)
+            //{
+            //    id++;
+            //    regel = new Regler(regelsida.tbx_ReglerSida_Regel.Text, id, Convert.ToInt32(regelsida.tbx_ReglerSida_Böter));
+            //    m_Regler.Add(regel);
+            //    regelsida.skaparegel = false;
 
-            }
+            //}
         }
 
         
         public void VisaRegler()
         {
-            string visaregler = "Regler" + System.Environment.NewLine;
-            string visaböter = System.Environment.NewLine;
-            for (int regelnr = 0; regelnr < m_Regler.Count; regelnr++)
-            {
-                visaregler += (m_Regler[regelnr].getId() + 1).ToString() + ".  " + m_Regler[regelnr].getNamn().ToString() + System.Environment.NewLine;
-                visaböter += m_Regler[regelnr].getBöter().ToString() + "kr" + System.Environment.NewLine;
-            }
-            regelsida = new ReglerSida();
-            regelsida.tbx_ReglerSida_Regel.Text = visaregler;
-            regelsida.tbx_ReglerSida_Regel.AppendText("Bryt dem inte!");
-            regelsida.tbx_ReglerSida_Böter.Text = visaböter;
-            
-            regelsida.Show();
+
+           
         }
+        
     }
 }
+
+
+

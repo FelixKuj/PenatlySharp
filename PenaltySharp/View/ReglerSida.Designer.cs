@@ -33,7 +33,7 @@
             this.ReglerSida_tbx_RegelKostnad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lw_ReglerSida = new System.Windows.Forms.ListView();
+            this.lv_ReglerSida = new System.Windows.Forms.ListView();
             this.Column_Regler = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Column_Böter = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
@@ -80,18 +80,18 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Regel böter";
             // 
-            // lw_ReglerSida
+            // lv_ReglerSida
             // 
-            this.lw_ReglerSida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_ReglerSida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Column_Regler,
             this.Column_Böter});
-            this.lw_ReglerSida.GridLines = true;
-            this.lw_ReglerSida.Location = new System.Drawing.Point(16, 13);
-            this.lw_ReglerSida.Name = "lw_ReglerSida";
-            this.lw_ReglerSida.Size = new System.Drawing.Size(346, 330);
-            this.lw_ReglerSida.TabIndex = 7;
-            this.lw_ReglerSida.UseCompatibleStateImageBehavior = false;
-            this.lw_ReglerSida.View = System.Windows.Forms.View.Details;
+            this.lv_ReglerSida.GridLines = true;
+            this.lv_ReglerSida.Location = new System.Drawing.Point(16, 13);
+            this.lv_ReglerSida.Name = "lv_ReglerSida";
+            this.lv_ReglerSida.Size = new System.Drawing.Size(346, 330);
+            this.lv_ReglerSida.TabIndex = 7;
+            this.lv_ReglerSida.UseCompatibleStateImageBehavior = false;
+            this.lv_ReglerSida.View = System.Windows.Forms.View.Details;
             // 
             // Column_Regler
             // 
@@ -108,7 +108,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(374, 447);
-            this.Controls.Add(this.lw_ReglerSida);
+            this.Controls.Add(this.lv_ReglerSida);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ReglerSida_tbx_RegelKostnad);
@@ -128,8 +128,8 @@
         private System.Windows.Forms.TextBox ReglerSida_tbx_RegelKostnad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView lw_ReglerSida;
         private System.Windows.Forms.ColumnHeader Column_Regler;
         private System.Windows.Forms.ColumnHeader Column_Böter;
+        public System.Windows.Forms.ListView lv_ReglerSida;
     }
 }

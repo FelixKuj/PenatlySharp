@@ -65,6 +65,7 @@
             this.btn_AdminSida_Spelare.TabIndex = 8;
             this.btn_AdminSida_Spelare.Text = "Spelare";
             this.btn_AdminSida_Spelare.UseVisualStyleBackColor = true;
+            this.btn_AdminSida_Spelare.Click += new System.EventHandler(this.btn_AdminSida_Spelare_Click);
             // 
             // btn_AdminSida_LoggaUt
             // 

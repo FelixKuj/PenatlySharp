@@ -21,6 +21,11 @@ namespace PenaltySharp.View
             InitializeComponent();
             regelcontroller = ServiceProvider.GetReglerService();
             spelarController = ServiceProvider.GetSpelareService();
+            cbx_AdminSida_Spelare.Show();
+            for (int index = 0; index < spelarController.Antal(); index++)
+            {
+                cbx_AdminSida_Spelare.Items.Add(spelarController.GetAnvändarnamn(index));
+            }
             
         }
 
@@ -33,6 +38,11 @@ namespace PenaltySharp.View
         private void btn_AdminSida_LoggaUt_Click(object sender, EventArgs e)
         {
             this.Close();          
+        }
+
+        private void btn_AdminSida_Spelare_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

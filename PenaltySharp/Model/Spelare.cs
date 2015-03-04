@@ -9,6 +9,7 @@ using PenaltySharp.View;
 
 namespace PenaltySharp.Model
 {
+    [Serializable]
     class Spelare
     {
         private string m_namn;
@@ -17,8 +18,8 @@ namespace PenaltySharp.Model
         private string m_lösenord;
         private bool m_admin;
         //(list)
-
-
+         
+      
 
         /// <summary>
         /// Konstruktor
@@ -46,7 +47,7 @@ namespace PenaltySharp.Model
         /// <returns>Namn</param>
         public string getNamn()
         {
-            return this.m_namn;
+           return this.m_namn;
         }
 
         /// <summary>

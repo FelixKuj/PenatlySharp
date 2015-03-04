@@ -42,7 +42,7 @@
             this.btn_InloggningsSida_Inloggning.Location = new System.Drawing.Point(127, 123);
             this.btn_InloggningsSida_Inloggning.Name = "btn_InloggningsSida_Inloggning";
             this.btn_InloggningsSida_Inloggning.Size = new System.Drawing.Size(75, 23);
-            this.btn_InloggningsSida_Inloggning.TabIndex = 0;
+            this.btn_InloggningsSida_Inloggning.TabIndex = 2;
             this.btn_InloggningsSida_Inloggning.Text = "Logga in";
             this.btn_InloggningsSida_Inloggning.UseVisualStyleBackColor = true;
             this.btn_InloggningsSida_Inloggning.Click += new System.EventHandler(this.btn_InloggningsSida_Inloggning_Click);
@@ -70,7 +70,7 @@
             this.tbx_InloggningsSida_Användarnamn.Location = new System.Drawing.Point(102, 38);
             this.tbx_InloggningsSida_Användarnamn.Name = "tbx_InloggningsSida_Användarnamn";
             this.tbx_InloggningsSida_Användarnamn.Size = new System.Drawing.Size(100, 20);
-            this.tbx_InloggningsSida_Användarnamn.TabIndex = 3;
+            this.tbx_InloggningsSida_Användarnamn.TabIndex = 0;
             // 
             // tbx_InloggningsSida_Lösenord
             // 
@@ -78,14 +78,15 @@
             this.tbx_InloggningsSida_Lösenord.Name = "tbx_InloggningsSida_Lösenord";
             this.tbx_InloggningsSida_Lösenord.PasswordChar = '•';
             this.tbx_InloggningsSida_Lösenord.Size = new System.Drawing.Size(100, 20);
-            this.tbx_InloggningsSida_Lösenord.TabIndex = 4;
+            this.tbx_InloggningsSida_Lösenord.TabIndex = 1;
+            this.tbx_InloggningsSida_Lösenord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbx_InloggningsSida_Lösenord_KeyDown);
             // 
             // btn_InloggningsSida_Registrera
             // 
             this.btn_InloggningsSida_Registrera.Location = new System.Drawing.Point(269, 185);
             this.btn_InloggningsSida_Registrera.Name = "btn_InloggningsSida_Registrera";
             this.btn_InloggningsSida_Registrera.Size = new System.Drawing.Size(75, 23);
-            this.btn_InloggningsSida_Registrera.TabIndex = 5;
+            this.btn_InloggningsSida_Registrera.TabIndex = 3;
             this.btn_InloggningsSida_Registrera.Text = "Registrera";
             this.btn_InloggningsSida_Registrera.UseVisualStyleBackColor = true;
             this.btn_InloggningsSida_Registrera.Click += new System.EventHandler(this.btn_InloggningsSida_Registrera_Click);
@@ -96,7 +97,7 @@
             this.label3.Location = new System.Drawing.Point(101, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(162, 13);
-            this.label3.TabIndex = 6;
+            this.label3.TabIndex = 45678;
             this.label3.Text = "Har du inte ett konto? Skapa här";
             // 
             // Inloggning
@@ -113,6 +114,7 @@
             this.Controls.Add(this.btn_InloggningsSida_Inloggning);
             this.Name = "Inloggning";
             this.Text = "Inloggning";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Inloggning_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

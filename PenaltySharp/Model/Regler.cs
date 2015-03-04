@@ -9,6 +9,7 @@ using PenaltySharp.View;
 
 namespace PenaltySharp.Model
 {
+    [Serializable]
     class Regler
     {
         //Medlemsvariabler

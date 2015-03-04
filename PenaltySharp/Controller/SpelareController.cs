@@ -9,8 +9,11 @@ using PenaltySharp.View;
 
 namespace PenaltySharp.Controller
 {
+    [Serializable]
     class SpelareController
     {
+
+
         private List<Spelare> m_Spelare;
 
         public SpelareController()
@@ -38,6 +41,10 @@ namespace PenaltySharp.Controller
             return m_Spelare.Count();
         }
 
+        public String GetAnvändarnamn(int index)
+        {
+            return m_Spelare[index].getAnvändarnamn();
+        }
         public int GetIndexOfNamn(string Namn)
         {
             for (int i = 0; i < m_Spelare.Count; i++)

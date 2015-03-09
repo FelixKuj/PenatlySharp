@@ -46,7 +46,7 @@ namespace PenaltySharp.View
                 btn_InloggningsSida_Inloggning.PerformClick();
             }
         }
-
+        //bra
         private void Inloggning_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

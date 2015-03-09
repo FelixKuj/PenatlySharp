@@ -32,6 +32,11 @@ namespace PenaltySharp.Controller
             m_Regler.Remove(item);
         }
 
+        public void RemoveAt(int i)
+        {
+            m_Regler.RemoveAt(i);
+        }
+
         public Regler Get(int index)
         {
             return m_Regler.ElementAt(index);

@@ -20,12 +20,20 @@ namespace PenaltySharp.View
             regelcontroller = ServiceProvider.GetReglerService();
             updateListView();
         }
-        
+
         public bool skaparegel = false;
         private void reglerSida_btn_LäggaTillRegel_Click(object sender, EventArgs e)
         {
-            regelcontroller.Add(new Model.Regler(ReglerSida_tbx_RegelNamn.Text, 0, Convert.ToInt32(ReglerSida_tbx_RegelKostnad.Text)));
-            updateListView();
+            try
+            {
+                regelcontroller.Add(new Model.Regler(ReglerSida_tbx_RegelNamn.Text, 0, Convert.ToInt32(ReglerSida_tbx_RegelKostnad.Text)));
+                updateListView();
+            }
+            catch (Exception)
+            {
+                
+                MessageBox.Show("Fuck you");
+            }
         }
         private void updateListView()
         {
@@ -44,9 +52,35 @@ namespace PenaltySharp.View
             {
 
                 lv_ReglerSida.AutoResizeColumn(i,
-                ColumnHeaderAutoResizeStyle.ColumnContent);
+                ColumnHeaderAutoResizeStyle.HeaderSize);
             }
 
         }
+
+        private void lv_ReglerSida_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                try
+                {
+                    for (int i = 0; i < lv_ReglerSida.Items.Count; i++)
+                    {
+                        if (lv_ReglerSida.Items[i].Selected)
+                        {
+                            lv_ReglerSida.Items.RemoveAt(i);
+                            regelcontroller.RemoveAt(i);
+
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        }
+
+
+
     }
 }

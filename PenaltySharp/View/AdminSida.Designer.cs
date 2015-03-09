@@ -33,9 +33,9 @@
             this.btn_AdminSida_Spelare = new System.Windows.Forms.Button();
             this.btn_AdminSida_LoggaUt = new System.Windows.Forms.Button();
             this.lv_AdminSida = new System.Windows.Forms.ListView();
-            this.cbx_AdminSida_Spelare = new System.Windows.Forms.ComboBox();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cbx_AdminSida_Spelare = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label3
@@ -90,6 +90,15 @@
             this.lv_AdminSida.UseCompatibleStateImageBehavior = false;
             this.lv_AdminSida.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Brutna Regler";
+            this.columnHeader1.Width = 568;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Böter";
+            // 
             // cbx_AdminSida_Spelare
             // 
             this.cbx_AdminSida_Spelare.FormattingEnabled = true;
@@ -97,15 +106,6 @@
             this.cbx_AdminSida_Spelare.Name = "cbx_AdminSida_Spelare";
             this.cbx_AdminSida_Spelare.Size = new System.Drawing.Size(121, 21);
             this.cbx_AdminSida_Spelare.TabIndex = 14;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Bruten Regler";
-            this.columnHeader1.Width = 568;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Böter";
             // 
             // AdminSida
             // 

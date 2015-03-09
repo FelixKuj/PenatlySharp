@@ -14,7 +14,6 @@ namespace PenaltySharp.Controller
     class RegelController
     {
         int id = 0;
-        ReglerSida regelsida;
         private List<Regler> m_Regler;
 
         public RegelController()
@@ -105,16 +104,8 @@ namespace PenaltySharp.Controller
 
             }
         }
-
-        
-        public void VisaRegler()
-        {
-
-           
-            }
             
     }
-}
 
 
 

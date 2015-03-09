@@ -58,7 +58,7 @@ namespace PenaltySharp.Controller
 
         public void TestData()
         {
-            
+
             Regler
             regel = new Regler("Sen ankomst till träning", id, 50);
             m_Regler.Add(regel);
@@ -103,18 +103,14 @@ namespace PenaltySharp.Controller
             //    m_Regler.Add(regel);
             //    regelsida.skaparegel = false;
 
-            }
         }
-
-        
-        public void VisaRegler()
-        {
-
-           
-            }
-            
     }
+
+
+
+
 }
+
 
 
 

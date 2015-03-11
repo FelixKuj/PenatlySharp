@@ -33,8 +33,8 @@
             this.btn_AdminSida_Spelare = new System.Windows.Forms.Button();
             this.btn_AdminSida_LoggaUt = new System.Windows.Forms.Button();
             this.lv_AdminSida = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbx_AdminSida_Spelare = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -79,29 +79,25 @@
             // 
             // lv_AdminSida
             // 
-            this.lv_AdminSida.Location = new System.Drawing.Point(12, 161);
+            this.lv_AdminSida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lv_AdminSida.GridLines = true;
+            this.lv_AdminSida.Location = new System.Drawing.Point(12, 61);
             this.lv_AdminSida.Name = "lv_AdminSida";
             this.lv_AdminSida.Size = new System.Drawing.Size(756, 389);
             this.lv_AdminSida.TabIndex = 10;
             this.lv_AdminSida.UseCompatibleStateImageBehavior = false;
+            this.lv_AdminSida.View = System.Windows.Forms.View.Details;
             // 
-            // label1
+            // columnHeader1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Bruten regel";
+            this.columnHeader1.Text = "Brutna Regler";
+            this.columnHeader1.Width = 568;
             // 
-            // label2
+            // columnHeader2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(681, 128);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Böter";
+            this.columnHeader2.Text = "Böter";
             // 
             // cbx_AdminSida_Spelare
             // 
@@ -115,10 +111,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(784, 462);
             this.Controls.Add(this.cbx_AdminSida_Spelare);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lv_AdminSida);
             this.Controls.Add(this.btn_AdminSida_LoggaUt);
             this.Controls.Add(this.btn_AdminSida_Spelare);
@@ -138,8 +132,8 @@
         private System.Windows.Forms.Button btn_AdminSida_Spelare;
         private System.Windows.Forms.Button btn_AdminSida_LoggaUt;
         private System.Windows.Forms.ListView lv_AdminSida;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbx_AdminSida_Spelare;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

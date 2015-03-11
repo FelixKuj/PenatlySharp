@@ -14,7 +14,6 @@ namespace PenaltySharp.Controller
     class RegelController
     {
         int id = 0;
-        ReglerSida regelsida;
         private List<Regler> m_Regler;
 
         public RegelController()
@@ -31,6 +30,11 @@ namespace PenaltySharp.Controller
         public void Remove(Regler item)
         {
             m_Regler.Remove(item);
+        }
+
+        public void RemoveAt(int i)
+        {
+            m_Regler.RemoveAt(i);
         }
 
         public Regler Get(int index)
@@ -103,18 +107,10 @@ namespace PenaltySharp.Controller
             //    m_Regler.Add(regel);
             //    regelsida.skaparegel = false;
 
-            //}
+            }
         }
 
-        
-        public void VisaRegler()
-        {
-
-           
-        }
-        
     }
-}
 
 
 

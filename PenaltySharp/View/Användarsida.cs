@@ -26,11 +26,6 @@ namespace PenaltySharp.View
             regelcontroller = ServiceProvider.GetReglerService();
         }
 
-        private void btn_Användarsida_Spealre_Click(object sender, EventArgs e)
-        {
-            label1.Text = "Bruten regel";
-        }
-
         private void lv_Användarsida_SelectedIndexChanged(object sender, EventArgs e)
         {
             bötercontroller.test1();
@@ -41,15 +36,10 @@ namespace PenaltySharp.View
 
         }
 
-        private void btn_Användarsida_Regler_Click(object sender, EventArgs e)
-        {
-            //regelcontroller.VisaRegler();
-            label1.Text = "Regler";
-        }
-
         private void btn_Användarsida_LoggaUt_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }

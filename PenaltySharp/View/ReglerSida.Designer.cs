@@ -82,6 +82,7 @@
             // 
             // lv_ReglerSida
             // 
+            this.lv_ReglerSida.AutoArrange = false;
             this.lv_ReglerSida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Column_Regler,
             this.Column_Böter});
@@ -92,6 +93,7 @@
             this.lv_ReglerSida.TabIndex = 7;
             this.lv_ReglerSida.UseCompatibleStateImageBehavior = false;
             this.lv_ReglerSida.View = System.Windows.Forms.View.Details;
+            this.lv_ReglerSida.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lv_ReglerSida_KeyDown);
             // 
             // Column_Regler
             // 
@@ -114,6 +116,7 @@
             this.Controls.Add(this.ReglerSida_tbx_RegelKostnad);
             this.Controls.Add(this.ReglerSida_tbx_RegelNamn);
             this.Controls.Add(this.reglerSida_btn_LäggaTillRegel);
+            this.DoubleBuffered = true;
             this.Name = "ReglerSida";
             this.Text = "Regler";
             this.ResumeLayout(false);

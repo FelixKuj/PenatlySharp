@@ -68,9 +68,9 @@ namespace PenaltySharp.View
                 FelFörnamn = true;
                 FelNågot = true;
             }
-            if (tbx_RegistreringsSida_lösenord.TextLength >= 6 || tbx_RegistreringsSida_lösenord.TextLength <= 18)
+            if (tbx_RegistreringsSida_lösenord.TextLength <= 6 || tbx_RegistreringsSida_lösenord.TextLength >= 18)
             {
-                FelMedlenade += "Lösenorden Är för kort eller långt.\n";
+                FelMedlenade += "Lösenorden är för kort eller långt.\n";
                 FelLösenord = true;
                 FelNågot = true;
             }

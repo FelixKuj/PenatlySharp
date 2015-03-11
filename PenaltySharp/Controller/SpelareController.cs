@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
+using System.Windows.Forms;
 
 namespace PenaltySharp.Controller
 {
@@ -15,7 +16,8 @@ namespace PenaltySharp.Controller
 
 
         private List<Spelare> m_Spelare;
-
+        public string publicanvändarnamn;
+        public int publicID;
         public SpelareController()
         {
             m_Spelare = new List<Spelare>();
@@ -69,6 +71,8 @@ namespace PenaltySharp.Controller
             m_Spelare.Add(spelare);
             spelare = new Spelare("Smartin Smartlund", 4, "smasma", "smasma", true);
             m_Spelare.Add(spelare);
+            spelare = new Spelare("1", 5, "1", "1", false);
+            m_Spelare.Add(spelare);
         }
         public string LoggaIn(string Användarnamn, string Lösenord)
         {
@@ -76,6 +80,8 @@ namespace PenaltySharp.Controller
             {
                 if (Användarnamn == m_Spelare[i].getAnvändarnamn() && Lösenord == m_Spelare[i].getLösenord())
                 {
+                    publicanvändarnamn = Användarnamn;
+                    publicID = m_Spelare[i].getId();
                     var adminsidaForm = new AdminSida();
                     var inloggningsForm = new Inloggning();
                     var användarsidaForm = new Användarsida();
@@ -91,7 +97,15 @@ namespace PenaltySharp.Controller
                         användarsidaForm.Show();
                         inloggningsForm.Hide();
                     }
+                    
                     return Användarnamn;
+                }
+                else
+                {
+                    if (i == Antal() - 1)
+                    {
+                        MessageBox.Show("Fel användarnamn eller lösenord");
+                    }
                 }
             }
 

@@ -16,14 +16,16 @@ namespace PenaltySharp.View
     public partial class Användarsida : Form
     {
         BöterController bötercontroller;
+        
         SpelareController spelarController;
         RegelController regelcontroller;
         public Användarsida()
         {
             InitializeComponent();
-            bötercontroller = new BöterController();
+           
             spelarController = ServiceProvider.GetSpelareService();
             regelcontroller = ServiceProvider.GetReglerService();
+            bötercontroller = ServiceProvider.GetBöterService();
         }
 
         private void lv_Användarsida_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,12 +35,45 @@ namespace PenaltySharp.View
 
         private void Användarsida_Load(object sender, EventArgs e)
         {
+            label3.Text = "Välkommen " + spelarController.publicanvändarnamn + "!" + "with id:" + spelarController.publicID;
 
         }
 
         private void btn_Användarsida_LoggaUt_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_Användarsida_Regler_Click(object sender, EventArgs e)
+        {
+            updateListView();
+        }
+        private void updateListView()
+        {
+            Column1.Text = "Regler";
+            lv_Användarsida.Items.Clear();
+            string[] columns = new string[2];
+            ListViewItem item;
+            for (int i = 0; i < regelcontroller.Count(); i++)
+            {
+                columns[0] = regelcontroller.Get(i).getNamn();
+                columns[1] = regelcontroller.Get(i).getBöter().ToString();
+                item = new ListViewItem(columns);
+                lv_Användarsida.Items.Add(item);
+            }
+            for (int i = 0; i < columns.Length; i++)
+            {
+
+                lv_Användarsida.AutoResizeColumn(i,
+                ColumnHeaderAutoResizeStyle.HeaderSize);
+            }
+
+        }
+
+        private void btn_Användarsida_Böter_Click(object sender, EventArgs e)
+        {
+            Column1.Text = "Bruten Regel";
+            lv_Användarsida.Items.Clear();
         }
 
     }

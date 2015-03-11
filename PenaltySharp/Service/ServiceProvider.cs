@@ -21,6 +21,7 @@ namespace PenaltySharp
     {
         static SpelareController _spelareControllerService;
         static RegelController _regelControllerSevice;
+        static BöterController _böterControllerSevice;
         public static SpelareController GetSpelareService()
         {
             if (_spelareControllerService == null)
@@ -37,7 +38,13 @@ namespace PenaltySharp
             return _regelControllerSevice;
         }
 
+        public static BöterController GetBöterService()
+        {
+            if (_böterControllerSevice == null)
+                _böterControllerSevice = new BöterController();
 
+            return _böterControllerSevice;
+        }
     }
 
 }

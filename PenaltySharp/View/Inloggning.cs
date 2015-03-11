@@ -51,7 +51,5 @@ namespace PenaltySharp.View
         {
             Application.Exit();
         }
-
-       
     }
 }

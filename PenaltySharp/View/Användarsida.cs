@@ -35,7 +35,7 @@ namespace PenaltySharp.View
 
         private void Användarsida_Load(object sender, EventArgs e)
         {
-            label3.Text = "Välkommen " + spelarController.publicanvändarnamn + "!" + "with id:" + spelarController.publicID;
+            label3.Text = "Välkommen " + spelarController.publicanvändarnamn + "!";
 
         }
 

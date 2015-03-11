@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
-using System.Net.Mail.MailAddress;
+//using System.Net.Mail.MailAddress;
 
 namespace PenaltySharp.View
 {
@@ -34,6 +34,7 @@ namespace PenaltySharp.View
 
         private void btn_RegistreringsSida_Registrera_Click(object sender, EventArgs e)
         {
+            FelMedlenade = "";
             for (int i = 0; i < spelarController.Antal(); i++)
             {
                 if (tbx_RegistreringsSida_användarnamn.Text == spelarController.GetAnvändarnamn(i))
@@ -73,7 +74,7 @@ namespace PenaltySharp.View
                 FelLösenord = true;
                 FelNågot = true;
             }
-            if (tbx_RegistreringsSida_LösenordIgen.Text == tbx_RegistreringsSida_lösenord.Text)
+            if (tbx_RegistreringsSida_LösenordIgen.Text != tbx_RegistreringsSida_lösenord.Text)
             {
                 FelMedlenade += "Lösenorden Matchar inte.\n";
                 FelLösenordsjämförelse = true;

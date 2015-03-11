@@ -88,6 +88,7 @@
             this.btn_Användarsida_Regler.TabIndex = 6;
             this.btn_Användarsida_Regler.Text = "Regler";
             this.btn_Användarsida_Regler.UseVisualStyleBackColor = true;
+            this.btn_Användarsida_Regler.Click += new System.EventHandler(this.btn_Användarsida_Regler_Click);
             // 
             // btn_Användarsida_Böter
             // 
@@ -97,6 +98,7 @@
             this.btn_Användarsida_Böter.TabIndex = 7;
             this.btn_Användarsida_Böter.Text = "Böter";
             this.btn_Användarsida_Böter.UseVisualStyleBackColor = true;
+            this.btn_Användarsida_Böter.Click += new System.EventHandler(this.btn_Användarsida_Böter_Click);
             // 
             // Användarsida
             // 

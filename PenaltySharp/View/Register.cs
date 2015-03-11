@@ -43,7 +43,7 @@ namespace PenaltySharp.View
                     FelNågot = true;
                 }
             }
-            if (tbx_RegistreringsSida_användarnamn.TextLength <= 6 || tbx_RegistreringsSida_användarnamn.TextLength <= 18)
+            if (tbx_RegistreringsSida_användarnamn.TextLength <= 6 || tbx_RegistreringsSida_användarnamn.TextLength >= 18)
             {
                 FelMedlenade += "Användarnamnet är för kort eller långt.\n";
                 FelAnvändarnamn = true;

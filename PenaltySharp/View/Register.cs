@@ -43,13 +43,13 @@ namespace PenaltySharp.View
                     FelNågot = true;
                 }
             }
-            if (tbx_RegistreringsSida_användarnamn.TextLength <= 6 || tbx_RegistreringsSida_användarnamn.TextLength <= 18)
+            if (tbx_RegistreringsSida_användarnamn.TextLength <= 6 || tbx_RegistreringsSida_användarnamn.TextLength >= 18)
             {
                 FelMedlenade += "Användarnamnet är för kort eller långt.\n";
                 FelAnvändarnamn = true;
                 FelNågot = true;
             }
-            if (tbx_RegistreringsSida_Efternamn.TextLength < 6)
+            if (tbx_RegistreringsSida_Efternamn.Text == "")
             {
                 FelMedlenade += "Har du inget efternamn?\n";
                 FelEfternamn = true;
@@ -62,7 +62,7 @@ namespace PenaltySharp.View
             //    FelNågot = true;
             //}
 
-            if (tbx_RegistreringsSida_Förnamn.Text != null)
+            if (tbx_RegistreringsSida_Förnamn.Text == "")
             {
                 FelMedlenade += "Har du inget förnamn?\n";
                 FelFörnamn = true;

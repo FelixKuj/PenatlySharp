@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
+using System.Windows.Forms;
 
 namespace PenaltySharp.Controller
 {
@@ -91,7 +92,15 @@ namespace PenaltySharp.Controller
                         användarsidaForm.Show();
                         inloggningsForm.Hide();
                     }
+                    
                     return Användarnamn;
+                }
+                else
+                {
+                    if (i == Antal() - 1)
+                    {
+                        MessageBox.Show("Fel användarnamn eller lösenord");
+                    }
                 }
             }
 

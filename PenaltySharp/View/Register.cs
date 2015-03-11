@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
-using System.Net.Mail.MailAddress;
+//using System.Net.Mail.MailAddress;
 
 namespace PenaltySharp.View
 {

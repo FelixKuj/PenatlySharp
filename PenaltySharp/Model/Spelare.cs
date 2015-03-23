@@ -11,12 +11,15 @@ namespace PenaltySharp.Model
 {
     [Serializable]
     class Spelare
-    {
+    {   //Medlemsvariabler
+
         private string m_namn;
         private int m_id;
         private string m_användarnamn;
         private string m_lösenord;
         private bool m_admin;
+
+
         //(list)
          
       
@@ -42,7 +45,7 @@ namespace PenaltySharp.Model
         }
 
         /// <summary>
-        /// rerurnerar Namn
+        /// Returnerar Namn
         /// </summary>
         /// <returns>Namn</param>
         public string getNamn()
@@ -69,30 +72,42 @@ namespace PenaltySharp.Model
             return this.m_id;
         }
         /// <summary>
-        /// Returnerar ID
+        /// Bestämmer ID
         /// </summary>
         /// <param name="id">ID</param>
         public void setId(int id)
         {
             this.m_id = id;
         }
-
+        /// <summary>
+        /// Returnerar Användarnamn
+        /// </summary>
+        /// <returns>Användarnamn</returns>
         public string getAnvändarnamn()
         {
             return this.m_användarnamn;
         }
 
-
+        /// <summary>
+        /// Bestämmer Användarnamn
+        /// </summary>
+        /// <param name="användarnamn">Användarnamn</param>
         public void setAnvändarnamn(string användarnamn)
         {
             this.m_användarnamn = användarnamn;
         }
-
+        /// <summary>
+        /// Returnerar Lösenord
+        /// </summary>
+        /// <returns>Lösenord</returns>
         public string getLösenord()
         {
             return this.m_lösenord;
         }
-
+        /// <summary>
+        /// Bestämmer Lösenord
+        /// </summary>
+        /// <param name="lösenord">Lösenord</param>
         public void setLösenord(string lösenord)
         {
             this.m_lösenord = lösenord;
@@ -107,7 +122,10 @@ namespace PenaltySharp.Model
         {
             return this.m_admin;
         }
-
+        /// <summary>
+        /// Bestämmer Admin
+        /// </summary>
+        /// <param name="admin">Admin</param>
         public void setAdmin(bool admin)
         {
             this.m_admin = admin;

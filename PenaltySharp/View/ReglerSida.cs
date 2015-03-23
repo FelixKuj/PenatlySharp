@@ -22,6 +22,10 @@ namespace PenaltySharp.View
         }
 
         public bool skaparegel = false;
+
+        /// <summary>
+        /// Metod för att admin ska kunna lägga till nya regler.
+        /// </summary>
         private void reglerSida_btn_LäggaTillRegel_Click(object sender, EventArgs e)
         {
             try
@@ -32,9 +36,12 @@ namespace PenaltySharp.View
             catch (Exception)
             {
                 
-                MessageBox.Show("Fuck you");
+                MessageBox.Show("Vänligen skriv in en regel och bötersumma innan du läger till en ny regel.");
             }
         }
+        /// <summary>
+        /// Uppdaterar regellistan när man öppnar sidan, samt när man lägger till en ny regel.
+        /// </summary>
         private void updateListView()
         {
 
@@ -56,7 +63,9 @@ namespace PenaltySharp.View
             }
 
         }
-
+        /// <summary>
+        /// Tar bort regler.
+        /// </summary>
         private void lv_ReglerSida_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
@@ -79,8 +88,5 @@ namespace PenaltySharp.View
                 }
             }
         }
-
-
-
     }
 }

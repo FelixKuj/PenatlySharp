@@ -25,7 +25,9 @@ namespace PenaltySharp.View
             spelarController = ServiceProvider.GetSpelareService();
             tbx_InloggningsSida_Användarnamn.Focus();
         }
-
+        /// <summary>
+        /// Använder texten i textrutorna samt raderar inskriven text i textrutorna vid inloggning.
+        /// </summary>
         private void btn_InloggningsSida_Inloggning_Click(object sender, EventArgs e)
         {
             string information = spelarController.LoggaIn(tbx_InloggningsSida_Användarnamn.Text, tbx_InloggningsSida_Lösenord.Text);
@@ -33,11 +35,18 @@ namespace PenaltySharp.View
             tbx_InloggningsSida_Lösenord.Clear();
         }
 
+        /// <summary>
+        /// Öppnar registerformuläret.
+        /// </summary>     
         private void btn_InloggningsSida_Registrera_Click(object sender, EventArgs e)
         {
             var registerForm = new Register();
             registerForm.Show();
         }
+
+        /// <summary>
+        /// Försöker logga in användare när enter trycks ner.
+        /// </summary>
 
         private void tbx_InloggningsSida_Lösenord_KeyDown(object sender, KeyEventArgs e)
         {
@@ -46,7 +55,9 @@ namespace PenaltySharp.View
                 btn_InloggningsSida_Inloggning.PerformClick();
             }
         }
-        //bra
+       /// <summary>
+       /// Slår av applikationen.
+       /// </summary>
         private void Inloggning_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

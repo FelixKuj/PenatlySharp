@@ -28,14 +28,22 @@ namespace PenaltySharp.View
             }
             
         }
-
+        /// <summary>
+        /// Öppnar regelsida.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_AdminSida_Regler_Click(object sender, EventArgs e)
         {
             Form regelsida = new ReglerSida();
             regelsida.Show();      
             
         }
-
+        /// <summary>
+        /// Stänger admin sidan.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_AdminSida_LoggaUt_Click(object sender, EventArgs e)
         {
             this.Close();          

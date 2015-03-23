@@ -11,47 +11,73 @@ namespace PenaltySharp.Model
     {
         // Medlemsvariabler
         private int m_personId;
-        private int m_böterkostnad;
+        private int m_böterKostnad;
         private int m_böterId;
 
         /// <summary>
-        /// 
+        /// Konstruktor
         /// </summary>
-        /// <param name="inPersonId"></param>
-        /// <param name="inBöterkostnad"></param>
-        /// <param name="inBöterId"></param>
-        public Böter(int inPersonId, int inBöterkostnad, int inBöterId)
+        /// <param name="inPersonId">PersonID</param>
+        /// <param name="inBöterKostnad">BöterKostnad</param>
+        /// <param name="inBöterId">BöterID</param>
+        public Böter(int inPersonId, int inBöterKostnad, int inBöterId)
         {
             this.m_personId = inPersonId;
-            this.m_böterkostnad = inBöterkostnad;
+            this.m_böterKostnad = inBöterKostnad;
             this.m_böterId = inBöterId;
         }
 
         // Metoder
 
+        /// <summary>
+        /// Returnerar PersonID
+        /// </summary>
+        /// <returns>Person ID</returns>
         public int getPersonId()
         {
             return this.m_personId;
         }
 
-        public int getBöterkostnad()
+        /// <summary>
+        /// Returnerar Böterkostnaden
+        /// </summary>
+        /// <returns>BöterKostnad</returns>
+        public int getBöterKostnad()
         {
-            return this.m_böterkostnad;
+            return this.m_böterKostnad;
         }
 
+        /// <summary>
+        /// Returnerar Böter ID
+        /// </summary>
+        /// <returns>Böter ID</returns>
         public int getBöterId()
         {
             return this.m_böterId;
         }
 
+        /// <summary>
+        /// Bestämmer PersonID
+        /// </summary>
+        /// <param name="personId">Person ID</param>
         public void setPersonId(int personId)
         {
             this.m_personId = personId;
         }
-        public void setBöterkostnad(int böterKostnad)
+
+        /// <summary>
+        /// Besämmer BöterKostnad
+        /// </summary>
+        /// <param name="böterKostnad">BöterKostnad</param>
+        public void setBöterKostnad(int böterKostnad)
         {
-            this.m_böterkostnad = böterKostnad;
+            this.m_böterKostnad = böterKostnad;
         }
+
+        /// <summary>
+        /// Bestämmer BöterID
+        /// </summary>
+        /// <param name="böterId">Böter ID</param>
         public void setBöterId(int böterId)
         {
             this.m_böterId = böterId;

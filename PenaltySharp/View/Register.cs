@@ -17,13 +17,10 @@ namespace PenaltySharp.View
     public partial class Register : Form
     {
         SpelareController spelarController;
-        bool FelAnvändarnamn;
-        bool FelEfternamn;
-        bool FelEmail;
-        bool FelFörnamn;
-        bool FelLösenord;
-        bool FelLösenordsjämförelse;
         bool FelNågot;
+        string text;
+        int textlängd;
+        char textchar;
         string FelMedlenade;
 
         public Register()
@@ -35,58 +32,73 @@ namespace PenaltySharp.View
         private void btn_RegistreringsSida_Registrera_Click(object sender, EventArgs e)
         {
             FelMedlenade = "";
+            FelNågot = false;
             for (int i = 0; i < spelarController.Antal(); i++)
             {
                 if (tbx_RegistreringsSida_användarnamn.Text == spelarController.GetAnvändarnamn(i))
                 {   FelMedlenade += "Användarnamnet existerar redan.\n";
-                    FelAnvändarnamn = true;
                     FelNågot = true;
                 }
             }
             if (tbx_RegistreringsSida_användarnamn.TextLength <= 6 || tbx_RegistreringsSida_användarnamn.TextLength >= 18)
             {
                 FelMedlenade += "Användarnamnet är för kort eller långt.\n";
-                FelAnvändarnamn = true;
                 FelNågot = true;
             }
             if (tbx_RegistreringsSida_Efternamn.Text == "")
             {
                 FelMedlenade += "Har du inget efternamn?\n";
-                FelEfternamn = true;
                 FelNågot = true;
             }
-            //if (tbx_RegistreringsSida_Email.Text.Contains('@') == true)
-            //{
-            //    FelMedlenade += "Tror inte det där är en Email va.\n";
-            //    FelEmail = true;
-            //    FelNågot = true;
-            //}
+
+
+            //för att se individuella chars i en text behöver jag veta textens längd och vad texten är.
+            text = tbx_RegistreringsSida_Email.Text;
+            textlängd = text.Length;
+            textchar = ' ';
+            for (int i = 0; i < textlängd; i++) //en for-sats för att gå igenom hela texten char för char
+            {
+                //en string är en lista med chars, så jag sätter charen till att vara stringens list värde
+                textchar = text[i];
+                if (textchar == '@') //om @ finns i texten så bryts for-satsen och inte läsa av mer utav texten.
+                {
+                    break;
+                }
+                else if (textchar != '@' && i + 1 == textlängd) //om @ inte finns i texten efter man sökt igenom hela texten kommer ett felmeddelande att skapas
+                {
+                    FelMedlenade += "Tror inte det där är en Email va.\n";
+                    FelNågot = true;
+                }
+            }
 
             if (tbx_RegistreringsSida_Förnamn.Text == "")
             {
                 FelMedlenade += "Har du inget förnamn?\n";
-                FelFörnamn = true;
                 FelNågot = true;
             }
-            if (tbx_RegistreringsSida_lösenord.TextLength <= 6 || tbx_RegistreringsSida_lösenord.TextLength >= 18)
+            if (tbx_RegistreringsSida_lösenord.TextLength <= 4 || tbx_RegistreringsSida_lösenord.TextLength >= 18)
             {
                 FelMedlenade += "Lösenorden är för kort eller långt.\n";
-                FelLösenord = true;
                 FelNågot = true;
             }
             if (tbx_RegistreringsSida_LösenordIgen.Text != tbx_RegistreringsSida_lösenord.Text)
             {
                 FelMedlenade += "Lösenorden Matchar inte.\n";
-                FelLösenordsjämförelse = true;
                 FelNågot = true;
             }
-            if (FelNågot == true)
+            if (FelNågot == true) //om det uppstått ett fel visas detta felmeddelande
             {
                 MessageBox.Show(FelMedlenade);
             }
             else
             {
-                spelarController.SkapaAnvändare(tbx_RegistreringsSida_Förnamn.Text, tbx_RegistreringsSida_Efternamn.Text, tbx_RegistreringsSida_användarnamn.Text, tbx_RegistreringsSida_lösenord.Text, tbx_RegistreringsSida_LösenordIgen.Text, tbx_RegistreringsSida_Email.Text);
+                //skapar den nya användaren
+                spelarController.SkapaAnvändare(tbx_RegistreringsSida_Förnamn.Text,
+                    tbx_RegistreringsSida_Efternamn.Text,
+                    tbx_RegistreringsSida_användarnamn.Text,
+                    tbx_RegistreringsSida_lösenord.Text,
+                    tbx_RegistreringsSida_LösenordIgen.Text,
+                    tbx_RegistreringsSida_Email.Text);
                 this.Hide();
             }
 

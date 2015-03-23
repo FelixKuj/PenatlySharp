@@ -21,7 +21,7 @@ namespace PenaltySharp.View
         string text;
         int textlängd;
         char textchar;
-        string FelMedlenade;
+        string FelMeddelnade;
 
         public Register()
         {
@@ -31,23 +31,23 @@ namespace PenaltySharp.View
 
         private void btn_RegistreringsSida_Registrera_Click(object sender, EventArgs e)
         {
-            FelMedlenade = "";
+            FelMeddelnade = "";
             FelNågot = false;
             for (int i = 0; i < spelarController.Antal(); i++)
             {
                 if (tbx_RegistreringsSida_användarnamn.Text == spelarController.GetAnvändarnamn(i))
-                {   FelMedlenade += "Användarnamnet existerar redan.\n";
+                {   FelMeddelnade += "Användarnamnet existerar redan.\n";
                     FelNågot = true;
                 }
             }
             if (tbx_RegistreringsSida_användarnamn.TextLength <= 6 || tbx_RegistreringsSida_användarnamn.TextLength >= 18)
             {
-                FelMedlenade += "Användarnamnet är för kort eller långt.\n";
+                FelMeddelnade += "Användarnamnet är för kort eller långt.\n";
                 FelNågot = true;
             }
             if (tbx_RegistreringsSida_Efternamn.Text == "")
             {
-                FelMedlenade += "Har du inget efternamn?\n";
+                FelMeddelnade += "Har du inget efternamn?\n";
                 FelNågot = true;
             }
 
@@ -66,29 +66,29 @@ namespace PenaltySharp.View
                 }
                 else if (textchar != '@' && i + 1 == textlängd) //om @ inte finns i texten efter man sökt igenom hela texten kommer ett felmeddelande att skapas
                 {
-                    FelMedlenade += "Tror inte det där är en Email va.\n";
+                    FelMeddelnade += "Tror inte det där är en Email va.\n";
                     FelNågot = true;
                 }
             }
 
             if (tbx_RegistreringsSida_Förnamn.Text == "")
             {
-                FelMedlenade += "Har du inget förnamn?\n";
+                FelMeddelnade += "Har du inget förnamn?\n";
                 FelNågot = true;
             }
             if (tbx_RegistreringsSida_lösenord.TextLength <= 4 || tbx_RegistreringsSida_lösenord.TextLength >= 18)
             {
-                FelMedlenade += "Lösenorden är för kort eller långt.\n";
+                FelMeddelnade += "Lösenorden är för kort eller långt.\n";
                 FelNågot = true;
             }
             if (tbx_RegistreringsSida_LösenordIgen.Text != tbx_RegistreringsSida_lösenord.Text)
             {
-                FelMedlenade += "Lösenorden Matchar inte.\n";
+                FelMeddelnade += "Lösenorden Matchar inte.\n";
                 FelNågot = true;
             }
             if (FelNågot == true) //om det uppstått ett fel visas detta felmeddelande
             {
-                MessageBox.Show(FelMedlenade);
+                MessageBox.Show(FelMeddelnade);
             }
             else
             {

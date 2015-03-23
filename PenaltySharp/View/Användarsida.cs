@@ -16,7 +16,6 @@ namespace PenaltySharp.View
     public partial class Användarsida : Form
     {
         BöterController bötercontroller;
-        
         SpelareController spelarController;
         RegelController regelcontroller;
         public Användarsida()

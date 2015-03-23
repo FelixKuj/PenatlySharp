@@ -46,7 +46,7 @@ namespace PenaltySharp.Controller
         {
             return m_Regler.Count();
         }
-
+       
         public int GetIndexOfRegel(string regel)
         {
             for (int i = 0; i < m_Regler.Count; i++)
@@ -59,7 +59,9 @@ namespace PenaltySharp.Controller
 
             return -1;
         }
-
+        /// <summary>
+        /// Lista med grundregler för att ha en bas till projektet.
+        /// </summary>
         public void TestData()
         {
             

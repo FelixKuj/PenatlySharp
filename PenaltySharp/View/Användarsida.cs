@@ -38,6 +38,9 @@ namespace PenaltySharp.View
             label3.Text = "Välkommen " + spelarController.publicanvändarnamn + "!";
 
         }
+        /// <summary>
+        /// Stänger ner användarsidan när du trycker på logga ut.
+        /// </summary>
 
         private void btn_Användarsida_LoggaUt_Click(object sender, EventArgs e)
         {
@@ -69,6 +72,9 @@ namespace PenaltySharp.View
             }
 
         }
+        /// <summary>
+        /// Bestämmer kolumnrubrik.
+        /// </summary>
 
         private void btn_Användarsida_Böter_Click(object sender, EventArgs e)
         {

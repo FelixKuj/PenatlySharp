@@ -67,7 +67,7 @@ namespace PenaltySharp.Controller
             m_Spelare.Add(spelare);
             spelare = new Spelare("Jarl Ballheden", 2, "baljar", "jarbal", true);
             m_Spelare.Add(spelare);
-            spelare = new Spelare("Leran Inos", 3, "inoler", "lerino", false);
+            spelare = new Spelare("Inos Leran", 3, "lerino", "inoler", false);
             m_Spelare.Add(spelare);
             spelare = new Spelare("Smartin Smartlund", 4, "smasma", "smasma", true);
             m_Spelare.Add(spelare);

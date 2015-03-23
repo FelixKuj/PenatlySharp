@@ -49,12 +49,12 @@ namespace PenaltySharp.View
 
         private void btn_Användarsida_Regler_Click(object sender, EventArgs e)
         {
-            updateListView();
+            updateListViewRegler();
         }
-        private void updateListView()
+        private void updateListViewRegler()
         {
-            Column1.Text = "Regler";
             lv_Användarsida.Items.Clear();
+            Column1.Text = "Regler";
             string[] columns = new string[2];
             ListViewItem item;
             for (int i = 0; i < regelcontroller.Count(); i++)
@@ -78,8 +78,14 @@ namespace PenaltySharp.View
 
         private void btn_Användarsida_Böter_Click(object sender, EventArgs e)
         {
-            Column1.Text = "Bruten Regel";
+            updateListViewBöter(); 
+        }
+
+        private void updateListViewBöter()
+        {
             lv_Användarsida.Items.Clear();
+            Column1.Text = "Bruten Regel";
+
         }
 
     }

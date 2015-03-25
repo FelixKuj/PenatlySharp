@@ -114,6 +114,7 @@
     <EmbeddedResource Include="View\ReglerSida.resx">
       <DependentUpon>ReglerSida.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\ReglerLista.DAT" />
     <None Include="bin\Debug\SpelareLista.DAT" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -28,24 +28,28 @@ namespace PenaltySharp.View
             InitializeComponent();
             spelarController = ServiceProvider.GetSpelareService();
         }
-
+        /// <summary>
+        /// kollar igenom alla textboxes i fromen och ser om de är lämpliga för att skapa en användare
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_RegistreringsSida_Registrera_Click(object sender, EventArgs e)
         {
             FelMeddelnade = "";
             FelNågot = false;
-            for (int i = 0; i < spelarController.Antal(); i++)
+            for (int i = 0; i < spelarController.Antal(); i++) //kollar om användarmanet redan finns
             {
                 if (tbx_RegistreringsSida_användarnamn.Text == spelarController.GetAnvändarnamn(i))
                 {   FelMeddelnade += "Användarnamnet existerar redan.\n";
                     FelNågot = true;
                 }
             }
-            if (tbx_RegistreringsSida_användarnamn.TextLength <= 6 || tbx_RegistreringsSida_användarnamn.TextLength >= 18)
+            if (tbx_RegistreringsSida_användarnamn.TextLength <= 6 || tbx_RegistreringsSida_användarnamn.TextLength >= 18)//om det är för långt eller kort
             {
                 FelMeddelnade += "Användarnamnet är för kort eller långt.\n";
                 FelNågot = true;
             }
-            if (tbx_RegistreringsSida_Efternamn.Text == "")
+            if (tbx_RegistreringsSida_Efternamn.Text == "") //man måste fylla i ett efternamn
             {
                 FelMeddelnade += "Har du inget efternamn?\n";
                 FelNågot = true;
@@ -71,17 +75,17 @@ namespace PenaltySharp.View
                 }
             }
 
-            if (tbx_RegistreringsSida_Förnamn.Text == "")
+            if (tbx_RegistreringsSida_Förnamn.Text == "") //man måste ha ett förnamn
             {
                 FelMeddelnade += "Har du inget förnamn?\n";
                 FelNågot = true;
             }
-            if (tbx_RegistreringsSida_lösenord.TextLength <= 4 || tbx_RegistreringsSida_lösenord.TextLength >= 18)
+            if (tbx_RegistreringsSida_lösenord.TextLength <= 4 || tbx_RegistreringsSida_lösenord.TextLength >= 18) //lösenordet får inte vara för kort/långt
             {
                 FelMeddelnade += "Lösenorden är för kort eller långt.\n";
                 FelNågot = true;
             }
-            if (tbx_RegistreringsSida_LösenordIgen.Text != tbx_RegistreringsSida_lösenord.Text)
+            if (tbx_RegistreringsSida_LösenordIgen.Text != tbx_RegistreringsSida_lösenord.Text)//man måste skriva in smma lösenord 2 gånger för att vara säker på det
             {
                 FelMeddelnade += "Lösenorden Matchar inte.\n";
                 FelNågot = true;
@@ -103,18 +107,5 @@ namespace PenaltySharp.View
             }
 
         }
-        //public bool IsValid(string emailaddress)
-        //{
-        //    try
-        //    {
-        //        MailAddress m = new MailAddress(emailaddress);
-
-        //        return true;
-        //    }
-        //    catch (FormatException)
-        //    {
-        //        return false;
-        //    }
-        //}
     }
 }

@@ -7,6 +7,8 @@ using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
 using System.Windows.Forms;
+using System.IO;
+using PenaltySharp.DAL;
 
 namespace PenaltySharp.Controller
 {
@@ -21,12 +23,27 @@ namespace PenaltySharp.Controller
         public SpelareController()
         {
             m_Spelare = new List<Spelare>();
-            TestData();
+            //TestData();
+            try
+            {
+                if (File.Exists("SpelareLista.DAT"))
+                {
+                    m_Spelare = BinarySerialization<List<Spelare>>.BinaryDeSerialize("SpelareLista.DAT");
+                } 
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Den kunde inte ladda från spelare listan." + ex.Message);// CustomException(ex.Message);
+            }
         }
 
         public void LäggaTill(Spelare item)
         {
             m_Spelare.Add(item);
+            ServiceProvider.GetSpelareService().BinarySerialize();
+            
         }
         public void TaBort(Spelare item)
         {
@@ -127,7 +144,7 @@ namespace PenaltySharp.Controller
             if (Lösenord == Lösenord2) // lösenorden är lika?
             {
                 Spelare spelare = new Spelare(Förnamn + " " + efternamn, Antal() + 1, Användarnamn, Lösenord, false);
-                m_Spelare.Add(spelare);
+                this.LäggaTill(spelare);
             }
             else
             {
@@ -136,6 +153,20 @@ namespace PenaltySharp.Controller
             
 
             return "Ny användare skapad";
+        }
+        public bool BinarySerialize()
+        {
+            try
+            {
+                BinarySerialization<List<Spelare>>.FileName = "SpelareLista.DAT";
+                BinarySerialization<List<Spelare>>.BinarySerialize(m_Spelare);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message); //CustomException(ex.Message);
+            }
+
+            return true;
         }
     }
 }

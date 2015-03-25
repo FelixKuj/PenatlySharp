@@ -11,11 +11,15 @@ using System.Windows.Forms;
 
 namespace PenaltySharp.Controller
 {
+    [Serializable]
     class BöterController
     {
         int id = 0;
         private List<Böter> m_böter;
 
+        /// <summary>
+        /// Samlade metoder för att hantera böter i applikationen.
+        /// </summary>
           public BöterController()
         {
             m_böter = new List<Böter>();
@@ -24,7 +28,7 @@ namespace PenaltySharp.Controller
         /// <summary>
         /// Lägger till objekt i listan Böter
         /// </summary>
-        /// <param name="item"></param>
+        /// <param name="item">Böter</param>
         public void Add(Böter item)
         {
             m_böter.Add(item);
@@ -33,7 +37,7 @@ namespace PenaltySharp.Controller
         /// <summary>
         /// Tar bort objekt från listan Böter
         /// </summary>
-        /// <param name="item"></param>
+        /// <param name="item">Böter</param>
         public void Remove(Böter item)
         {
             m_böter.Remove(item);
@@ -42,7 +46,7 @@ namespace PenaltySharp.Controller
         /// <summary>
         /// Tar bort ett specifikt objekt efter index i listan Böter.
         /// </summary>
-        /// <param name="i"></param>
+        /// <param name="i">Böterindex</param>
         public void RemoveAt(int i)
         {
             m_böter.RemoveAt(i);
@@ -51,17 +55,17 @@ namespace PenaltySharp.Controller
         /// <summary>
         /// Letar reda på specifik böters index.
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
+        /// <param name="index">Böterindex</param>
+        /// <returns>Specifikt Index</returns>
         public Böter Get(int index)
         {
             return m_böter.ElementAt(index);
         }
 
         /// <summary>
-        /// Antalet obkejt i listan Böter.
+        /// Antalet objekt i listan Böter.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Antalet objekt i listan Böter</returns>
         public int Count()
         {
             return m_böter.Count();

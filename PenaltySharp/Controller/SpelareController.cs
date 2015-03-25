@@ -58,7 +58,19 @@ namespace PenaltySharp.Controller
             }
             return -1;
         }
-        public void TestData()
+        public string GetNamnOfIndex(int Index)
+        {
+            return m_Spelare[Index].getNamn();
+        }
+        public string GetAnvändarNamnOfIndex(int Index)
+        {
+            return m_Spelare[Index].getAnvändarnamn();
+        }
+        public bool GetAdminStatusOfIndex(int Index)
+        {
+            return m_Spelare[Index].getAdmin();
+        }
+        public void TestData() //skapar default spelarna
         {
             Spelare
             spelare = new Spelare("Felix Kujanpää", 0, "kujfel", "felkuj", true);
@@ -74,6 +86,13 @@ namespace PenaltySharp.Controller
             spelare = new Spelare("1", 5, "1", "1", false);
             m_Spelare.Add(spelare);
         }
+
+        /// <summary>
+        /// Hur inloggningen fungerar
+        /// </summary>
+        /// <param name="Användarnamn"></param>
+        /// <param name="Lösenord"></param>
+        /// <returns></returns>
         public string LoggaIn(string Användarnamn, string Lösenord)
         {
             for (int i = 0; i < Antal(); i++)
@@ -86,13 +105,13 @@ namespace PenaltySharp.Controller
                     var inloggningsForm = new Inloggning();
                     var användarsidaForm = new Användarsida();
 
-                    if (m_Spelare[i].getAdmin() == true)
+                    if (m_Spelare[i].getAdmin() == true) //om man är admin
                     {
                         adminsidaForm.Show();
                         inloggningsForm.Hide();                       
                     }
 
-                    else
+                    else //eller om man är en vanlig användare
                     {
                         användarsidaForm.Show();
                         inloggningsForm.Hide();
@@ -100,7 +119,7 @@ namespace PenaltySharp.Controller
                     
                     return Användarnamn;
                 }
-                else
+                else //om det inte finns ett matchande användarman med lösenord kommer ett felmeddelande fram
                 {
                     if (i == Antal() - 1)
                     {

@@ -82,7 +82,7 @@
             // 
             // btn_Användarsida_Regler
             // 
-            this.btn_Användarsida_Regler.Location = new System.Drawing.Point(138, 8);
+            this.btn_Användarsida_Regler.Location = new System.Drawing.Point(311, 8);
             this.btn_Användarsida_Regler.Name = "btn_Användarsida_Regler";
             this.btn_Användarsida_Regler.Size = new System.Drawing.Size(75, 23);
             this.btn_Användarsida_Regler.TabIndex = 6;
@@ -92,7 +92,7 @@
             // 
             // btn_Användarsida_Böter
             // 
-            this.btn_Användarsida_Böter.Location = new System.Drawing.Point(252, 8);
+            this.btn_Användarsida_Böter.Location = new System.Drawing.Point(392, 8);
             this.btn_Användarsida_Böter.Name = "btn_Användarsida_Böter";
             this.btn_Användarsida_Böter.Size = new System.Drawing.Size(75, 23);
             this.btn_Användarsida_Böter.TabIndex = 7;

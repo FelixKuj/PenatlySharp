@@ -49,7 +49,7 @@
             // 
             // btn_AdminSida_Regler
             // 
-            this.btn_AdminSida_Regler.Location = new System.Drawing.Point(140, 9);
+            this.btn_AdminSida_Regler.Location = new System.Drawing.Point(255, 12);
             this.btn_AdminSida_Regler.Name = "btn_AdminSida_Regler";
             this.btn_AdminSida_Regler.Size = new System.Drawing.Size(75, 23);
             this.btn_AdminSida_Regler.TabIndex = 7;
@@ -120,6 +120,7 @@
             this.Controls.Add(this.label3);
             this.Name = "AdminSida";
             this.Text = "AdminSida";
+            this.Load += new System.EventHandler(this.AdminSida_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

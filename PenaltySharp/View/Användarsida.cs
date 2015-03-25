@@ -29,12 +29,16 @@ namespace PenaltySharp.View
 
         private void lv_Användarsida_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bötercontroller.test1();
+            
         }
-
+        /// <summary>
+        /// visar ett välkomstmeddelande
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Användarsida_Load(object sender, EventArgs e)
         {
-            label3.Text = "Välkommen " + spelarController.publicanvändarnamn + "!";
+            label3.Text = "Välkommen " + spelarController.GetNamnOfIndex(spelarController.publicID) + "!";
 
         }
         /// <summary>

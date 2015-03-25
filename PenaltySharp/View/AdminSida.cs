@@ -22,7 +22,7 @@ namespace PenaltySharp.View
             regelcontroller = ServiceProvider.GetReglerService();
             spelarController = ServiceProvider.GetSpelareService();
             cbx_AdminSida_Spelare.Show();
-            for (int index = 0; index < spelarController.Antal(); index++)
+            for (int index = 0; index < spelarController.Antal(); index++) //lägger till alla spelare i en dropdown lista.
             {
                 cbx_AdminSida_Spelare.Items.Add(spelarController.GetAnvändarnamn(index));
             }
@@ -52,6 +52,11 @@ namespace PenaltySharp.View
         private void btn_AdminSida_Spelare_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AdminSida_Load(object sender, EventArgs e) //visar välkomstmeddelande
+        {
+            label3.Text = "Välkommen Admin " + spelarController.GetNamnOfIndex(spelarController.publicID) + "!";
         }
     }
 }

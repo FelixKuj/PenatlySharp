@@ -30,7 +30,7 @@ namespace PenaltySharp.View
 
         private void lv_Användarsida_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bötercontroller.test1();
+            
         }
 
         private void Användarsida_Load(object sender, EventArgs e)

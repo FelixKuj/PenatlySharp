@@ -11,19 +11,19 @@ namespace PenaltySharp.Model
     {
         // Medlemsvariabler
         private int m_personId;
-        private int m_böterKostnad;
+       
         private int m_böterId;
 
         /// <summary>
         /// Konstruktor
         /// </summary>
         /// <param name="inPersonId">PersonID</param>
-        /// <param name="inBöterKostnad">BöterKostnad</param>
+        
         /// <param name="inBöterId">BöterID</param>
-        public Böter(int inPersonId, int inBöterKostnad, int inBöterId)
+        public Böter(int inPersonId, int inBöterId)
         {
             this.m_personId = inPersonId;
-            this.m_böterKostnad = inBöterKostnad;
+       
             this.m_böterId = inBöterId;
         }
 
@@ -36,15 +36,6 @@ namespace PenaltySharp.Model
         public int getPersonId()
         {
             return this.m_personId;
-        }
-
-        /// <summary>
-        /// Returnerar Böterkostnaden
-        /// </summary>
-        /// <returns>BöterKostnad</returns>
-        public int getBöterKostnad()
-        {
-            return this.m_böterKostnad;
         }
 
         /// <summary>
@@ -63,15 +54,6 @@ namespace PenaltySharp.Model
         public void setPersonId(int personId)
         {
             this.m_personId = personId;
-        }
-
-        /// <summary>
-        /// Besämmer BöterKostnad
-        /// </summary>
-        /// <param name="böterKostnad">BöterKostnad</param>
-        public void setBöterKostnad(int böterKostnad)
-        {
-            this.m_böterKostnad = böterKostnad;
         }
 
         /// <summary>

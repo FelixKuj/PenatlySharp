@@ -15,38 +15,60 @@ namespace PenaltySharp.Controller
     {
         int id = 0;
         private List<Regler> m_Regler;
-
+        /// <summary>
+        /// Samlade metoder för att hantera regler i applikationen.
+        /// </summary>
         public RegelController()
         {
             m_Regler = new List<Regler>();
             TestData();
         }
-
+        /// <summary>
+        /// Lägger till objekt i listan Regler
+        /// </summary>
+        /// <param name="item">Regel</param>
         public void Add(Regler item)
         {
             m_Regler.Add(item);
         }
-
+        /// <summary>
+        /// Tar bort objekt i listan Regler.
+        /// </summary>
+        /// <param name="item">Regel</param>
         public void Remove(Regler item)
         {
             m_Regler.Remove(item);
         }
-
+        /// <summary>
+        /// Tar bort specifikt objekt efter index.
+        /// </summary>
+        /// <param name="i">Regelindex</param>
         public void RemoveAt(int i)
         {
             m_Regler.RemoveAt(i);
         }
-
+        /// <summary>
+        /// Tar fram ett regelindex.
+        /// </summary>
+        /// <param name="index">Regelindex</param>
+        /// <returns>Specifikt index</returns>
         public Regler Get(int index)
         {
             return m_Regler.ElementAt(index);
         }
-
+        /// <summary>
+        /// Tar fram antalet objekt i listan Regler.
+        /// </summary>
+        /// <returns>Antalet objekt i Regler</returns>
         public int Count()
         {
             return m_Regler.Count();
         }
-       
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="regel"></param>
+       /// <returns></returns>
         public int GetIndexOfRegel(string regel)
         {
             for (int i = 0; i < m_Regler.Count; i++)

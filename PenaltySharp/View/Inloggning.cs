@@ -19,10 +19,12 @@ namespace PenaltySharp.View
     {
 
         SpelareController spelarController;
+        BöterController böterController;
         public Inloggning()
         {
             InitializeComponent();
             spelarController = ServiceProvider.GetSpelareService();
+            böterController = ServiceProvider.GetBöterService();
             tbx_InloggningsSida_Användarnamn.Focus();
         }
         /// <summary>

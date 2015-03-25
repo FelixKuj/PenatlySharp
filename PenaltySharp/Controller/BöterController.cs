@@ -8,6 +8,8 @@ using PenaltySharp.Model;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
 using System.Windows.Forms;
+using System.IO;
+using PenaltySharp.DAL;
 
 namespace PenaltySharp.Controller
 {
@@ -24,6 +26,18 @@ namespace PenaltySharp.Controller
         {
             m_böter = new List<Böter>();
             testData();
+            try
+            {
+                if (File.Exists("BöterLista.DAT"))
+                {
+                    m_böter = BinarySerialization<List<Böter>>.BinaryDeSerialize("BöterLista.DAT");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Den kunde inte ladda från Böter listan." + ex.Message);// CustomException(ex.Message);
+            }
         }
         /// <summary>
         /// Lägger till objekt i listan Böter
@@ -32,6 +46,7 @@ namespace PenaltySharp.Controller
         public void Add(Böter item)
         {
             m_böter.Add(item);
+           // ServiceProvider.GetBöterService().BinarySerialize();
         }
 
         /// <summary>
@@ -125,6 +140,20 @@ namespace PenaltySharp.Controller
             böter = new Böter(4,8);
             m_böter.Add(böter);
             id++;
+        }
+        public bool BinarySerialize()
+        {
+            try
+            {
+                BinarySerialization<List<Böter>>.FileName = "BöterLista.DAT";
+                BinarySerialization<List<Böter>>.BinarySerialize(m_böter);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message); //CustomException(ex.Message);
+            }
+
+            return true;
         }
     }
 }

@@ -75,6 +75,27 @@ namespace PenaltySharp.View
             }
 
         }
+        private void updateListViewBöter()
+        {
+            lv_Användarsida.Items.Clear();
+            Column1.Text = "Böter";
+            string[] columns = new string[2];
+            ListViewItem item;
+            for (int i = 0; i < bötercontroller.GetAntalBöter(spelarController.publicID); i++)
+            {
+                //columns[0] = bötercontroller.Get(i).getNamn();
+                //columns[1] = bötercontroller.Get(i).getBöter().ToString();
+                item = new ListViewItem(columns);
+                lv_Användarsida.Items.Add(item);
+            }
+            for (int i = 0; i < columns.Length; i++)
+            {
+                
+                lv_Användarsida.AutoResizeColumn(i,
+                ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
+
+        }
         /// <summary>
         /// Bestämmer kolumnrubrik.
         /// </summary>
@@ -82,13 +103,6 @@ namespace PenaltySharp.View
         private void btn_Användarsida_Böter_Click(object sender, EventArgs e)
         {
             updateListViewBöter(); 
-        }
-
-        private void updateListViewBöter()
-        {
-            lv_Användarsida.Items.Clear();
-            Column1.Text = "Bruten Regel";
-
         }
 
     }

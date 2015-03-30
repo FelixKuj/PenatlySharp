@@ -51,17 +51,17 @@ namespace PenaltySharp.View
         }
 
         /// <summary>
-        /// 
+        /// Startar metoden updateListViewRegler när man klickar på knappen regler i användarsidan.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">btn_Användarsida_Regler</param>
+        /// <param name="e">Clickevent</param>
         private void btn_Användarsida_Regler_Click(object sender, EventArgs e)
         {
             updateListViewRegler();
         }
 
         /// <summary>
-        /// Uppdaterar användarsidan när man öppnar sidan, samnt när man lägger till en ny spelare/användare
+        /// Gör om lv_Användarsida så att den visar regler istället för böter.
         /// </summary>
         private void updateListViewRegler()
         {
@@ -84,15 +84,17 @@ namespace PenaltySharp.View
             }
 
         }
+      
         /// <summary>
-        /// Bestämmer kolumnrubrik.
+        /// Visar lv_Användarsida med böter.
         /// </summary>
-
+        /// <param name="sender">btn_Användarsida_Böter</param>
+        /// <param name="e">Clickevent</param>
         private void btn_Användarsida_Böter_Click(object sender, EventArgs e)
         {
             updateListViewBöter(); 
         }
-
+    
         private void updateListViewBöter()
         {
             lv_Användarsida.Items.Clear();

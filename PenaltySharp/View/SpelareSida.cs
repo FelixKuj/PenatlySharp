@@ -22,7 +22,7 @@ namespace PenaltySharp.View
             updateListView();
         }
         /// <summary>
-        /// allt äger i denna metod
+        /// Upptaderar spelarlistan när man öppnar sidan samt när man lägger till en ny spelare.
         /// </summary>
         private void updateListView()
         {
@@ -46,7 +46,11 @@ namespace PenaltySharp.View
             }
 
         }
-
+        /// <summary>
+        /// Tar bort markerat objekt när man trycker delete.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lv_SpelareSida_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)

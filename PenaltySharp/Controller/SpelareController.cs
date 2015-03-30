@@ -244,7 +244,7 @@ namespace PenaltySharp.Controller
         }
 
         /// <summary>
-        /// Sparar ner spelare som filer.
+        /// Sparar ner spelare som en fil.
         /// </summary>
         /// <returns>Att sparningen lyckades.</returns>
         public bool BinarySerialize()

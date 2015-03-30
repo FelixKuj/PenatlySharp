@@ -22,6 +22,10 @@ namespace PenaltySharp
         static SpelareController _spelareControllerService;
         static RegelController _regelControllerSevice;
         static BöterController _böterControllerSevice;
+        /// <summary>
+        /// Tar fram 
+        /// </summary>
+        /// <returns></returns>
         public static SpelareController GetSpelareService()
         {
             if (_spelareControllerService == null)

@@ -14,6 +14,7 @@ namespace PenaltySharp.View
     public partial class ReglerSida : Form
     {
         RegelController regelcontroller;
+     
         public ReglerSida()
         {
             InitializeComponent();

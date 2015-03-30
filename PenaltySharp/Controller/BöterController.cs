@@ -20,7 +20,7 @@ namespace PenaltySharp.Controller
         private List<Böter> m_böter;
 
         /// <summary>
-        /// Samlade metoder för att hantera böter i applikationen.
+        /// Samlade metoder för att hantera böter i applikationen. Samt kollar om listan existerar och upptaterar listan efter filen.
         /// </summary>
           public BöterController()
         {
@@ -85,7 +85,11 @@ namespace PenaltySharp.Controller
         {
             return m_böter.Count();
         }
-       
+       /// <summary>
+       /// Tar fram ett index till en böter.
+       /// </summary>
+       /// <param name="böter">Böterns namn</param>
+       /// <returns>Böterns index</returns>
         public int GetIndexOfBöter(int böter)
         {
             for (int i = 0; i < m_böter.Count; i++)
@@ -141,6 +145,11 @@ namespace PenaltySharp.Controller
             m_böter.Add(böter);
             id++;
         }
+
+        /// <summary>
+        /// Sparar böter som en fil.
+        /// </summary>
+        /// <returns>Om sparningen fungerade</returns>
         public bool BinarySerialize()
         {
             try

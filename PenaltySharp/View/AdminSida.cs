@@ -51,7 +51,8 @@ namespace PenaltySharp.View
 
         private void btn_AdminSida_Spelare_Click(object sender, EventArgs e)
         {
-
+            Form spelaresida = new SpelareSida();
+            spelaresida.Show();
         }
 
         private void AdminSida_Load(object sender, EventArgs e) //visar välkomstmeddelande

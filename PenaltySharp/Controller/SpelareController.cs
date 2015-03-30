@@ -32,7 +32,7 @@ namespace PenaltySharp.Controller
                 if (File.Exists("SpelareLista.DAT"))
                 {
                     m_Spelare = BinarySerialization<List<Spelare>>.BinaryDeSerialize("SpelareLista.DAT");
-        }
+                }
 
             }
             catch (Exception ex)
@@ -59,6 +59,10 @@ namespace PenaltySharp.Controller
         public void TaBort(Spelare item)
         {
             m_Spelare.Remove(item);
+        }
+        public void TaBortVid(int ID)
+        {
+            m_Spelare.RemoveAt(ID);
         }
 
         /// <summary>

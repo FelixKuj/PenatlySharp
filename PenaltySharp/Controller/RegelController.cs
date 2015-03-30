@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using PenaltySharp.Controller;
 using PenaltySharp.View;
 using System.Windows.Forms;
+using System.IO;
+using PenaltySharp.DAL;
 
 namespace PenaltySharp.Controller
 {
@@ -21,7 +23,20 @@ namespace PenaltySharp.Controller
         public RegelController()
         {
             m_Regler = new List<Regler>();
-            TestData();
+            //TestData();
+            try
+            {
+                if (File.Exists("ReglerLista.DAT"))
+                {
+                    m_Regler = BinarySerialization<List<Regler>>.BinaryDeSerialize("ReglerLista.DAT");
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Den kunde inte ladda från Regler listan." + ex.Message);// CustomException(ex.Message);
+            }
         }
         /// <summary>
         /// Lägger till objekt i listan Regler
@@ -30,6 +45,7 @@ namespace PenaltySharp.Controller
         public void Add(Regler item)
         {
             m_Regler.Add(item);
+            ServiceProvider.GetReglerService().BinarySerialize();
         }
         /// <summary>
         /// Tar bort objekt i listan Regler.
@@ -132,6 +148,20 @@ namespace PenaltySharp.Controller
             //    regelsida.skaparegel = false;
 
             }
+        public bool BinarySerialize()
+        {
+            try
+            {
+                BinarySerialization<List<Regler>>.FileName = "ReglerLista.DAT";
+                BinarySerialization<List<Regler>>.BinarySerialize(m_Regler);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message); //CustomException(ex.Message);
+            }
+
+            return true;
+        }
         }
 
     }

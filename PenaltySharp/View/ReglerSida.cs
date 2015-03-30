@@ -30,7 +30,9 @@ namespace PenaltySharp.View
         {
             try
             {
-                regelcontroller.Add(new Model.Regler(ReglerSida_tbx_RegelNamn.Text, regelcontroller.Count(), Convert.ToInt32(ReglerSida_tbx_RegelKostnad.Text)));
+                regelcontroller.Add(new Model.Regler(ReglerSida_tbx_RegelNamn.Text,
+                    regelcontroller.Count(),
+                    Convert.ToInt32(ReglerSida_tbx_RegelKostnad.Text)));
                 updateListView();
             }
             catch (Exception)

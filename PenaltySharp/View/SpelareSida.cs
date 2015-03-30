@@ -14,13 +14,40 @@ namespace PenaltySharp.View
     public partial class SpelareSida : Form
     {
         SpelareController spelarecontroller;
+        
         public SpelareSida()
         {
             spelarecontroller = ServiceProvider.GetSpelareService();
             InitializeComponent();
+            updateListView();
         }
-        
-        private void SpelareSida_KeyDown(object sender, KeyEventArgs e)
+        /// <summary>
+        /// allt äger i denna metod
+        /// </summary>
+        private void updateListView()
+        {
+
+            lv_SpelareSida.Items.Clear();
+            string[] columns = new string[3];
+            ListViewItem item;
+            for (int i = 0; i < spelarecontroller.Antal(); i++)
+            {
+                columns[0] = spelarecontroller.Get(i).getNamn();
+                columns[1] = spelarecontroller.Get(i).getAnvändarnamn();
+                columns[2] = i.ToString();
+                item = new ListViewItem(columns);
+                lv_SpelareSida.Items.Add(item);
+            }
+            for (int i = 0; i < columns.Length; i++)
+            {
+
+                lv_SpelareSida.AutoResizeColumn(i,
+                ColumnHeaderAutoResizeStyle.HeaderSize);
+            }
+
+        }
+
+        private void lv_SpelareSida_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
             {
@@ -31,8 +58,9 @@ namespace PenaltySharp.View
                         if (lv_SpelareSida.Items[i].Selected)
                         {
                             lv_SpelareSida.Items.RemoveAt(i);
-                            //regelcontroller.RemoveAt(i);
-
+                            spelarecontroller.TaBortVid(i);
+                            updateListView();
+                            break;
                         }
                     }
                 }

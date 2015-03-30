@@ -47,6 +47,7 @@
             this.lv_SpelareSida.TabIndex = 0;
             this.lv_SpelareSida.UseCompatibleStateImageBehavior = false;
             this.lv_SpelareSida.View = System.Windows.Forms.View.Details;
+            this.lv_SpelareSida.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lv_SpelareSida_KeyDown);
             // 
             // columnHeader1
             // 
@@ -71,7 +72,6 @@
             this.Controls.Add(this.lv_SpelareSida);
             this.Name = "SpelareSida";
             this.Text = "SpelareSida";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SpelareSida_KeyDown);
             this.ResumeLayout(false);
 
         }

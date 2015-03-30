@@ -49,6 +49,10 @@ namespace PenaltySharp.Controller
         {
             m_Spelare.Remove(item);
         }
+        public void TaBortVid(int ID)
+        {
+            m_Spelare.RemoveAt(ID);
+        }
 
         public Spelare Get(int index)
         {

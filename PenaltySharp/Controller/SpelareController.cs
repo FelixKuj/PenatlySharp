@@ -20,6 +20,9 @@ namespace PenaltySharp.Controller
         private List<Spelare> m_Spelare;
         public string publicanvändarnamn;
         public int publicID;
+        /// <summary>
+        /// Kollar om listan existerar och upptaterar listan efter filen.
+        /// </summary>
         public SpelareController()
         {
             m_Spelare = new List<Spelare>();
@@ -38,32 +41,64 @@ namespace PenaltySharp.Controller
                 throw new Exception("Den kunde inte ladda från spelare listan." + ex.Message);// CustomException(ex.Message);
             }
         }
-
+        /// <summary>
+        /// Lägger till ett objekt i listan spelare.
+        /// </summary>
+        /// <param name="item">En spelare</param>
         public void LäggaTill(Spelare item)
         {
             m_Spelare.Add(item);
             ServiceProvider.GetSpelareService().BinarySerialize();
             
         }
+
+        /// <summary>
+        /// Tar bort ett objekt ur listan spelare.
+        /// </summary>
+        /// <param name="item">En spelare</param>
         public void TaBort(Spelare item)
         {
             m_Spelare.Remove(item);
         }
+        public void TaBortVid(int ID)
+        {
+            m_Spelare.RemoveAt(ID);
+        }
 
+        /// <summary>
+        /// Tar fram ett spelareindex
+        /// </summary>
+        /// <param name="index">Spelareindex</param>
+        /// <returns>Specifikt index</returns>
         public Spelare Get(int index)
         {
             return m_Spelare.ElementAt(index);
         }
 
+        /// <summary>
+        /// Beräknar antalet objekt i listan spelare.
+        /// </summary>
+        /// <returns>Antalet objekt i listan spelare.</returns>
         public int Antal()
         {
             return m_Spelare.Count();
         }
 
+        /// <summary>
+        /// Tar fram ett användarnamn för en specifik spelare med ett visst index.
+        /// </summary>
+        /// <param name="index">Spelareindex</param>
+        /// <returns>Spelarens användarnamn</returns>
         public String GetAnvändarnamn(int index)
         {
             return m_Spelare[index].getAnvändarnamn();
         }
+
+        /// <summary>
+        /// Tar fram ett index tillhörande en spelares namn.
+        /// </summary>
+        /// <param name="Namn">En spelares namn</param>
+        /// <returns>Spelarens index</returns>
         public int GetIndexOfNamn(string Namn)
         {
             for (int i = 0; i < m_Spelare.Count; i++)
@@ -75,19 +110,39 @@ namespace PenaltySharp.Controller
             }
             return -1;
         }
-        public string GetNamnOfIndex(int Index)
+        /// <summary>
+        /// Tar fram en spelares namn med hjälp av ett specifikt index.
+        /// </summary>
+        /// <param name="index">Spelareindex</param>
+        /// <returns>Spelarens namn</returns>
+        public string GetNamnOfIndex(int index)
         {
-            return m_Spelare[Index].getNamn();
+            return m_Spelare[index].getNamn();
         }
+
+        /// <summary>
+        /// Tar fram ett användarnamn med hjälp av en spelares index.
+        /// </summary>
+        /// <param name="Index">En spelares index</param>
+        /// <returns>En spelares användarnamn.</returns>
         public string GetAnvändarNamnOfIndex(int Index)
         {
             return m_Spelare[Index].getAnvändarnamn();
         }
+        /// <summary>
+        /// Kollar om en spelare är admin eller inte utifrån ett index.
+        /// </summary>
+        /// <param name="Index">En spelares index</param>
+        /// <returns>Om en spelare är admin eller inte.</returns>
         public bool GetAdminStatusOfIndex(int Index)
         {
             return m_Spelare[Index].getAdmin();
         }
-        public void TestData() //skapar default spelarna
+
+        /// <summary>
+        /// Lista med grundspelare för att ha en bas till projektet.
+        /// </summary>
+        public void TestData() 
         {
             Spelare
             spelare = new Spelare("Felix Kujanpää", 0, "kujfel", "felkuj", true);
@@ -105,11 +160,12 @@ namespace PenaltySharp.Controller
         }
 
         /// <summary>
-        /// Hur inloggningen fungerar
+        /// Loggar in samt kollar om man är admin eller inte.
+        /// Om användarnamnet och lösenordet som skrivs in tillhör samma index godkänns inloggningen.
         /// </summary>
-        /// <param name="Användarnamn"></param>
-        /// <param name="Lösenord"></param>
-        /// <returns></returns>
+        /// <param name="Användarnamn">En spelares användarnamn från listan m_Spelare</param>
+        /// <param name="Lösenord">En spelares lösenord från listan m_Spelare</param>
+        /// <returns>Vid felinloggningen: felmeddelande. Vid godkänd inloggning: Användarnamnet på spelaren som loggats in.</returns>
         public string LoggaIn(string Användarnamn, string Lösenord)
         {
             for (int i = 0; i < Antal(); i++)
@@ -148,6 +204,19 @@ namespace PenaltySharp.Controller
             return "Fel användarnamn eller lösenord.";
         }
 
+        /// <summary>
+        /// Kollar om användarnamn är upptaget vid regristrering.
+        /// Kollar om man fyllt i samma lösenord två gånger vid regristrering.
+        /// Om lösenorden stämmer och användarnamnet inte är upptaget läggs en ny spelare till med namn, efternamn och email.
+        /// Lägger till en spelare i filsparningen.
+        /// </summary>
+        /// <param name="Förnamn">Spelarens förnamn</param>
+        /// <param name="efternamn">Spelarens efternamn</param>
+        /// <param name="Användarnamn">Spelarens användarnamn</param>
+        /// <param name="Lösenord">Spelarens lösenord</param>
+        /// <param name="Lösenord2">Spelarens lösenord</param>
+        /// <param name="Email">Spelarens email</param>
+        /// <returns></returns>
         public string SkapaAnvändare(string Förnamn, string efternamn, string Användarnamn, string Lösenord, string Lösenord2, string Email)
         {
             
@@ -173,6 +242,11 @@ namespace PenaltySharp.Controller
 
             return "Ny användare skapad";
         }
+
+        /// <summary>
+        /// Sparar ner spelare som en fil.
+        /// </summary>
+        /// <returns>Att sparningen lyckades.</returns>
         public bool BinarySerialize()
         {
             try

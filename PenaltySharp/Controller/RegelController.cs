@@ -18,7 +18,7 @@ namespace PenaltySharp.Controller
         int id = 0;
         private List<Regler> m_Regler;
         /// <summary>
-        /// Samlade metoder för att hantera regler i applikationen.
+        /// Samlade metoder för att hantera regler i applikationen. Samt kollar om listan existerar och upptaterar listan efter filen.
         /// </summary>
         public RegelController()
         {
@@ -81,10 +81,10 @@ namespace PenaltySharp.Controller
             return m_Regler.Count();
         }
        /// <summary>
-       /// 
+       /// Tar fram ett index för en viss regel.
        /// </summary>
-       /// <param name="regel"></param>
-       /// <returns></returns>
+       /// <param name="regel">En regels namn/signatur</param>
+       /// <returns>Regelns index</returns>
         public int GetIndexOfRegel(string regel)
         {
             for (int i = 0; i < m_Regler.Count; i++)
@@ -148,6 +148,11 @@ namespace PenaltySharp.Controller
             //    regelsida.skaparegel = false;
 
             }
+
+        /// <summary>
+        /// Sparar ner regler som en fil.
+        /// </summary>
+        /// <returns>Att sparningen lyckades</returns>
         public bool BinarySerialize()
         {
             try

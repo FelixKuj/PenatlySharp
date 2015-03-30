@@ -22,6 +22,10 @@ namespace PenaltySharp
         static SpelareController _spelareControllerService;
         static RegelController _regelControllerSevice;
         static BöterController _böterControllerSevice;
+        /// <summary>
+        /// Kollar om SpelareController redan finns, annars skapar den.
+        /// </summary>
+        /// <returns>SpelareController</returns>
         public static SpelareController GetSpelareService()
         {
             if (_spelareControllerService == null)
@@ -29,7 +33,10 @@ namespace PenaltySharp
 
             return _spelareControllerService;
         }
-
+        /// <summary>
+        /// Kollar om RegelController redan finns, annars skapar den.
+        /// </summary>
+        /// <returns>RegelController</returns>
         public static RegelController GetReglerService()
         {
             if (_regelControllerSevice == null)
@@ -37,7 +44,10 @@ namespace PenaltySharp
 
             return _regelControllerSevice;
         }
-
+        /// <summary>
+        /// Kollar om BöterController redan finns, annars skapar den.
+        /// </summary>
+        /// <returns>BöterController</returns>
         public static BöterController GetBöterService()
         {
             if (_böterControllerSevice == null)

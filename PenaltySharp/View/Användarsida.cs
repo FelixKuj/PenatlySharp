@@ -32,7 +32,7 @@ namespace PenaltySharp.View
             
         }
         /// <summary>
-        /// visar ett välkomstmeddelande
+        /// Visar ett välkomstmeddelande
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -50,10 +50,19 @@ namespace PenaltySharp.View
             this.Close();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Användarsida_Regler_Click(object sender, EventArgs e)
         {
             updateListViewRegler();
         }
+
+        /// <summary>
+        /// Uppdaterar användarsidan när man öppnar sidan, samnt när man lägger till en ny spelare/användare
+        /// </summary>
         private void updateListViewRegler()
         {
             lv_Användarsida.Items.Clear();

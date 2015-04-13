@@ -29,10 +29,10 @@ namespace PenaltySharp.View
             spelarController = ServiceProvider.GetSpelareService();
         }
         /// <summary>
-        /// kollar igenom alla textboxes i fromen och ser om de är lämpliga för att skapa en användare
+        /// Kollar igenom alla textboxes i fromen och ser om de är lämpliga för att skapa en användare.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">btn_RegistreringsSida_Registrera</param>
+        /// <param name="e">Clickevent</param>
         private void btn_RegistreringsSida_Registrera_Click(object sender, EventArgs e)
         {
             FelMeddelnade = "";

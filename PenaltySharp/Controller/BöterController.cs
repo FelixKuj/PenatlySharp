@@ -40,7 +40,6 @@ namespace PenaltySharp.Controller
                 throw new Exception("Den kunde inte ladda från Böter listan." + ex.Message);// CustomException(ex.Message);
             }
         }
-        //
         /// <summary>
         /// Lägger till objekt i listan Böter
         /// </summary>
@@ -104,6 +103,11 @@ namespace PenaltySharp.Controller
 
             return -1;
         }
+        /// <summary>
+        /// Tar fram antal böter.
+        /// </summary>
+        /// <param name="spelarID">En spelares ID</param>
+        /// <returns>Antal Böter</returns>
         public int GetAntalBöter(int spelarID)
         {
              antal = 0;
@@ -117,7 +121,7 @@ namespace PenaltySharp.Controller
             return antal;
         }
         /// <summary>
-        /// Lista med grunböter för att skapa en bas i projektet.
+        /// Lista med grundböter för att skapa en bas i projektet.
         /// </summary>
         public void testData()
         {

@@ -52,6 +52,7 @@ namespace PenaltySharp.DAL
                 IFormatter formatter = new BinaryFormatter();
                 stream = new FileStream(_fileName, FileMode.Create, FileAccess.Write, FileShare.None);
                 formatter.Serialize(stream, lista);
+
             }
             catch
             {

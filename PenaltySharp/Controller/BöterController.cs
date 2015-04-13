@@ -40,6 +40,7 @@ namespace PenaltySharp.Controller
                 throw new Exception("Den kunde inte ladda från Böter listan." + ex.Message);// CustomException(ex.Message);
             }
         }
+        //
         /// <summary>
         /// Lägger till objekt i listan Böter
         /// </summary>

@@ -18,6 +18,7 @@ namespace PenaltySharp.Controller
     {
         int id = 0;
         private List<Böter> m_böter;
+        int antal = 0;
 
         /// <summary>
         /// Samlade metoder för att hantera böter i applikationen. Samt kollar om listan existerar och upptaterar listan efter filen.
@@ -101,6 +102,18 @@ namespace PenaltySharp.Controller
             }
 
             return -1;
+        }
+        public int GetAntalBöter(int spelarID)
+        {
+             antal = 0;
+            for (int i = 0; i < m_böter.Count; i++)
+			{
+			 if (m_böter[i].getPersonId() == spelarID)
+	            {
+		            antal++;
+	            }
+			}
+            return antal;
         }
         /// <summary>
         /// Lista med grunböter för att skapa en bas i projektet.

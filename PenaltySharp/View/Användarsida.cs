@@ -21,7 +21,7 @@ namespace PenaltySharp.View
         public Användarsida()
         {
             InitializeComponent();
-           
+
             spelarController = ServiceProvider.GetSpelareService();
             regelcontroller = ServiceProvider.GetReglerService();
             bötercontroller = ServiceProvider.GetBöterService();
@@ -29,13 +29,13 @@ namespace PenaltySharp.View
 
         private void lv_Användarsida_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
         /// <summary>
         /// Visar ett välkomstmeddelande
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Användarsida</param>
+        /// <param name="e">Loadevent</param>
         private void Användarsida_Load(object sender, EventArgs e)
         {
             label3.Text = "Välkommen " + spelarController.GetNamnOfIndex(spelarController.publicID) + "!";
@@ -84,7 +84,7 @@ namespace PenaltySharp.View
             }
 
         }
-      
+
         /// <summary>
         /// Visar lv_Användarsida med böter.
         /// </summary>
@@ -92,9 +92,11 @@ namespace PenaltySharp.View
         /// <param name="e">Clickevent</param>
         private void btn_Användarsida_Böter_Click(object sender, EventArgs e)
         {
-            updateListViewBöter(); 
+            updateListViewBöter();
         }
-    
+        /// <summary>
+        /// Upptaderar texten i Column1.
+        /// </summary>
         private void updateListViewBöter()
         {
             lv_Användarsida.Items.Clear();

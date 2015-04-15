@@ -17,13 +17,11 @@ namespace PenaltySharp.Model
         /// <summary>
         /// Konstruktor
         /// </summary>
-        /// <param name="inPersonId">PersonID</param>
-        
+        /// <param name="inPersonId">PersonID</param>       
         /// <param name="inBöterId">BöterID</param>
         public Böter(int inPersonId, int inBöterId)
         {
-            this.m_personId = inPersonId;
-       
+            this.m_personId = inPersonId;       
             this.m_böterId = inBöterId;
         }
 

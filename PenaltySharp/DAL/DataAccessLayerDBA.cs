@@ -44,8 +44,9 @@ namespace PenaltySharp.DAL
             //sqlList.Add("if not exists (select * from master.sys.databases where name = '[MOVIELIBRARY]') " +
             //             "CREATE DATABASE MOVIELIBRARY");
             sqlList.Add("USE JBote");
-            sqlList.Add("CREATE TABLE [dbo].[Spelare6] ([Id] INT NOT NULL,[användarnamn] VARCHAR (50) NULL, [lösenord]     VARCHAR (50) NULL,    PRIMARY KEY CLUSTERED ([Id] ASC));");
-            
+            sqlList.Add("CREATE TABLE [dbo].[Spelare] ([Spelare ID]INT NOT NULL,[Användarnamn] VARCHAR (50) NULL, [Lösenord]VARCHAR (50) NULL,[Admin] BIT NULL, [Namn] VARCHAR(50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");
+            sqlList.Add("CREATE TABLE [dbo].[Regler] ([Regler ID]INT NOT NULL,[Böter]INT NULL,[Regel Namn] VARCHAR(50) NULL, PRIMARY KEY CLUSTERED ([Id] ASC));");
+            sqlList.Add("CREATE TABLE [dbo].[Böter] ([Böter ID]INT NOT NULL,[Person ID]INT NULL,PRIMARY KEY CLUSTERED ([Id] ASC));");
             SqlCommand cmd;
             foreach (var sql in sqlList)
             {

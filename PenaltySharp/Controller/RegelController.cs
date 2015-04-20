@@ -46,6 +46,7 @@ namespace PenaltySharp.Controller
         {
             m_Regler.Add(item);
             ServiceProvider.GetReglerService().BinarySerialize();
+            SaveToDBA();
         }
         /// <summary>
         /// Tar bort objekt i listan Regler.
@@ -80,11 +81,11 @@ namespace PenaltySharp.Controller
         {
             return m_Regler.Count();
         }
-       /// <summary>
-       /// Tar fram ett index för en viss regel.
-       /// </summary>
-       /// <param name="regel">En regels namn/signatur</param>
-       /// <returns>Regelns index</returns>
+        /// <summary>
+        /// Tar fram ett index för en viss regel.
+        /// </summary>
+        /// <param name="regel">En regels namn/signatur</param>
+        /// <returns>Regelns index</returns>
         public int GetIndexOfRegel(string regel)
         {
             for (int i = 0; i < m_Regler.Count; i++)
@@ -102,7 +103,7 @@ namespace PenaltySharp.Controller
         /// </summary>
         public void TestData()
         {
-            
+
             Regler
             regel = new Regler("Sen ankomst till träning", id, 50);
             m_Regler.Add(regel);
@@ -147,7 +148,7 @@ namespace PenaltySharp.Controller
             //    m_Regler.Add(regel);
             //    regelsida.skaparegel = false;
 
-            }
+        }
 
         /// <summary>
         /// Sparar ner regler som en fil.
@@ -167,9 +168,17 @@ namespace PenaltySharp.Controller
 
             return true;
         }
-        }
+        public bool SaveToDBA()
+        {
+            DataAccessLayerDBA dba = new DataAccessLayerDBA();
+            return dba.SaveAll();
 
+        }
     }
+
+
+
+}
 
 
 

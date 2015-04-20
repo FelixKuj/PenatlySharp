@@ -48,6 +48,7 @@
     <Compile Include="Controller\RegelController.cs" />
     <Compile Include="Controller\SpelareController.cs" />
     <Compile Include="DAL\BinarySerialization.cs" />
+    <Compile Include="DAL\DataAccessLayerDBA.cs" />
     <Compile Include="Model\Böter.cs" />
     <Compile Include="Service\ServiceProvider.cs" />
     <Compile Include="View\AdminSida.cs">

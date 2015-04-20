@@ -182,5 +182,12 @@ namespace PenaltySharp.Controller
 
             return true;
         }
+
+        public bool SaveToDBA()
+        {
+            DataAccessLayerDBA dba = new DataAccessLayerDBA();
+            return dba.SaveAll();
+
+        }
     }
 }

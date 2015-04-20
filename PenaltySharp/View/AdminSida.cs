@@ -16,6 +16,9 @@ namespace PenaltySharp.View
     {
         RegelController regelcontroller;
         SpelareController spelarController;
+        /// <summary>
+        /// Initialiserar AdminSida.
+        /// </summary>
         public AdminSida()
         {
             InitializeComponent();
@@ -31,8 +34,8 @@ namespace PenaltySharp.View
         /// <summary>
         /// Öppnar regelsida.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">btn_AdminSida_Regler</param>
+        /// <param name="e">Clickevent</param>
         private void btn_AdminSida_Regler_Click(object sender, EventArgs e)
         {
             Form regelsida = new ReglerSida();
@@ -42,20 +45,28 @@ namespace PenaltySharp.View
         /// <summary>
         /// Stänger admin sidan.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">btn_AdminSida_LoggaUt</param>
+        /// <param name="e">Clickevent</param>
         private void btn_AdminSida_LoggaUt_Click(object sender, EventArgs e)
         {
             this.Close();          
         }
-
+        /// <summary>
+        /// Skapar och visar spelarssida.
+        /// </summary>
+        /// <param name="sender">btn_AdminSida_Spelare</param>
+        /// <param name="e">Clickevent</param>
         private void btn_AdminSida_Spelare_Click(object sender, EventArgs e)
         {
             Form spelaresida = new SpelareSida();
             spelaresida.Show();
         }
-
-        private void AdminSida_Load(object sender, EventArgs e) //visar välkomstmeddelande
+        /// <summary>
+        /// Visar ett välkomstmeddelande.
+        /// </summary>
+        /// <param name="sender">AdminSida</param>
+        /// <param name="e">Loadevent</param>
+        private void AdminSida_Load(object sender, EventArgs e)
         {
             label3.Text = "Välkommen Admin " + spelarController.GetNamnOfIndex(spelarController.publicID) + "!";
         }

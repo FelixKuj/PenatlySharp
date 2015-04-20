@@ -58,7 +58,7 @@ namespace PenaltySharp.Controller
         {
             m_böter.Remove(item);
         }
-
+         
         /// <summary>
         /// Tar bort ett specifikt objekt efter index i listan Böter.
         /// </summary>

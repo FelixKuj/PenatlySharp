@@ -39,7 +39,7 @@ namespace PenaltySharp.View
             catch (Exception)
             {
                 
-                MessageBox.Show("Vänligen skriv in en regel och bötersumma innan du läger till en ny regel.");
+                MessageBox.Show("Vänligen skriv in en regel och bötersumma innan du läger till en ny regel.t");
             }
         }
         /// <summary>

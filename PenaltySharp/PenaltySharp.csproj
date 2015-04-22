@@ -124,7 +124,6 @@
     <EmbeddedResource Include="View\SpelareSida.resx">
       <DependentUpon>SpelareSida.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\ReglerLista - Copy.DAT" />
     <None Include="bin\Debug\ReglerLista.DAT" />
     <None Include="bin\Debug\SpelareLista.DAT" />
     <None Include="Properties\Settings.settings">

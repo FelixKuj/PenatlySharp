@@ -25,6 +25,7 @@ namespace PenaltySharp.View
             spelarController = ServiceProvider.GetSpelareService();
             regelcontroller = ServiceProvider.GetReglerService();
             bötercontroller = ServiceProvider.GetBöterService();
+            updateListViewBöter();
         }
    
         private void lv_Användarsida_SelectedIndexChanged(object sender, EventArgs e)

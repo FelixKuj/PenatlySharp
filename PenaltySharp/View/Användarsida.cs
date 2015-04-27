@@ -25,6 +25,7 @@ namespace PenaltySharp.View
             spelarController = ServiceProvider.GetSpelareService();
             regelcontroller = ServiceProvider.GetReglerService();
             bötercontroller = ServiceProvider.GetBöterService();
+            updateListViewBöter();
         }
    
         private void lv_Användarsida_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,7 +106,7 @@ namespace PenaltySharp.View
             ListViewItem item;
             for (int i = 0; i < bötercontroller.Count(); i++)
             {
-                if (true)
+                if (bötercontroller.Get(i).getPersonId() == spelarController.publicID)
                 {
                     columns[0] = regelcontroller.Get(i).getNamn();
                     columns[1] = regelcontroller.Get(i).getBöter().ToString();

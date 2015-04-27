@@ -106,6 +106,7 @@
             this.cbx_AdminSida_Spelare.Name = "cbx_AdminSida_Spelare";
             this.cbx_AdminSida_Spelare.Size = new System.Drawing.Size(121, 21);
             this.cbx_AdminSida_Spelare.TabIndex = 14;
+            this.cbx_AdminSida_Spelare.SelectedIndexChanged += new System.EventHandler(this.cbx_AdminSida_Spelare_SelectedIndexChanged);
             // 
             // AdminSida
             // 

@@ -87,10 +87,10 @@ namespace PenaltySharp.View
             {
                 if (bötercontroller.Get(i).getPersonId() == spelarController.publicID)
                 {
-                    if (bötercontroller.Get(i1).getPersonId() == i)
+                    if (bötercontroller.Get(i).getPersonId() == i)
                     {
-                        columns[0] = regelcontroller.Get(bötercontroller.Get(i1).getBöterId()).getNamn();
-                        columns[1] = regelcontroller.Get(bötercontroller.Get(i1).getBöterId()).getBöter().ToString();
+                        columns[0] = regelcontroller.Get(bötercontroller.Get(i).getBöterId()).getNamn();
+                        columns[1] = regelcontroller.Get(bötercontroller.Get(i).getBöterId()).getBöter().ToString();
                     item = new ListViewItem(columns);
                     lv_AdminSida.Items.Add(item);
                 }

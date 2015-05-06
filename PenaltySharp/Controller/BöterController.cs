@@ -120,7 +120,7 @@ namespace PenaltySharp.Controller
 			}
             return antal;
         }
-        public void LäggtillBöter (int spelare, int regel)
+        public void LäggtillBöter(int spelare, int regel)
         {
             Böter
             böter = new Böter(spelare, regel);

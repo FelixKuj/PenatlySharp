@@ -26,7 +26,7 @@ namespace PenaltySharp.Controller
           public BöterController()
         {
             m_böter = new List<Böter>();
-            testData();
+            //testData();
             try
             {
                 if (File.Exists("BöterLista.DAT"))
@@ -125,6 +125,7 @@ namespace PenaltySharp.Controller
             Böter
             böter = new Böter(spelare, regel);
             m_böter.Add(böter);
+            ServiceProvider.GetBöterService().BinarySerialize();
         }
 
         /// <summary>

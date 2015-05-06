@@ -132,7 +132,15 @@ namespace PenaltySharp.View
 
         private void btn_AdminSida_Acceptera_Click(object sender, EventArgs e)
         {
-            //bötercontroller.Add(cbx_AdminSida_LäggTillRegel.SelectedIndex, cbx_AdminSida_SpelareBöter.SelectedIndex);
+            try
+            {
+                bötercontroller.LäggtillBöter(cbx_AdminSida_SpelareBöter.SelectedIndex, cbx_AdminSida_LäggTillRegel.SelectedIndex);
+            }
+            catch (Exception)
+            {
+                
+            }
+                
         }
     }
 }

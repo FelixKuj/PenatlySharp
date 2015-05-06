@@ -38,11 +38,11 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbx_AdminSida_Spelare = new System.Windows.Forms.ComboBox();
             this.cbx_AdminSida_LäggTillRegel = new System.Windows.Forms.ComboBox();
-            this.spelareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.spelareControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbx_AdminSida_SpelareBöter = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_AdminSida_Acceptera = new System.Windows.Forms.Button();
+            this.spelareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.spelareControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.spelareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spelareControllerBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -125,14 +125,6 @@
             this.cbx_AdminSida_LäggTillRegel.Size = new System.Drawing.Size(324, 21);
             this.cbx_AdminSida_LäggTillRegel.TabIndex = 16;
             // 
-            // spelareBindingSource
-            // 
-            this.spelareBindingSource.DataSource = typeof(PenaltySharp.Model.Spelare);
-            // 
-            // spelareControllerBindingSource
-            // 
-            this.spelareControllerBindingSource.DataSource = typeof(PenaltySharp.Controller.SpelareController);
-            // 
             // cbx_AdminSida_SpelareBöter
             // 
             this.cbx_AdminSida_SpelareBöter.FormattingEnabled = true;
@@ -159,6 +151,14 @@
             this.btn_AdminSida_Acceptera.Text = "Acceptera";
             this.btn_AdminSida_Acceptera.UseVisualStyleBackColor = true;
             this.btn_AdminSida_Acceptera.Click += new System.EventHandler(this.btn_AdminSida_Acceptera_Click);
+            // 
+            // spelareBindingSource
+            // 
+            this.spelareBindingSource.DataSource = typeof(PenaltySharp.Model.Spelare);
+            // 
+            // spelareControllerBindingSource
+            // 
+            this.spelareControllerBindingSource.DataSource = typeof(PenaltySharp.Controller.SpelareController);
             // 
             // AdminSida
             // 

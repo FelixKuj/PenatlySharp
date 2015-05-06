@@ -83,10 +83,13 @@ namespace PenaltySharp.View
             {
                 if (bötercontroller.Get(i).getPersonId() == spelarController.publicID)
                 {
-                    columns[0] = regelcontroller.Get(i).getNamn();
-                    columns[1] = regelcontroller.Get(i).getBöter().ToString();
-                    item = new ListViewItem(columns);
-                    lv_AdminSida.Items.Add(item);
+                    if (bötercontroller.Get(i1).getPersonId() == i)
+                    {
+                        columns[0] = regelcontroller.Get(bötercontroller.Get(i1).getBöterId()).getNamn();
+                        columns[1] = regelcontroller.Get(bötercontroller.Get(i1).getBöterId()).getBöter().ToString();
+                        item = new ListViewItem(columns);
+                        lv_AdminSida.Items.Add(item);
+                    }
                 }
             }
             for (int i = 0; i < columns.Length; i++)
@@ -111,8 +114,8 @@ namespace PenaltySharp.View
                         ListViewItem item;
                         if (bötercontroller.Get(i1).getPersonId() == i)
                         {
-                            columns[0] = regelcontroller.Get(i1).getNamn();
-                            columns[1] = regelcontroller.Get(i1).getBöter().ToString();
+                            columns[0] = regelcontroller.Get(bötercontroller.Get(i1).getBöterId()).getNamn();
+                            columns[1] = regelcontroller.Get(bötercontroller.Get(i1).getBöterId()).getBöter().ToString();
                             item = new ListViewItem(columns);
                             lv_AdminSida.Items.Add(item);
                         }

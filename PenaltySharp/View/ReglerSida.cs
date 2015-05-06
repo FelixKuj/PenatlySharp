@@ -81,7 +81,6 @@ namespace PenaltySharp.View
                         {
                             lv_ReglerSida.Items.RemoveAt(i);
                             regelcontroller.RemoveAt(i);
-
                         }
                     }
                 }

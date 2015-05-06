@@ -122,7 +122,7 @@
             this.cbx_AdminSida_LäggTillRegel.FormattingEnabled = true;
             this.cbx_AdminSida_LäggTillRegel.Location = new System.Drawing.Point(87, 474);
             this.cbx_AdminSida_LäggTillRegel.Name = "cbx_AdminSida_LäggTillRegel";
-            this.cbx_AdminSida_LäggTillRegel.Size = new System.Drawing.Size(121, 21);
+            this.cbx_AdminSida_LäggTillRegel.Size = new System.Drawing.Size(324, 21);
             this.cbx_AdminSida_LäggTillRegel.TabIndex = 16;
             // 
             // spelareBindingSource
@@ -136,9 +136,9 @@
             // cbx_AdminSida_SpelareBöter
             // 
             this.cbx_AdminSida_SpelareBöter.FormattingEnabled = true;
-            this.cbx_AdminSida_SpelareBöter.Location = new System.Drawing.Point(214, 474);
+            this.cbx_AdminSida_SpelareBöter.Location = new System.Drawing.Point(417, 474);
             this.cbx_AdminSida_SpelareBöter.Name = "cbx_AdminSida_SpelareBöter";
-            this.cbx_AdminSida_SpelareBöter.Size = new System.Drawing.Size(121, 21);
+            this.cbx_AdminSida_SpelareBöter.Size = new System.Drawing.Size(270, 21);
             this.cbx_AdminSida_SpelareBöter.TabIndex = 18;
             // 
             // label1
@@ -152,12 +152,13 @@
             // 
             // btn_AdminSida_Acceptera
             // 
-            this.btn_AdminSida_Acceptera.Location = new System.Drawing.Point(341, 472);
+            this.btn_AdminSida_Acceptera.Location = new System.Drawing.Point(693, 472);
             this.btn_AdminSida_Acceptera.Name = "btn_AdminSida_Acceptera";
             this.btn_AdminSida_Acceptera.Size = new System.Drawing.Size(75, 23);
             this.btn_AdminSida_Acceptera.TabIndex = 19;
             this.btn_AdminSida_Acceptera.Text = "Acceptera";
             this.btn_AdminSida_Acceptera.UseVisualStyleBackColor = true;
+            this.btn_AdminSida_Acceptera.Click += new System.EventHandler(this.btn_AdminSida_Acceptera_Click);
             // 
             // AdminSida
             // 

@@ -102,17 +102,17 @@ namespace PenaltySharp.View
         {
             for (int i = 0; i < spelarController.Antal(); i++)
             {
-                if (spelarController.GetNamnOfIndex(i) == cbx_AdminSida_Spelare.Items[cbx_AdminSida_Spelare.SelectedIndex].ToString())
+                if (spelarController.GetAnvändarnamn(i) == cbx_AdminSida_Spelare.Items[cbx_AdminSida_Spelare.SelectedIndex].ToString())
                 {
+                    lv_AdminSida.Items.Clear();
                     for (int i1 = 0; i1 < bötercontroller.Count(); i1++)
                     {
-                        lv_AdminSida.Items.Clear();
                         string[] columns = new string[2];
                         ListViewItem item;
-                        if (bötercontroller.Get(i).getPersonId() == spelarController.GetIndexOfNamn(cbx_AdminSida_Spelare.Items[cbx_AdminSida_Spelare.SelectedIndex].ToString()))
+                        if (bötercontroller.Get(i1).getPersonId() == i)
                         {
-                            columns[0] = regelcontroller.Get(i).getNamn();
-                            columns[1] = regelcontroller.Get(i).getBöter().ToString();
+                            columns[0] = regelcontroller.Get(i1).getNamn();
+                            columns[1] = regelcontroller.Get(i1).getBöter().ToString();
                             item = new ListViewItem(columns);
                             lv_AdminSida.Items.Add(item);
                         }

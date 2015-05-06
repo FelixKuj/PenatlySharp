@@ -56,6 +56,11 @@ namespace PenaltySharp.Controller
         {
             m_Regler.Remove(item);
         }
+
+        public string GetNamnOFIndex(int i)
+        {
+            return m_Regler[i].getNamn();
+        }
         /// <summary>
         /// Tar bort specifikt objekt efter index.
         /// </summary>

@@ -32,6 +32,10 @@ namespace PenaltySharp.View
             {
                 cbx_AdminSida_Spelare.Items.Add(spelarController.GetAnvändarnamn(index));
             }
+            for (int index = 0; index < spelarController.Antal(); index++) //lägger till alla spelare i en dropdown lista.
+            {
+                cbx_AdminSida_SpelareBöter.Items.Add(spelarController.GetNamnOfIndex(index));
+            }
             updateListViewBöter();
         }
         /// <summary>
@@ -95,6 +99,10 @@ namespace PenaltySharp.View
                 lv_AdminSida.AutoResizeColumn(i,
                 ColumnHeaderAutoResizeStyle.HeaderSize);
             }
+            for (int index = 0; index < regelcontroller.Count(); index++)
+            {
+                cbx_AdminSida_LäggTillRegel.Items.Add(regelcontroller.GetNamnOFIndex(index));
+            }
 
         }
 
@@ -120,6 +128,11 @@ namespace PenaltySharp.View
                     break;
                 }
             }
+        }
+
+        private void btn_AdminSida_Acceptera_Click(object sender, EventArgs e)
+        {
+            //bötercontroller.Add(cbx_AdminSida_LäggTillRegel.SelectedIndex, cbx_AdminSida_SpelareBöter.SelectedIndex);
         }
     }
 }

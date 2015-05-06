@@ -23,7 +23,7 @@ namespace PenaltySharp.Controller
         public RegelController()
         {
             m_Regler = new List<Regler>();
-            //TestData();
+            TestData();
             try
             {
                 if (File.Exists("ReglerLista.DAT"))

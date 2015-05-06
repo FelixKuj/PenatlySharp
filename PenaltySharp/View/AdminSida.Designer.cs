@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_AdminSida_Regler = new System.Windows.Forms.Button();
             this.btn_AdminSida_Spelare = new System.Windows.Forms.Button();
@@ -36,6 +37,14 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbx_AdminSida_Spelare = new System.Windows.Forms.ComboBox();
+            this.cbx_AdminSida_LäggTillRegel = new System.Windows.Forms.ComboBox();
+            this.spelareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.spelareControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbx_AdminSida_SpelareBöter = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_AdminSida_Acceptera = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.spelareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spelareControllerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -108,11 +117,57 @@
             this.cbx_AdminSida_Spelare.TabIndex = 14;
             this.cbx_AdminSida_Spelare.SelectedIndexChanged += new System.EventHandler(this.cbx_AdminSida_Spelare_SelectedIndexChanged);
             // 
+            // cbx_AdminSida_LäggTillRegel
+            // 
+            this.cbx_AdminSida_LäggTillRegel.FormattingEnabled = true;
+            this.cbx_AdminSida_LäggTillRegel.Location = new System.Drawing.Point(87, 474);
+            this.cbx_AdminSida_LäggTillRegel.Name = "cbx_AdminSida_LäggTillRegel";
+            this.cbx_AdminSida_LäggTillRegel.Size = new System.Drawing.Size(121, 21);
+            this.cbx_AdminSida_LäggTillRegel.TabIndex = 16;
+            // 
+            // spelareBindingSource
+            // 
+            this.spelareBindingSource.DataSource = typeof(PenaltySharp.Model.Spelare);
+            // 
+            // spelareControllerBindingSource
+            // 
+            this.spelareControllerBindingSource.DataSource = typeof(PenaltySharp.Controller.SpelareController);
+            // 
+            // cbx_AdminSida_SpelareBöter
+            // 
+            this.cbx_AdminSida_SpelareBöter.FormattingEnabled = true;
+            this.cbx_AdminSida_SpelareBöter.Location = new System.Drawing.Point(214, 474);
+            this.cbx_AdminSida_SpelareBöter.Name = "cbx_AdminSida_SpelareBöter";
+            this.cbx_AdminSida_SpelareBöter.Size = new System.Drawing.Size(121, 21);
+            this.cbx_AdminSida_SpelareBöter.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 477);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Lägg till regel";
+            // 
+            // btn_AdminSida_Acceptera
+            // 
+            this.btn_AdminSida_Acceptera.Location = new System.Drawing.Point(341, 472);
+            this.btn_AdminSida_Acceptera.Name = "btn_AdminSida_Acceptera";
+            this.btn_AdminSida_Acceptera.Size = new System.Drawing.Size(75, 23);
+            this.btn_AdminSida_Acceptera.TabIndex = 19;
+            this.btn_AdminSida_Acceptera.Text = "Acceptera";
+            this.btn_AdminSida_Acceptera.UseVisualStyleBackColor = true;
+            // 
             // AdminSida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 530);
+            this.ClientSize = new System.Drawing.Size(784, 526);
+            this.Controls.Add(this.btn_AdminSida_Acceptera);
+            this.Controls.Add(this.cbx_AdminSida_SpelareBöter);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbx_AdminSida_LäggTillRegel);
             this.Controls.Add(this.cbx_AdminSida_Spelare);
             this.Controls.Add(this.lv_AdminSida);
             this.Controls.Add(this.btn_AdminSida_LoggaUt);
@@ -122,6 +177,8 @@
             this.Name = "AdminSida";
             this.Text = "AdminSida";
             this.Load += new System.EventHandler(this.AdminSida_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.spelareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spelareControllerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +194,11 @@
         private System.Windows.Forms.ComboBox cbx_AdminSida_Spelare;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ComboBox cbx_AdminSida_LäggTillRegel;
+        private System.Windows.Forms.BindingSource spelareBindingSource;
+        private System.Windows.Forms.BindingSource spelareControllerBindingSource;
+        private System.Windows.Forms.ComboBox cbx_AdminSida_SpelareBöter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_AdminSida_Acceptera;
     }
 }

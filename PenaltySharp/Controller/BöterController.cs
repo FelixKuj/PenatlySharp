@@ -120,6 +120,13 @@ namespace PenaltySharp.Controller
 			}
             return antal;
         }
+        public void LäggtillBöter (int spelare, int regel)
+        {
+            Böter
+            böter = new Böter(spelare, regel);
+            m_böter.Add(böter);
+        }
+
         /// <summary>
         /// Lista med grundböter för att skapa en bas i projektet.
         /// </summary>

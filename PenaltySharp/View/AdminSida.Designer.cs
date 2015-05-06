@@ -36,6 +36,8 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbx_AdminSida_Spelare = new System.Windows.Forms.ComboBox();
+            this.btn_AdminSida_LäggTillRegel = new System.Windows.Forms.Button();
+            this.cbx_AdminSida_LäggTillRegel = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label3
@@ -108,11 +110,30 @@
             this.cbx_AdminSida_Spelare.TabIndex = 14;
             this.cbx_AdminSida_Spelare.SelectedIndexChanged += new System.EventHandler(this.cbx_AdminSida_Spelare_SelectedIndexChanged);
             // 
+            // btn_AdminSida_LäggTillRegel
+            // 
+            this.btn_AdminSida_LäggTillRegel.Location = new System.Drawing.Point(12, 473);
+            this.btn_AdminSida_LäggTillRegel.Name = "btn_AdminSida_LäggTillRegel";
+            this.btn_AdminSida_LäggTillRegel.Size = new System.Drawing.Size(91, 23);
+            this.btn_AdminSida_LäggTillRegel.TabIndex = 15;
+            this.btn_AdminSida_LäggTillRegel.Text = "Lägg till regel";
+            this.btn_AdminSida_LäggTillRegel.UseVisualStyleBackColor = true;
+            // 
+            // cbx_AdminSida_LäggTillRegel
+            // 
+            this.cbx_AdminSida_LäggTillRegel.FormattingEnabled = true;
+            this.cbx_AdminSida_LäggTillRegel.Location = new System.Drawing.Point(110, 474);
+            this.cbx_AdminSida_LäggTillRegel.Name = "cbx_AdminSida_LäggTillRegel";
+            this.cbx_AdminSida_LäggTillRegel.Size = new System.Drawing.Size(121, 21);
+            this.cbx_AdminSida_LäggTillRegel.TabIndex = 16;
+            // 
             // AdminSida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 462);
+            this.ClientSize = new System.Drawing.Size(784, 526);
+            this.Controls.Add(this.cbx_AdminSida_LäggTillRegel);
+            this.Controls.Add(this.btn_AdminSida_LäggTillRegel);
             this.Controls.Add(this.cbx_AdminSida_Spelare);
             this.Controls.Add(this.lv_AdminSida);
             this.Controls.Add(this.btn_AdminSida_LoggaUt);
@@ -137,5 +158,7 @@
         private System.Windows.Forms.ComboBox cbx_AdminSida_Spelare;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Button btn_AdminSida_LäggTillRegel;
+        private System.Windows.Forms.ComboBox cbx_AdminSida_LäggTillRegel;
     }
 }

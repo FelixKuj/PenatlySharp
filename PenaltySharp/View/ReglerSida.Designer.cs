@@ -36,6 +36,7 @@
             this.lv_ReglerSida = new System.Windows.Forms.ListView();
             this.Column_Regler = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Column_Böter = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // reglerSida_btn_LäggaTillRegel
@@ -105,11 +106,22 @@
             this.Column_Böter.Text = "Böter";
             this.Column_Böter.Width = 100;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(208, 404);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Extrahera till databas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ReglerSida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(381, 447);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lv_ReglerSida);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.ColumnHeader Column_Regler;
         private System.Windows.Forms.ColumnHeader Column_Böter;
         public System.Windows.Forms.ListView lv_ReglerSida;
+        private System.Windows.Forms.Button button1;
     }
 }

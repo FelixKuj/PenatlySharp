@@ -12,6 +12,7 @@ using PenaltySharp.View;
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using PenaltySharp.DAL;
 
 namespace PenaltySharp.View
 {
@@ -26,6 +27,8 @@ namespace PenaltySharp.View
             spelarController = ServiceProvider.GetSpelareService();
             böterController = ServiceProvider.GetBöterService();
             tbx_InloggningsSida_Användarnamn.Focus();
+            DataAccessLayerDBA db = new DataAccessLayerDBA();
+
         }
         /// <summary>
         /// Använder texten i textrutorna samt raderar inskriven text i textrutorna vid inloggning.

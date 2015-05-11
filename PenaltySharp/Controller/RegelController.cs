@@ -173,10 +173,10 @@ namespace PenaltySharp.Controller
 
             return true;
         }
-        public bool SaveToDBA()
+        public void SaveToDBA()
         {
             DataAccessLayerDBA dba = new DataAccessLayerDBA();
-            return dba.SaveAll();
+            dba.SaveRegel();
 
         }
     }

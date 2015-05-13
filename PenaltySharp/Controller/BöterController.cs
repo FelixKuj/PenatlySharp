@@ -28,9 +28,13 @@ namespace PenaltySharp.Controller
             m_böter = new List<Böter>();
             try
             {
-                if (File.Exists("BöterLista.DAT"))
+                if (File.Exists(@"..\..\DAL\BöterLista.DAT"))
                 {
                     m_böter = BinarySerialization<List<Böter>>.BinaryDeSerialize("BöterLista.DAT");
+                }
+                else
+                {
+                    //testData();
                 }
 
             }

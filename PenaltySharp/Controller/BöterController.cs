@@ -120,6 +120,12 @@ namespace PenaltySharp.Controller
 			}
             return antal;
         }
+
+        /// <summary>
+        /// Lägger till en böter till en spelare.
+        /// </summary>
+        /// <param name="spelare">Spelaren som ska få bötern</param>
+        /// <param name="regel">Regeln som bötern ska vara</param>
         public void LäggtillBöter(int spelare, int regel)
         {
             Böter
@@ -190,7 +196,10 @@ namespace PenaltySharp.Controller
 
             return true;
         }
-
+        /// <summary>
+        /// Sparar i databasen.
+        /// </summary>
+        /// <returns></returns>
         public bool SaveToDBA()
         {
             DataAccessLayerDBA dba = new DataAccessLayerDBA();

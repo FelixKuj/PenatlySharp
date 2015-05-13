@@ -23,18 +23,22 @@ namespace PenaltySharp.Controller
         public RegelController()
         {
             m_Regler = new List<Regler>();
-            TestData();
+            
             try
             {
                 if (File.Exists("ReglerLista.DAT"))
                 {
                     m_Regler = BinarySerialization<List<Regler>>.BinaryDeSerialize("ReglerLista.DAT");
                 }
+                else
+                {
+                    //TestData();
+                }
 
             }
             catch (Exception ex)
             {
-
+                
                 throw new Exception("Den kunde inte ladda från Regler listan." + ex.Message);// CustomException(ex.Message);
             }
         }
@@ -47,6 +51,7 @@ namespace PenaltySharp.Controller
             m_Regler.Add(item);
             ServiceProvider.GetReglerService().BinarySerialize();
             SaveToDBA();
+
         }
         /// <summary>
         /// Tar bort objekt i listan Regler.

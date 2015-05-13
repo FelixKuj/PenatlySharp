@@ -50,7 +50,7 @@ namespace PenaltySharp.DAL
             try
             {
                 IFormatter formatter = new BinaryFormatter();
-                stream = new FileStream(_fileName, FileMode.Create, FileAccess.Write, FileShare.None);
+                stream = new FileStream("../../DAL/"+_fileName, FileMode.Create, FileAccess.Write, FileShare.None);
                 formatter.Serialize(stream, lista);
 
             }
@@ -85,7 +85,7 @@ namespace PenaltySharp.DAL
             try
             {
                 IFormatter formatter = new BinaryFormatter();
-                stream = new FileStream(_fileName, FileMode.Open, FileAccess.Read, FileShare.None);
+                stream = new FileStream("../../DAL/"+_fileName, FileMode.Open, FileAccess.Read, FileShare.None);
                 lista = (T)formatter.Deserialize(stream);
             }
             catch

@@ -26,7 +26,7 @@ namespace PenaltySharp.Controller
             
             try
             {
-                if (File.Exists("ReglerLista.DAT"))
+                if (File.Exists(@"..\..\DAL\ReglerLista.DAT"))
                 {
                     m_Regler = BinarySerialization<List<Regler>>.BinaryDeSerialize("ReglerLista.DAT");
                 }

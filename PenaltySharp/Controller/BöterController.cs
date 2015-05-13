@@ -29,7 +29,7 @@ namespace PenaltySharp.Controller
             
             try
             {
-                if (File.Exists("BöterLista.DAT"))
+                if (File.Exists(@"..\..\DAL\BöterLista.DAT"))
                 {
                     m_böter = BinarySerialization<List<Böter>>.BinaryDeSerialize("BöterLista.DAT");
                 }

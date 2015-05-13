@@ -22,7 +22,7 @@ namespace PenaltySharp.View
         /// </summary>
         public AdminSida()
         {
-            
+
             InitializeComponent();
             regelcontroller = ServiceProvider.GetReglerService();
             spelarController = ServiceProvider.GetSpelareService();
@@ -46,8 +46,8 @@ namespace PenaltySharp.View
         private void btn_AdminSida_Regler_Click(object sender, EventArgs e)
         {
             Form regelsida = new ReglerSida();
-            regelsida.Show();      
-            
+            regelsida.Show();
+
         }
         /// <summary>
         /// Stänger admin sidan.
@@ -56,7 +56,7 @@ namespace PenaltySharp.View
         /// <param name="e">Clickevent</param>
         private void btn_AdminSida_LoggaUt_Click(object sender, EventArgs e)
         {
-            this.Close();          
+            this.Close();
         }
         /// <summary>
         /// Skapar och visar spelarssida.
@@ -79,7 +79,7 @@ namespace PenaltySharp.View
         }
         private void updateListViewBöter()
         {
-            
+
             lv_AdminSida.Items.Clear();
             string[] columns = new string[2];
             ListViewItem item;
@@ -91,10 +91,10 @@ namespace PenaltySharp.View
                     {
                         columns[0] = regelcontroller.Get(bötercontroller.Get(i).getBöterId()).getNamn();
                         columns[1] = regelcontroller.Get(bötercontroller.Get(i).getBöterId()).getBöter().ToString();
-                    item = new ListViewItem(columns);
-                    lv_AdminSida.Items.Add(item);
+                        item = new ListViewItem(columns);
+                        lv_AdminSida.Items.Add(item);
+                    }
                 }
-            }
             }
             for (int i = 0; i < columns.Length; i++)
             {
@@ -141,8 +141,31 @@ namespace PenaltySharp.View
             }
             catch (Exception)
             {
-                
-            }   
+
+            }
+        }
+
+        private void lv_AdminSida_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Betala denna böter?","Böter Betalning",MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    for (int i = 0; i < lv_AdminSida.Items.Count; i++)
+                    {
+                        if (lv_AdminSida.Items[i].Selected)
+                        {
+                            lv_AdminSida.Items.RemoveAt(i);
+                            regelcontroller.RemoveAt(i);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+            }
         }
     }
 }

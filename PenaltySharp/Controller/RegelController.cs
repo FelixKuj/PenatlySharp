@@ -32,7 +32,7 @@ namespace PenaltySharp.Controller
                 }
                 else
                 {
-                    TestData();
+                    //TestData();
                 }
 
             }

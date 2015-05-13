@@ -126,6 +126,7 @@
     </EmbeddedResource>
     <None Include="bin\Debug\ReglerLista.DAT" />
     <None Include="bin\Debug\SpelareLista.DAT" />
+    <None Include="DAL\BöterLista.DAT" />
     <None Include="DAL\ReglerLista.DAT" />
     <None Include="DAL\SpelareLista.DAT" />
     <None Include="PenaltySharp.Controller.SpelareController.datasource" />

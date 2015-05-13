@@ -26,7 +26,7 @@ namespace PenaltySharp.Controller
           public BöterController()
         {
             m_böter = new List<Böter>();
-            //testData();
+            testData();
             try
             {
                 if (File.Exists("BöterLista.DAT"))

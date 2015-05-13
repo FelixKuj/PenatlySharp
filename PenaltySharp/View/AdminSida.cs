@@ -142,8 +142,7 @@ namespace PenaltySharp.View
             catch (Exception)
             {
                 
-            }
-                
+            }   
         }
     }
 }

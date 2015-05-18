@@ -89,12 +89,15 @@ namespace PenaltySharp.View
                 ListViewItem item;
                 if (bötercontroller.Get(i).getPersonId() == spelarController.publicID)
                 {
-                    if (bötercontroller.Get(i).getPersonId() == i)
+                    for (int index = 0; index < bötercontroller.Count(); index++)
                     {
-                        columns[0] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getNamn();
-                        columns[1] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getBöter().ToString();
-                        item = new ListViewItem(columns);
-                        lv_AdminSida.Items.Add(item);
+                        if (bötercontroller.Get(index).getPersonId() == i)
+                        {
+                            columns[0] = regelcontroller.Get(bötercontroller.Get(index).getRegelId()).getNamn();
+                            columns[1] = regelcontroller.Get(bötercontroller.Get(index).getRegelId()).getBöter().ToString();
+                            item = new ListViewItem(columns);
+                            lv_AdminSida.Items.Add(item);
+                        }
                     }
                 }
             }

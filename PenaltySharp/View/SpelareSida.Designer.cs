@@ -48,6 +48,7 @@
             this.lv_SpelareSida.UseCompatibleStateImageBehavior = false;
             this.lv_SpelareSida.View = System.Windows.Forms.View.Details;
             this.lv_SpelareSida.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lv_SpelareSida_KeyDown);
+            this.lv_SpelareSida.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lv_SpelareSida_MouseDoubleClick);
             // 
             // columnHeader1
             // 

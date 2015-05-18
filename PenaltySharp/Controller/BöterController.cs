@@ -99,7 +99,7 @@ namespace PenaltySharp.Controller
         {
             for (int i = 0; i < m_böter.Count; i++)
             {
-                if (m_böter[i].getBöterId() == böter)
+                if (m_böter[i].getRegelId() == böter)
                 {
                     return i;
                 }
@@ -133,7 +133,7 @@ namespace PenaltySharp.Controller
         public void LäggtillBöter(int spelare, int regel)
         {
             Böter
-            böter = new Böter(spelare, regel);
+            böter = new Böter(spelare, regel, false);
             m_böter.Add(böter);
             ServiceProvider.GetBöterService().BinarySerialize();
         }
@@ -144,40 +144,40 @@ namespace PenaltySharp.Controller
         public void testData()
         {
             Böter
-            böter = new Böter(1, 2);
+            böter = new Böter(1, 2, false);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(2,5);
+            böter = new Böter(2, 5, false);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(3,6);
+            böter = new Böter(3, 6, false);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(2,10);
+            böter = new Böter(2, 10, false);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(4,8);
+            böter = new Böter(4, 8, false);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(2,8);
+            böter = new Böter(2, 8, false);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(5,7);
+            böter = new Böter(5, 7, true);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(1,4);
+            böter = new Böter(1, 4, false);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(4,8); //Vilken lirare asså//
+            böter = new Böter(4, 8, false); //Vilken lirare asså//
             m_böter.Add(böter);
             id++;
-            böter = new Böter(4,8);
+            böter = new Böter(4, 8, false);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(4,8);
+            böter = new Böter(4, 8, false);
             m_böter.Add(böter);
             id++;
-            böter = new Böter(4,8);
+            böter = new Böter(4, 8, false);
             m_böter.Add(böter);
             id++;
         }

@@ -72,8 +72,8 @@ namespace PenaltySharp.View
             ListViewItem item;
             for (int i = 0; i < regelcontroller.Count(); i++)
             {
-                columns[0] = regelcontroller.Get(bötercontroller.Get(i).getBöterId()).getNamn();
-                columns[1] = regelcontroller.Get(bötercontroller.Get(i).getBöterId()).getBöter().ToString();
+                columns[0] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getNamn();
+                columns[1] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getBöter().ToString();
                 item = new ListViewItem(columns);
                 lv_Användarsida.Items.Add(item);
             }

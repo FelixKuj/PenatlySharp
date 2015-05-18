@@ -173,7 +173,7 @@ namespace PenaltySharp.DAL
                 sqlString = "insert into Regler ([Böter ID],[Person ID],[Regler ID]) values(" +
                             //Böter.Get(i).getId() + "," +
                             Böter.Get(i).getPersonId() + ",'" +
-                            Böter.Get(i).getBöterId() + "');";
+                            Böter.Get(i).getRegelId() + "');";
                 try
                 {
                     cmd = new SqlCommand(sqlString, msqlConnection);

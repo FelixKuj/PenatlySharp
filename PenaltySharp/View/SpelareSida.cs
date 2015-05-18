@@ -74,5 +74,19 @@ namespace PenaltySharp.View
                 }
             }
         }
+
+        private void lv_SpelareSida_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Ska spelaren vara admin?", "Adnim status", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show("ok");
+            }
+            else
+            {
+                MessageBox.Show("hepp");
+            }
+        }
+
     }
 }

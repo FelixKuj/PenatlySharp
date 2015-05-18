@@ -82,9 +82,11 @@ namespace PenaltySharp.View
 
             lv_AdminSida.Items.Clear();
             string[] columns = new string[2];
-            ListViewItem item;
+
             for (int i = 0; i < bötercontroller.Count(); i++)
             {
+
+                ListViewItem item;
                 if (bötercontroller.Get(i).getPersonId() == spelarController.publicID)
                 {
                     if (bötercontroller.Get(i).getPersonId() == i)

@@ -94,6 +94,12 @@ namespace PenaltySharp.Controller
             return m_Spelare[index].getAnvändarnamn();
         }
 
+        public void SetAdmin(bool admin, int index)
+        {
+            m_Spelare[index].setAdmin(admin);
+        }
+
+
         /// <summary>
         /// Tar fram ett index tillhörande en spelares namn.
         /// </summary>

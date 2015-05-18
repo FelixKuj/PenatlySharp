@@ -80,11 +80,39 @@ namespace PenaltySharp.View
             DialogResult dialogResult = MessageBox.Show("Ska spelaren vara admin?", "Adnim status", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show("ok");
+                try
+                {
+                    for (int i = 0; i < spelarecontroller.Antal(); i++)
+                    {
+                        if (lv_SpelareSida.Items[i].Selected)
+                        {
+                            spelarecontroller.SetAdmin(true, i);
+                            break;
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
             }
             else
             {
-                MessageBox.Show("hepp");
+                try
+                {
+                    for (int i = 0; i < spelarecontroller.Antal(); i++)
+                    {
+                        if (lv_SpelareSida.Items[i].Selected)
+                        {
+                            spelarecontroller.SetAdmin(false, i);
+                            break;
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
             }
         }
 

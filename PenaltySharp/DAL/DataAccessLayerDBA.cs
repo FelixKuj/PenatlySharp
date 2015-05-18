@@ -107,7 +107,7 @@ namespace PenaltySharp.DAL
         }
 
         /// <summary>
-        /// Metod för att spara spelare till databas.
+        /// Metod för att spara spelare till databas. Och leka lekar som inkluderar barbiedockor och eld.
         /// </summary>
         public void SaveSpelare()
         {

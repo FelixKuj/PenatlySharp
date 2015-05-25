@@ -172,5 +172,11 @@ namespace PenaltySharp.View
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form diagramsida = new DiagramSida();
+            diagramsida.Show();
+        }
     }
 }

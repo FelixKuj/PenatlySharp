@@ -223,5 +223,11 @@ namespace PenaltySharp.Controller
 
         }
 
+        public void SetBetald(int id, bool betald)
+        {
+            m_böter[id].setBetald(betald);
+
+        }
+
     }
 }

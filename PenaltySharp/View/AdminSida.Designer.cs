@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.spelareBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.spelareControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.spelareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spelareControllerBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +92,8 @@
             // 
             this.lv_AdminSida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.lv_AdminSida.GridLines = true;
             this.lv_AdminSida.Location = new System.Drawing.Point(12, 61);
             this.lv_AdminSida.Name = "lv_AdminSida";
@@ -164,13 +166,9 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // spelareBindingSource
+            // columnHeader3
             // 
-            //this.spelareBindingSource.DataSource = typeof(PenaltySharp.Model.Spelare);
-            // 
-            // spelareControllerBindingSource
-            // 
-            //this.spelareControllerBindingSource.DataSource = typeof(PenaltySharp.Controller.SpelareController);
+            this.columnHeader3.Text = "Id";
             // 
             // AdminSida
             // 
@@ -215,5 +213,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_AdminSida_Acceptera;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

@@ -85,7 +85,7 @@ namespace PenaltySharp.View
         {
 
             lv_AdminSida.Items.Clear();
-            string[] columns = new string[2];
+            string[] columns = new string[3];
 
             for (int i = 0; i < bötercontroller.Count(); i++)
             {
@@ -99,6 +99,7 @@ namespace PenaltySharp.View
                         {
                             columns[0] = regelcontroller.Get(bötercontroller.Get(index).getRegelId()).getNamn();
                             columns[1] = regelcontroller.Get(bötercontroller.Get(index).getRegelId()).getBöter().ToString();
+                            columns[2] = index.ToString();
                             item = new ListViewItem(columns);
                             lv_AdminSida.Items.Add(item);
                         }
@@ -132,12 +133,13 @@ namespace PenaltySharp.View
                     lv_AdminSida.Items.Clear();
                     for (int i1 = 0; i1 < bötercontroller.Count(); i1++)
                     {
-                        string[] columns = new string[2];
+                        string[] columns = new string[3];
                         ListViewItem item;
                         if (bötercontroller.Get(i1).getPersonId() == i)
                         {
                             columns[0] = regelcontroller.Get(bötercontroller.Get(i1).getRegelId()).getNamn();
                             columns[1] = regelcontroller.Get(bötercontroller.Get(i1).getRegelId()).getBöter().ToString();
+                            columns[2] = i1.ToString();
                             item = new ListViewItem(columns);
                             lv_AdminSida.Items.Add(item);
                         }
@@ -180,6 +182,7 @@ namespace PenaltySharp.View
                     {
                         if (lv_AdminSida.Items[i].Selected)
                         {
+                            bötercontroller.SetBetald(Convert.ToInt32(lv_AdminSida.Items[i].SubItems[2].ToString()),true);
                             lv_AdminSida.Items.RemoveAt(i);
                             regelcontroller.RemoveAt(i);
                         }

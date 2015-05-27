@@ -23,7 +23,7 @@ namespace PenaltySharp.Controller
         /// <summary>
         /// Samlade metoder för att hantera böter i applikationen. Samt kollar om listan existerar och upptaterar listan efter filen.
         /// </summary>
-          public BöterController()
+        public BöterController()
         {
             m_böter = new List<Böter>();
             try
@@ -61,7 +61,7 @@ namespace PenaltySharp.Controller
         {
             m_böter.Remove(item);
         }
-         
+
         /// <summary>
         /// Tar bort ett specifikt objekt efter index i listan Böter.
         /// </summary>
@@ -89,11 +89,11 @@ namespace PenaltySharp.Controller
         {
             return m_böter.Count();
         }
-       /// <summary>
-       /// Tar fram ett index till en böter.
-       /// </summary>
-       /// <param name="böter">Böterns namn</param>
-       /// <returns>Böterns index</returns>
+        /// <summary>
+        /// Tar fram ett index till en böter.
+        /// </summary>
+        /// <param name="böter">Böterns namn</param>
+        /// <returns>Böterns index</returns>
         public int GetIndexOfBöter(int böter)
         {
             for (int i = 0; i < m_böter.Count; i++)
@@ -113,14 +113,14 @@ namespace PenaltySharp.Controller
         /// <returns>Antal Böter</returns>
         public int GetAntalBöter(int spelarID)
         {
-             antal = 0;
+            antal = 0;
             for (int i = 0; i < m_böter.Count; i++)
-			{
-			 if (m_böter[i].getPersonId() == spelarID)
-	            {
-		            antal++;
-	            }
-			}
+            {
+                if (m_böter[i].getPersonId() == spelarID)
+                {
+                    antal++;
+                }
+            }
             return antal;
         }
 

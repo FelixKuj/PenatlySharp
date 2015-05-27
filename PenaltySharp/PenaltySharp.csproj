@@ -72,6 +72,12 @@
     <Compile Include="View\AdminSida.Designer.cs">
       <DependentUpon>AdminSida.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DiagramView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DiagramView.Designer.cs">
+      <DependentUpon>DiagramView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,12 +93,6 @@
     </Compile>
     <Compile Include="View\Användarsida.Designer.cs">
       <DependentUpon>Användarsida.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\DiagramSida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\DiagramSida.Designer.cs">
-      <DependentUpon>DiagramSida.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Inloggning.cs">
       <SubType>Form</SubType>
@@ -134,8 +134,8 @@
     <EmbeddedResource Include="View\Användarsida.resx">
       <DependentUpon>Användarsida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\DiagramSida.resx">
-      <DependentUpon>DiagramSida.cs</DependentUpon>
+    <EmbeddedResource Include="View\DiagramView.resx">
+      <DependentUpon>DiagramView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Inloggning.resx">
       <DependentUpon>Inloggning.cs</DependentUpon>

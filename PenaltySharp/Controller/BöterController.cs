@@ -111,12 +111,25 @@ namespace PenaltySharp.Controller
         /// </summary>
         /// <param name="spelarID">En spelares ID</param>
         /// <returns>Antal Böter</returns>
-        public int GetAntalBöter(int spelarID)
+        public int GetAntalObetaldBöter(int spelarID)
         {
             antal = 0;
             for (int i = 0; i < m_böter.Count; i++)
             {
-                if (m_böter[i].getPersonId() == spelarID)
+                if (m_böter[i].getPersonId() == spelarID && m_böter[i].getBetald() == false)
+                {
+                    antal++;
+                }
+            }
+            return antal;
+        }
+
+        public int GetAntalBetaldBöter(int spelarID)
+        {
+            antal = 0;
+            for (int i = 0; i < m_böter.Count; i++)
+            {
+                if (m_böter[i].getPersonId() == spelarID && m_böter[i].getBetald() == true)
                 {
                     antal++;
                 }

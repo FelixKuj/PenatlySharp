@@ -77,6 +77,10 @@ namespace PenaltySharp.View
         {
             label3.Text = "Välkommen Admin " + spelarController.GetNamnOfIndex(spelarController.publicID) + "!";
         }
+
+        /// <summary>
+        /// Uppdaterar ListView.
+        /// </summary>
         private void updateListViewBöter()
         {
 
@@ -114,6 +118,11 @@ namespace PenaltySharp.View
 
         }
 
+        /// <summary>
+        /// Visar markerade objektets böter.
+        /// </summary>
+        /// <param name="sender">Adminsidan</param>
+        /// <param name="e">Index event</param>
         private void cbx_AdminSida_Spelare_SelectedIndexChanged(object sender, EventArgs e)
         {
             for (int i = 0; i < spelarController.Antal(); i++)
@@ -138,6 +147,11 @@ namespace PenaltySharp.View
             }
         }
 
+        /// <summary>
+        /// Lägger till en bot på en spelare efter att man fyllt in comboxarna ovan.
+        /// </summary>
+        /// <param name="sender">btn_AdminSida_Acceptera</param>
+        /// <param name="e">Clickevent</param>
         private void btn_AdminSida_Acceptera_Click(object sender, EventArgs e)
         {
             try
@@ -150,6 +164,11 @@ namespace PenaltySharp.View
             }
         }
 
+        /// <summary>
+        /// Öppna meddelande för att betala böter.
+        /// </summary>
+        /// <param name="sender">lv_AdminSida</param>
+        /// <param name="e">Clickevent</param>
         private void lv_AdminSida_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Betala denna böter?","Böter Betalning",MessageBoxButtons.YesNo);
@@ -173,6 +192,11 @@ namespace PenaltySharp.View
             }
         }
 
+        /// <summary>
+        /// Visar diagramformuläret.
+        /// </summary>
+        /// <param name="sender">button1</param>
+        /// <param name="e">Clickevent</param>
         private void button1_Click(object sender, EventArgs e)
         {
             Form diagramsida = new DiagramSida();

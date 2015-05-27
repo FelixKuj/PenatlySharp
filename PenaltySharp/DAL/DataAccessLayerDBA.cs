@@ -22,6 +22,9 @@ namespace PenaltySharp.DAL
             mConnectionString = @"Data Source=RUBAND-SQLSERVE\RUBIRAMSSQLSERVE;Initial Catalog=JBote;User ID=JBote;Password=JBote";
             //mConnectionString = MovieLibrary.Properties.Settings.Default.MovieLibraryConnectionString;
 
+            //mConnectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\JBOTEDBA.mdf;Integrated Security=True";
+
+
             msqlConnection = new SqlConnection(mConnectionString);
 
             msqlConnection.Open();
@@ -40,11 +43,12 @@ namespace PenaltySharp.DAL
         }
 
         private void CreateIfNotExists()
-        {
+        {//Data Source=(localdb)\v11.0;Initial Catalog=C:\USERS\12KUJFEL\SOURCE\REPOS\PENATLYSHARP\PENALTYSHARP\BIN\DEBUG\JBOTEDBA.MDF;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False
             List<string> sqlList = new List<string>();
             //sqlList.Add("if not exists (select * from master.sys.databases where name = '[MOVIELIBRARY]') " +
             //             "CREATE DATABASE MOVIELIBRARY");
-            sqlList.Add("USE JBote");
+            //sqlList.Add(@"USE C:\USERS\12KUJFEL\SOURCE\REPOS\PENATLYSHARP\PENALTYSHARP\BIN\DEBUG\JBOTEDBA.MDF");
+            sqlList.Add(@"USE JBote");
             sqlList.Add("CREATE TABLE [dbo].[Spelare] ([Spelare ID]INT NOT NULL,[Användarnamn] VARCHAR (50) NULL, [Lösenord]VARCHAR (50) NULL,[Admin] BIT NULL, [Namn] VARCHAR(50) NULL, PRIMARY KEY CLUSTERED ([Spelare ID] ASC));");
             sqlList.Add("CREATE TABLE [dbo].[Regler] ([Regler ID]INT NOT NULL,[Böter]INT NULL,[Regel Namn] VARCHAR(50) NULL, PRIMARY KEY CLUSTERED ([Regler ID] ASC));");
             sqlList.Add("CREATE TABLE [dbo].[Böter] ([Böter ID]INT NOT NULL,[Person ID]INT NULL,[Regler ID]INT NOT NULL,PRIMARY KEY CLUSTERED ([Böter ID] ASC));");
@@ -187,6 +191,7 @@ namespace PenaltySharp.DAL
 
             msqlConnection.Close();
         }
+
 
 
     }

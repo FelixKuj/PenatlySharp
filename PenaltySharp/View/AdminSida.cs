@@ -199,8 +199,8 @@ namespace PenaltySharp.View
         /// <param name="e">Clickevent</param>
         private void button1_Click(object sender, EventArgs e)
         {
-            Form diagramsida = new DiagramSida();
-            diagramsida.Show();
+            //Form diagramsida = new DiagramSida();
+            //diagramsida.Show();
         }
     }
 }

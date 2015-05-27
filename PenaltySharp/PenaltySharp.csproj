@@ -149,6 +149,7 @@
     <EmbeddedResource Include="View\SpelareSida.resx">
       <DependentUpon>SpelareSida.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DAL\BöterLista.DAT" />
     <None Include="DAL\ReglerLista.DAT" />
     <None Include="DAL\SpelareLista.DAT" />
     <None Include="PenaltySharp.Controller.SpelareController.datasource" />

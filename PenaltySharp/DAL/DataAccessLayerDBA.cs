@@ -174,7 +174,7 @@ namespace PenaltySharp.DAL
 
             for (int i = 0; i < Böter.Count(); i++)
             {
-                sqlString = "insert into Regler ([Böter ID],[Person ID],[Regler ID]) values(" +
+                sqlString = "insert into Regler ([Böter ID],[Person ID],[Regler ID],[Betald]) values(" +
                             //Böter.Get(i).getId() + "," +
                             Böter.Get(i).getPersonId() + ",'" +
                             Böter.Get(i).getRegelId() + "');";

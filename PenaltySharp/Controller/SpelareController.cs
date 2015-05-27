@@ -49,6 +49,7 @@ namespace PenaltySharp.Controller
         {
             m_Spelare.Add(item);
             ServiceProvider.GetSpelareService().BinarySerialize();
+            SaveToDBA();
             
         }
 
@@ -266,6 +267,11 @@ namespace PenaltySharp.Controller
             }
 
             return true;
+        }
+        public void SaveToDBA()
+        {
+            DataAccessLayerDBA dba = new DataAccessLayerDBA();
+            dba.SaveSpelare();
         }
     }
 }

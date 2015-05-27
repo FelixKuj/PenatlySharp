@@ -216,11 +216,12 @@ namespace PenaltySharp.Controller
         /// Sparar i databasen.
         /// </summary>
         /// <returns></returns>
-        public bool SaveToDBA()
+        public void SaveToDBA()
         {
             DataAccessLayerDBA dba = new DataAccessLayerDBA();
-            return dba.SaveAll();
+            dba.SaveBöter();
 
         }
+
     }
 }

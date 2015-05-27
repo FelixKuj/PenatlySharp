@@ -166,11 +166,11 @@
             // 
             // spelareBindingSource
             // 
-            this.spelareBindingSource.DataSource = typeof(PenaltySharp.Model.Spelare);
+            //this.spelareBindingSource.DataSource = typeof(PenaltySharp.Model.Spelare);
             // 
             // spelareControllerBindingSource
             // 
-            this.spelareControllerBindingSource.DataSource = typeof(PenaltySharp.Controller.SpelareController);
+            //this.spelareControllerBindingSource.DataSource = typeof(PenaltySharp.Controller.SpelareController);
             // 
             // AdminSida
             // 

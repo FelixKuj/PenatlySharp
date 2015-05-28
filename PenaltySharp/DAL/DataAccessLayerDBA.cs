@@ -133,7 +133,7 @@ namespace PenaltySharp.DAL
 
             for (int i = 0; i < Spelare.Antal(); i++)
             {
-                sqlString = "insert into Regler ([Spelare ID],[Användarnamn],[Lösenord],[Admin],[Namn]) values(" +
+                sqlString = "insert into Spelare ([Spelare ID],[Användarnamn],[Lösenord],[Admin],[Namn]) values(" +
                             Spelare.Get(i).getId() + "," +
                             Spelare.Get(i).getAnvändarnamn() + ",'" +
                             Spelare.Get(i).getLösenord() + ",'" +
@@ -174,7 +174,7 @@ namespace PenaltySharp.DAL
 
             for (int i = 0; i < Böter.Count(); i++)
             {
-                sqlString = "insert into Regler ([Böter ID],[Person ID],[Regler ID],[Betald]) values(" +
+                sqlString = "insert into Böter ([Böter ID],[Person ID],[Regler ID],[Betald]) values(" +
                             //Böter.Get(i).getId() + "," +
                             Böter.Get(i).getPersonId() + ",'" +
                             Böter.Get(i).getRegelId() + ",'" +

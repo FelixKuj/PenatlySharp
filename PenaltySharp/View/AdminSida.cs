@@ -36,7 +36,8 @@ namespace PenaltySharp.View
             {
                 cbx_AdminSida_SpelareBöter.Items.Add(spelarController.GetNamnOfIndex(index));
             }
-            updateListViewBöter();
+            //updateListViewBöter();
+            Updatecbx();
         }
         /// <summary>
         /// Öppnar regelsida.
@@ -106,17 +107,22 @@ namespace PenaltySharp.View
                     }
                 }
             }
-            for (int i = 0; i < columns.Length; i++)
-            {
+            //for (int i = 0; i < columns.Length; i++)
+            //{
+            //
+            //  lv_AdminSida.AutoResizeColumn(i,
+            //    ColumnHeaderAutoResizeStyle.HeaderSize);
+            //}
 
-                lv_AdminSida.AutoResizeColumn(i,
-                ColumnHeaderAutoResizeStyle.HeaderSize);
-            }
+
+        }
+
+        private void Updatecbx()
+        {
             for (int index = 0; index < regelcontroller.Count(); index++)
             {
                 cbx_AdminSida_LäggTillRegel.Items.Add(regelcontroller.GetNamnOFIndex(index));
             }
-
         }
 
         /// <summary>
@@ -173,7 +179,7 @@ namespace PenaltySharp.View
         /// <param name="e">Clickevent</param>
         private void lv_AdminSida_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Betala denna böter?","Böter Betalning",MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Betala denna böter?", "Böter Betalning", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 try
@@ -182,7 +188,7 @@ namespace PenaltySharp.View
                     {
                         if (lv_AdminSida.Items[i].Selected)
                         {
-                            bötercontroller.SetBetald(Convert.ToInt32(lv_AdminSida.Items[i].SubItems[2].ToString()),true);
+                            bötercontroller.SetBetald(Convert.ToInt32(lv_AdminSida.Items[i].SubItems[2].Text), true);
                             lv_AdminSida.Items.RemoveAt(i);
                             regelcontroller.RemoveAt(i);
                         }

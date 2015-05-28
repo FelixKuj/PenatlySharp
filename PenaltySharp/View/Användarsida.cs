@@ -64,16 +64,17 @@ namespace PenaltySharp.View
         /// <summary>
         /// Gör om lv_Användarsida så att den visar regler istället för böter.
         /// </summary>
-        private void updateListViewRegler()
+        private void updateListViewBöter()
         {
             lv_Användarsida.Items.Clear();
             Column1.Text = "Regler";
-            string[] columns = new string[2];
+            string[] columns = new string[3];
             ListViewItem item;
             for (int i = 0; i < regelcontroller.Count(); i++)
             {
                 columns[0] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getNamn();
                 columns[1] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getBöter().ToString();
+                columns[2] = i.ToString();
                 item = new ListViewItem(columns);
                 lv_Användarsida.Items.Add(item);
             }
@@ -100,18 +101,20 @@ namespace PenaltySharp.View
         /// <summary>
         /// Upptaderar texten i Column1.
         /// </summary>
-        private void updateListViewBöter()
+        private void updateListViewRegler()
         {
             lv_Användarsida.Items.Clear();
             Column1.Text = "Bruten Regel";
-            string[] columns = new string[2];
+            string[] columns = new string[3];
             ListViewItem item;
-            for (int i = 0; i < bötercontroller.Count(); i++)
+            for (int i = 0; i <  regelcontroller.Count(); i++)
             {
-                if (bötercontroller.Get(i).getPersonId() == spelarController.publicID)
+                if (regelcontroller.Get(i).getId() == spelarController.publicID)
                 {
                     columns[0] = regelcontroller.Get(i).getNamn();
                     columns[1] = regelcontroller.Get(i).getBöter().ToString();
+                    columns[2] = i.ToString();
+
                     item = new ListViewItem(columns);
                     lv_Användarsida.Items.Add(item);
                 }

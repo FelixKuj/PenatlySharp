@@ -63,7 +63,9 @@ namespace PenaltySharp.Controller
         }
         public void TaBortVid(int ID)
         {
+
             m_Spelare.RemoveAt(ID);
+            ServiceProvider.GetSpelareService().BinarySerialize();
         }
 
         /// <summary>

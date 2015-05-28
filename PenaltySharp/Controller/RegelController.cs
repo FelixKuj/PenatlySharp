@@ -73,6 +73,7 @@ namespace PenaltySharp.Controller
         public void RemoveAt(int i)
         {
             m_Regler.RemoveAt(i);
+            ServiceProvider.GetReglerService().BinarySerialize();
         }
         /// <summary>
         /// Tar fram ett regelindex.

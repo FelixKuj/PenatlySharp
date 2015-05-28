@@ -49,7 +49,7 @@ namespace PenaltySharp.Controller
         {
             m_Spelare.Add(item);
             ServiceProvider.GetSpelareService().BinarySerialize();
-            SaveToDBA();
+            //SaveToDBA();
             
         }
 
@@ -63,7 +63,9 @@ namespace PenaltySharp.Controller
         }
         public void TaBortVid(int ID)
         {
+
             m_Spelare.RemoveAt(ID);
+            ServiceProvider.GetSpelareService().BinarySerialize();
         }
 
         /// <summary>

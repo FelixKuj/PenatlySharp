@@ -31,9 +31,16 @@ namespace PenaltySharp.View
         protected override void OnPaint(PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            Font font = new Font("Arial", 8);
             g.DrawImage(Diagram, 0, 100);
+            g.DrawString("ID", font, Brushes.Black, 0F, 330F);
+            
             if (SpelareDiagram)
             {
+                for (int i = 0; i < spelarecontroller.Antal(); i++)
+                {
+                    g.DrawString(i.ToString(), font, Brushes.Black, 50F + 25*i, 330F);
+                }
                 for (int i = 0; i < spelarecontroller.Antal(); i++)
                 {
                     for (int y = 0; y < bötercontroller.GetAntalObetaldBöter(i); y++)
@@ -49,6 +56,10 @@ namespace PenaltySharp.View
             }
             if (BöterDiagram)
             {
+                for (int i = 0; i < regelcontroller.Count(); i++)
+                {
+                    g.DrawString(i.ToString(), font, Brushes.Black, 50F + 25 * i, 330F);
+                }
                 for (int i = 0; i < regelcontroller.Count(); i++)
                 {
                     for (int y = 0; y < bötercontroller.GetAntalBrutnaRegler(i); y++)

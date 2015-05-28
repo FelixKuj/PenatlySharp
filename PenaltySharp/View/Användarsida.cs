@@ -70,7 +70,7 @@ namespace PenaltySharp.View
             Column1.Text = "Regler";
             string[] columns = new string[3];
             ListViewItem item;
-            for (int i = 0; i < regelcontroller.Count(); i++)
+            for (int i = 0; i < bötercontroller.Count(); i++)
             {
                 columns[0] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getNamn();
                 columns[1] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getBöter().ToString();

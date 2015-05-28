@@ -32,6 +32,7 @@ namespace PenaltySharp.View
         {
             Graphics g = e.Graphics;
             Font font = new Font("Arial", 8);
+            g.FillRectangle(Brushes.White, 0, 0, DiagramView.ActiveForm.Size.Width, DiagramView.ActiveForm.Size.Height);
             g.DrawImage(Diagram, 0, 100);
             g.DrawString("ID", font, Brushes.Black, 0F, 330F);
             

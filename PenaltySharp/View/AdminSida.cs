@@ -213,5 +213,28 @@ namespace PenaltySharp.View
             Form diagramsida = new DiagramView();
             diagramsida.Show();
         }
+
+        private void lv_AdminSida_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                try
+                {
+                    for (int i = 0; i < lv_AdminSida.Items.Count; i++)
+                    {
+                        if (lv_AdminSida.Items[i].Selected)
+                        {
+                            lv_AdminSida.Items.RemoveAt(i);
+                            regelcontroller.RemoveAt(Convert.ToInt32(lv_AdminSida.Items[i].SubItems[2].Text));
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        
+        }
     }
 }

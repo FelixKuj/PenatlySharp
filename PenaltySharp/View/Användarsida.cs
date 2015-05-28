@@ -48,7 +48,9 @@ namespace PenaltySharp.View
 
         private void btn_Användarsida_LoggaUt_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Form inloggning = new Inloggning();
+            inloggning.Show();
+            this.Close(); 
         }
 
         /// <summary>

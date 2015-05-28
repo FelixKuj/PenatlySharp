@@ -49,8 +49,8 @@ namespace PenaltySharp.View
 
         private void btn_Användarsida_LoggaUt_Click(object sender, EventArgs e)
         {
-            Form inloggning = new Inloggning();
-            inloggning.Show();
+            //Form inloggning = new Inloggning();
+            //inloggning.Show();
             this.Close(); 
         }
 
@@ -75,7 +75,7 @@ namespace PenaltySharp.View
             ListViewItem item;
             for (int i = 0; i < bötercontroller.Count(); i++)
             {
-                if (bötercontroller.Get(i).getPersonId() == spelarController.publicID)
+                if (bötercontroller.Get(i).getPersonId() == spelarController.publicID && bötercontroller.Get(i).getBetald() == false)
                 {
                     columns[0] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getNamn();
                     columns[1] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getBöter().ToString();

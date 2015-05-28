@@ -100,7 +100,7 @@ namespace PenaltySharp.View
                 {
                     for (int index = 0; index < bötercontroller.Count(); index++)
                     {
-                        if (bötercontroller.Get(index).getPersonId() == i)
+                        if (bötercontroller.Get(index).getPersonId() == i && bötercontroller.Get(i).getBetald() == false)
                         {
                             columns[0] = regelcontroller.Get(bötercontroller.Get(index).getRegelId()).getNamn();
                             columns[1] = regelcontroller.Get(bötercontroller.Get(index).getRegelId()).getBöter().ToString();

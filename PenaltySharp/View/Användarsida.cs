@@ -75,7 +75,7 @@ namespace PenaltySharp.View
             ListViewItem item;
             for (int i = 0; i < bötercontroller.Count(); i++)
             {
-                if (bötercontroller.Get(i).getPersonId() == spelarController.publicID && bötercontroller.Get(i).getBetald() == false)
+                if (bötercontroller.Get(i).getPersonId() == spelarController.publicID)
                 {
                     columns[0] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getNamn();
                     columns[1] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getBöter().ToString();

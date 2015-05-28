@@ -72,11 +72,14 @@ namespace PenaltySharp.View
             ListViewItem item;
             for (int i = 0; i < bötercontroller.Count(); i++)
             {
-                columns[0] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getNamn();
-                columns[1] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getBöter().ToString();
-                columns[2] = i.ToString();
-                item = new ListViewItem(columns);
-                lv_Användarsida.Items.Add(item);
+                if (bötercontroller.Get(i).getPersonId() == spelarController.publicID)
+                {
+                    columns[0] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getNamn();
+                    columns[1] = regelcontroller.Get(bötercontroller.Get(i).getRegelId()).getBöter().ToString();
+                    columns[2] = i.ToString();
+                    item = new ListViewItem(columns);
+                    lv_Användarsida.Items.Add(item);
+                }
             }
 
 
@@ -109,15 +112,13 @@ namespace PenaltySharp.View
             ListViewItem item;
             for (int i = 0; i <  regelcontroller.Count(); i++)
             {
-                if (regelcontroller.Get(i).getId() == spelarController.publicID)
-                {
                     columns[0] = regelcontroller.Get(i).getNamn();
                     columns[1] = regelcontroller.Get(i).getBöter().ToString();
                     columns[2] = i.ToString();
 
                     item = new ListViewItem(columns);
                     lv_Användarsida.Items.Add(item);
-                }
+                
             }
             for (int i = 0; i < columns.Length; i++)
             {
@@ -126,6 +127,30 @@ namespace PenaltySharp.View
                 ColumnHeaderAutoResizeStyle.HeaderSize);
             }
 
+        }
+
+        private void lv_Användarsida_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Betala denna böter?", "Böter Betalning", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    for (int i = 0; i < lv_Användarsida.Items.Count; i++)
+                    {
+                        if (lv_Användarsida.Items[i].Selected)
+                        {
+                            bötercontroller.SetBetald(Convert.ToInt32(lv_Användarsida.Items[i].SubItems[2].Text), true);
+                            lv_Användarsida.Items.RemoveAt(i);
+                            regelcontroller.RemoveAt(i);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("det gick inte att betala böter");
+                }
+            }
         }
 
     }

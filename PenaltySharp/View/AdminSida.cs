@@ -196,7 +196,7 @@ namespace PenaltySharp.View
                 }
                 catch (Exception)
                 {
-
+                    MessageBox.Show("det gick inte att betala böter");
                 }
             }
         }

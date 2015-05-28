@@ -31,11 +31,11 @@
             this.lv_Användarsida = new System.Windows.Forms.ListView();
             this.Column1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Column2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_Användarsida_LoggaUt = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Användarsida_Regler = new System.Windows.Forms.Button();
             this.btn_Användarsida_Böter = new System.Windows.Forms.Button();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lv_Användarsida
@@ -52,6 +52,7 @@
             this.lv_Användarsida.UseCompatibleStateImageBehavior = false;
             this.lv_Användarsida.View = System.Windows.Forms.View.Details;
             this.lv_Användarsida.SelectedIndexChanged += new System.EventHandler(this.lv_Användarsida_SelectedIndexChanged);
+            this.lv_Användarsida.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lv_Användarsida_MouseDoubleClick);
             // 
             // Column1
             // 
@@ -62,6 +63,10 @@
             // 
             this.Column2.Text = "Böter";
             this.Column2.Width = 72;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Id";
             // 
             // btn_Användarsida_LoggaUt
             // 
@@ -101,10 +106,6 @@
             this.btn_Användarsida_Böter.Text = "Böter";
             this.btn_Användarsida_Böter.UseVisualStyleBackColor = true;
             this.btn_Användarsida_Böter.Click += new System.EventHandler(this.btn_Användarsida_Böter_Click);
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Id";
             // 
             // Användarsida
             // 

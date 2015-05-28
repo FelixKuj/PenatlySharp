@@ -188,6 +188,7 @@ namespace PenaltySharp.Controller
             böter = new Böter(spelare, regel, false);
             m_böter.Add(böter);
             ServiceProvider.GetBöterService().BinarySerialize();
+            //SaveToDBA();
         }
 
         /// <summary>

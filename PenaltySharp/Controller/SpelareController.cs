@@ -49,7 +49,7 @@ namespace PenaltySharp.Controller
         {
             m_Spelare.Add(item);
             ServiceProvider.GetSpelareService().BinarySerialize();
-            SaveToDBA();
+            //SaveToDBA();
             
         }
 

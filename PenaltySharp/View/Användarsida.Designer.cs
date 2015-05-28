@@ -35,13 +35,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Användarsida_Regler = new System.Windows.Forms.Button();
             this.btn_Användarsida_Böter = new System.Windows.Forms.Button();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lv_Användarsida
             // 
             this.lv_Användarsida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Column1,
-            this.Column2});
+            this.Column2,
+            this.columnHeader3});
             this.lv_Användarsida.GridLines = true;
             this.lv_Användarsida.Location = new System.Drawing.Point(12, 64);
             this.lv_Användarsida.Name = "lv_Användarsida";
@@ -59,7 +61,7 @@
             // Column2
             // 
             this.Column2.Text = "Böter";
-            this.Column2.Width = 180;
+            this.Column2.Width = 72;
             // 
             // btn_Användarsida_LoggaUt
             // 
@@ -100,6 +102,10 @@
             this.btn_Användarsida_Böter.UseVisualStyleBackColor = true;
             this.btn_Användarsida_Böter.Click += new System.EventHandler(this.btn_Användarsida_Böter_Click);
             // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Id";
+            // 
             // Användarsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +133,7 @@
         private System.Windows.Forms.Button btn_Användarsida_Böter;
         private System.Windows.Forms.ColumnHeader Column1;
         private System.Windows.Forms.ColumnHeader Column2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
 
     }
 }

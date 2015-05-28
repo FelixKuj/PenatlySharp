@@ -36,6 +36,7 @@
             this.lv_AdminSida = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbx_AdminSida_Spelare = new System.Windows.Forms.ComboBox();
             this.cbx_AdminSida_LäggTillRegel = new System.Windows.Forms.ComboBox();
             this.cbx_AdminSida_SpelareBöter = new System.Windows.Forms.ComboBox();
@@ -44,7 +45,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.spelareBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.spelareControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.spelareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spelareControllerBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +83,7 @@
             this.btn_AdminSida_LoggaUt.Location = new System.Drawing.Point(697, 9);
             this.btn_AdminSida_LoggaUt.Name = "btn_AdminSida_LoggaUt";
             this.btn_AdminSida_LoggaUt.Size = new System.Drawing.Size(75, 23);
-            this.btn_AdminSida_LoggaUt.TabIndex = 9;
+            this.btn_AdminSida_LoggaUt.TabIndex = 11;
             this.btn_AdminSida_LoggaUt.Text = "Logga ut";
             this.btn_AdminSida_LoggaUt.UseVisualStyleBackColor = true;
             this.btn_AdminSida_LoggaUt.Click += new System.EventHandler(this.btn_AdminSida_LoggaUt_Click);
@@ -98,7 +98,7 @@
             this.lv_AdminSida.Location = new System.Drawing.Point(12, 61);
             this.lv_AdminSida.Name = "lv_AdminSida";
             this.lv_AdminSida.Size = new System.Drawing.Size(756, 389);
-            this.lv_AdminSida.TabIndex = 10;
+            this.lv_AdminSida.TabIndex = 100;
             this.lv_AdminSida.UseCompatibleStateImageBehavior = false;
             this.lv_AdminSida.View = System.Windows.Forms.View.Details;
             this.lv_AdminSida.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lv_AdminSida_MouseDoubleClick);
@@ -112,13 +112,17 @@
             // 
             this.columnHeader2.Text = "Böter";
             // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Id";
+            // 
             // cbx_AdminSida_Spelare
             // 
             this.cbx_AdminSida_Spelare.FormattingEnabled = true;
             this.cbx_AdminSida_Spelare.Location = new System.Drawing.Point(417, 14);
             this.cbx_AdminSida_Spelare.Name = "cbx_AdminSida_Spelare";
             this.cbx_AdminSida_Spelare.Size = new System.Drawing.Size(121, 21);
-            this.cbx_AdminSida_Spelare.TabIndex = 14;
+            this.cbx_AdminSida_Spelare.TabIndex = 9;
             this.cbx_AdminSida_Spelare.SelectedIndexChanged += new System.EventHandler(this.cbx_AdminSida_Spelare_SelectedIndexChanged);
             // 
             // cbx_AdminSida_LäggTillRegel
@@ -161,14 +165,10 @@
             this.button1.Location = new System.Drawing.Point(544, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Diagram";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Id";
             // 
             // AdminSida
             // 

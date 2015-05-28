@@ -44,7 +44,7 @@ namespace PenaltySharp.View
                     FelNågot = true;
                 }
             }
-            if (tbx_RegistreringsSida_användarnamn.TextLength <= 6 || tbx_RegistreringsSida_användarnamn.TextLength >= 18)//om det är för långt eller kort
+            if (tbx_RegistreringsSida_användarnamn.TextLength < 6 || tbx_RegistreringsSida_användarnamn.TextLength >= 18)//om det är för långt eller kort
             {
                 FelMeddelnade += "Användarnamnet är för kort eller långt.\n";
                 FelNågot = true;

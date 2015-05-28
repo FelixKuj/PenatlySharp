@@ -26,7 +26,7 @@ namespace PenaltySharp.View
         Image BetaldBöter = PenaltySharp.Properties.Resources.betaldböterbild;
         Image ObetaldBöter = PenaltySharp.Properties.Resources.obetaldböterbild;
         Image Diagram = PenaltySharp.Properties.Resources.diagram_bild;
-        bool SpelareDiagram = false;
+        bool SpelareDiagram = true;
         bool BöterDiagram = false;
         protected override void OnPaint(PaintEventArgs e)
         {

@@ -38,6 +38,7 @@ namespace PenaltySharp.View
             string information = spelarController.LoggaIn(tbx_InloggningsSida_Användarnamn.Text, tbx_InloggningsSida_Lösenord.Text);
             tbx_InloggningsSida_Användarnamn.Clear();
             tbx_InloggningsSida_Lösenord.Clear();
+            this.Hide();
         }
 
         /// <summary>

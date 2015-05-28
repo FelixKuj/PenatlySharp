@@ -101,6 +101,7 @@
             this.lv_AdminSida.TabIndex = 100;
             this.lv_AdminSida.UseCompatibleStateImageBehavior = false;
             this.lv_AdminSida.View = System.Windows.Forms.View.Details;
+            this.lv_AdminSida.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lv_AdminSida_KeyDown);
             this.lv_AdminSida.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lv_AdminSida_MouseDoubleClick);
             // 
             // columnHeader1

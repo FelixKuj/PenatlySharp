@@ -59,6 +59,8 @@
             this.ClientSize = new System.Drawing.Size(584, 362);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.MaximumSize = new System.Drawing.Size(1920, 400);
+            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "DiagramView";
             this.Text = "DiagramView";
             this.ResumeLayout(false);

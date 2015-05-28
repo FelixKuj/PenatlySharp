@@ -57,8 +57,8 @@ namespace PenaltySharp.View
         /// <param name="e">Clickevent</param>
         private void btn_AdminSida_LoggaUt_Click(object sender, EventArgs e)
         {
-            Form inloggning = new Inloggning();
-            inloggning.Show();
+            //Form inloggning = new Inloggning();
+            //inloggning.Show();
             this.Close();
         }
         /// <summary>
@@ -79,6 +79,8 @@ namespace PenaltySharp.View
         private void AdminSida_Load(object sender, EventArgs e)
         {
             label3.Text = "Välkommen Admin " + spelarController.GetNamnOfIndex(spelarController.publicID) + "!";
+            //Form inloggning = new Inloggning();
+            //inloggning.Hide();
         }
 
         /// <summary>

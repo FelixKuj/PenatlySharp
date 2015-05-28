@@ -40,7 +40,8 @@ namespace PenaltySharp.View
         private void Användarsida_Load(object sender, EventArgs e)
         {
             label3.Text = "Välkommen " + spelarController.GetNamnOfIndex(spelarController.publicID) + "!";
-
+            //Form inloggning = new Inloggning();
+            //inloggning.Hide();
         }
         /// <summary>
         /// Stänger ner användarsidan när du trycker på logga ut.

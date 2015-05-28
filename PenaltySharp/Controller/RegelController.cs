@@ -178,6 +178,10 @@ namespace PenaltySharp.Controller
 
             return true;
         }
+
+        /// <summary>
+        /// Sparar till databasen
+        /// </summary>
         public void SaveToDBA()
         {
             DataAccessLayerDBA dba = new DataAccessLayerDBA();

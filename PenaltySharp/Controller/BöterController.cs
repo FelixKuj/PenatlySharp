@@ -124,6 +124,11 @@ namespace PenaltySharp.Controller
             return antal;
         }
 
+        /// <summary>
+        /// Tar fram antal betalda böter.
+        /// </summary>
+        /// <param name="spelarID"></param>
+        /// <returns>Antal betalda böter</returns>
         public int GetAntalBetaldBöter(int spelarID)
         {
             antal = 0;
@@ -137,6 +142,11 @@ namespace PenaltySharp.Controller
             return antal;
         }
 
+        /// <summary>
+        /// Tar fram antal obrutna regler
+        /// </summary>
+        /// <param name="regelID"></param>
+        /// <returns>Antalet obrutna regler</returns>
         public int GetAntalOBrutnaRegler(int regelID)
         {
             antal = 0;
@@ -150,6 +160,11 @@ namespace PenaltySharp.Controller
             return antal;
         }
 
+        /// <summary>
+        /// Tar fram antal brutna regler
+        /// </summary>
+        /// <param name="regelID"></param>
+        /// <returns>Antal brutna regler</returns>
         public int GetAntalBrutnaRegler(int regelID)
         {
             antal = 0;
@@ -248,6 +263,11 @@ namespace PenaltySharp.Controller
 
         }
 
+        /// <summary>
+        /// Bestämmer om en regel är betald
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="betald"></param>
         public void SetBetald(int id, bool betald)
         {
             m_böter[id].setBetald(betald);

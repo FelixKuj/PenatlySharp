@@ -129,6 +129,11 @@ namespace PenaltySharp.View
 
         }
 
+        /// <summary>
+        /// Gör böter betald vid dubbelklick.
+        /// </summary>
+        /// <param name="lv_Användarsida"></param>
+        /// <param name="clickevent"></param>
         private void lv_Användarsida_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Betala denna böter?", "Böter Betalning", MessageBoxButtons.YesNo);

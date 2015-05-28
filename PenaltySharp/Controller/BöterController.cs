@@ -137,6 +137,31 @@ namespace PenaltySharp.Controller
             return antal;
         }
 
+        public int GetAntalOBrutnaRegler(int regelID)
+        {
+            antal = 0;
+            for (int i = 0; i < m_böter.Count; i++)
+            {
+                if (m_böter[i].getRegelId() == regelID && m_böter[i].getBetald() == true)
+                {
+                    antal++;
+                }
+            }
+            return antal;
+        }
+
+        public int GetAntalBrutnaRegler(int regelID)
+        {
+            antal = 0;
+            for (int i = 0; i < m_böter.Count; i++)
+            {
+                if (m_böter[i].getRegelId() == regelID && m_böter[i].getBetald() == false)
+                {
+                    antal++;
+                }
+            }
+            return antal;
+        }
         /// <summary>
         /// Lägger till en böter till en spelare.
         /// </summary>

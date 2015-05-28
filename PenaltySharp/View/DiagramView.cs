@@ -15,11 +15,13 @@ namespace PenaltySharp.View
     {
         SpelareController spelarecontroller;
         BöterController bötercontroller;
+        RegelController regelcontroller;
         public DiagramView()
         {
             InitializeComponent();
             spelarecontroller = ServiceProvider.GetSpelareService();
             bötercontroller = ServiceProvider.GetBöterService();
+            regelcontroller = ServiceProvider.GetReglerService();
         }
         Image BetaldBöter = PenaltySharp.Properties.Resources.betaldböterbild;
         Image ObetaldBöter = PenaltySharp.Properties.Resources.obetaldböterbild;
@@ -47,7 +49,17 @@ namespace PenaltySharp.View
             }
             if (BöterDiagram)
             {
-
+                for (int i = 0; i < regelcontroller.Count(); i++)
+                {
+                    for (int y = 0; y < bötercontroller.GetAntalBrutnaRegler(i); y++)
+                    {
+                        g.DrawImage(ObetaldBöter, 45 + 25 * i, 306 - 10 * y);
+                    }
+                    for (int y = bötercontroller.GetAntalBrutnaRegler(i); y < (bötercontroller.GetAntalBrutnaRegler(i) + bötercontroller.GetAntalOBrutnaRegler(i)); y++)
+                    {
+                        g.DrawImage(BetaldBöter, 45 + 25 * i, 306 - 10 * y);
+                    }
+                }
             }
         }
 
